@@ -22,7 +22,7 @@ Ce fichier liste les liens pour télécharger les données utilisées dans ce pr
 ## Données électorales
 
 ### Résultats électoraux par bureau de vote
-- **Lien** : *(à compléter)*
+- **Lien** : https://www.data.gouv.fr/datasets/donnees-des-elections-agregees
 - **Fichier** : `candidats_results.txt` (2.1 GB)
 - **Description** : Résultats de toutes les élections (présidentielles, législatives, européennes, régionales, départementales, municipales) de 1999 à 2024
 - **Clé de jointure** : `Code du département` + `Code de la commune`
