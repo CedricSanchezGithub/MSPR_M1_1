@@ -9,7 +9,7 @@ import csv
 import sys
 
 # Configuration
-INPUT_FILE = "candidats_results.txt"
+INPUT_FILE = "data_input/candidats_results.txt"
 OUTPUT_FILE = "candidats_camp.txt"
 SEPARATOR = ";"
 
