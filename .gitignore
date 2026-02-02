@@ -46,3 +46,9 @@ wheels/
 # OS
 .DS_Store
 Thumbs.db
+
+# Gros fichiers de données (trop volumineux pour git)
+candidats_results.txt
+candidats_classified.txt
+candidats_camp.txt
+*.geojson

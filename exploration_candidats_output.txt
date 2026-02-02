@@ -1,0 +1,570 @@
+================================================================================
+ANALYSE EXPLORATOIRE - candidats_results.txt
+================================================================================
+
+[1] Lecture du fichier ligne par ligne...
+  En-tête détecté avec 18 colonnes
+
+  => Lecture terminée!
+
+================================================================================
+[2] STATISTIQUES GÉNÉRALES
+================================================================================
+  Nombre total de lignes (hors en-tête): 27,097,161
+
+----------------------------------------
+[3] COLONNES
+----------------------------------------
+   1. id_election
+   2. id_brut_miom
+   3. Code du département
+   4. Code de la commune
+   5. Code du b.vote
+   6. N°Panneau
+   7. Libellé Abrégé Liste
+   8. Libellé Etendu Liste
+   9. Nom Tête de Liste
+  10. Voix
+  11. % Voix/Ins
+  12. % Voix/Exp
+  13. Sexe
+  14. Nom
+  15. Prénom
+  16. Nuance
+  17. Binôme
+  18. Liste
+
+----------------------------------------
+[4] ÉLECTIONS PRÉSENTES
+----------------------------------------
+  Nombre d'élections distinctes: 53
+    - 2024_euro_t1: 2,663,952 lignes
+    - 2019_euro_t1: 2,356,098 lignes
+    - 2014_euro_t1: 1,656,868 lignes
+    - 2004_euro_t1: 1,408,140 lignes
+    - 2009_euro_t1: 1,379,284 lignes
+    - 1999_euro_t1: 1,274,740 lignes
+    - 2002_pres_t1: 1,026,256 lignes
+    - 2017_legi_t1: 908,722 lignes
+    - 2002_legi_t1: 903,988 lignes
+    - 2007_legi_t1: 861,595 lignes
+    - 2022_pres_t1: 836,184 lignes
+    - 2007_pres_t1: 787,404 lignes
+    - 2017_pres_t1: 761,662 lignes
+    - 2012_legi_t1: 740,266 lignes
+    - 2022_legi_t1: 740,221 lignes
+    - 2015_regi_t1: 679,967 lignes
+    - 2012_pres_t1: 679,320 lignes
+    - 2010_regi_t1: 655,307 lignes
+    - 2021_regi_t1: 601,434 lignes
+    - 2014_muni_t1: 576,489 lignes
+    - 2020_muni_t1: 545,351 lignes
+    - 2004_regi_t1: 503,807 lignes
+    - 2024_legi_t1: 464,549 lignes
+    - 2015_dpmt_t1: 289,173 lignes
+    - 2021_dpmt_t1: 257,375 lignes
+    - 2021_regi_t2: 251,820 lignes
+    - 2004_cant_t1: 198,945 lignes
+    - 2015_regi_t2: 191,507 lignes
+    - 2001_cant_t1: 185,631 lignes
+    - 2010_regi_t2: 177,390 lignes
+    - 2011_cant_t1: 173,815 lignes
+    - 2008_cant_t1: 141,209 lignes
+    - 2022_legi_t2: 139,618 lignes
+    - 2022_pres_t2: 139,364 lignes
+    - 2017_pres_t2: 138,484 lignes
+    - 2017_legi_t2: 137,627 lignes
+    - 2012_pres_t2: 135,864 lignes
+    - 2024_legi_t2: 133,107 lignes
+    - 2015_dpmt_t2: 131,891 lignes
+    - 2007_pres_t2: 131,234 lignes
+    - 2002_pres_t2: 128,282 lignes
+    - 2012_legi_t2: 128,204 lignes
+    - 2021_dpmt_t2: 123,541 lignes
+    - 2002_legi_t2: 115,929 lignes
+    - 2014_muni_t2: 115,540 lignes
+    - 2008_muni_t1: 109,983 lignes
+    - 2007_legi_t2: 103,694 lignes
+    - 2020_muni_t2: 85,622 lignes
+    - 2004_cant_t2: 55,289 lignes
+    - 2011_cant_t2: 53,928 lignes
+    - 2001_cant_t2: 43,753 lignes
+    - 2008_cant_t2: 37,193 lignes
+    - 2008_muni_t2: 30,545 lignes
+
+----------------------------------------
+[5] DÉPARTEMENTS
+----------------------------------------
+  Nombre de départements: 120
+  Top 15 départements (par nombre de lignes):
+    - 59: 748,099 lignes
+    - 62: 632,153 lignes
+    - 13: 557,492 lignes
+    - 33: 542,094 lignes
+    - 31: 530,931 lignes
+    - 76: 521,786 lignes
+    - 57: 515,890 lignes
+    - 69: 495,659 lignes
+    - 77: 449,424 lignes
+    - 92: 428,197 lignes
+    - 78: 414,557 lignes
+    - 44: 409,501 lignes
+    - 38: 406,645 lignes
+    - 75: 391,974 lignes
+    - 67: 385,306 lignes
+
+----------------------------------------
+[6] COMMUNES
+----------------------------------------
+  Nombre de communes distinctes: 908
+  Top 10 communes (par nombre de lignes):
+    - 056: 483,109 lignes
+    - 055: 274,518 lignes
+    - 123: 189,483 lignes
+    - 088: 167,958 lignes
+    - 063: 149,190 lignes
+    - 004: 143,992 lignes
+    - 007: 139,832 lignes
+    - 109: 132,994 lignes
+    - 555: 129,310 lignes
+    - 069: 126,570 lignes
+
+----------------------------------------
+[7] LISTES / PARTIS (Libellé Abrégé)
+----------------------------------------
+  Nombre de listes distinctes: 67
+  Top 30 listes:
+    - Parti Pirate: 139,401
+    - Pace: 139,401
+    - Esperanto: 139,401
+    - Europe Écologie: 139,401
+    - Parti Animaliste: 139,401
+    - Humanite Souveraine: 70,104
+    - Pour Une Democratie Reelle : Decidons Nous-Memes !: 70,104
+    - La France Fiere, Menee Par Marion Marechal Et Soutenue Par Éric Zemmour: 70,104
+    - Lfi - Up: 70,104
+    - La France Revient: 70,104
+    - Free Palestine: 70,104
+    - Parti Revolutionnaire Communistes: 70,104
+    - Besoin D'Europe: 70,104
+    - Équinoxe: 70,104
+    - Ecologie Positive: 70,104
+    - Liste Asselineau-Frexit: 70,104
+    - Paix Et Decroissance: 70,104
+    - Pour Une Autre Europe: 70,104
+    - La Droite Pour Faire Entendre La Voix De La France En Europe: 70,104
+    - Lutte Ouvriere: 70,104
+    - Changer L'Europe: 70,104
+    - Nlp: 70,104
+    - Urgence Revolution !: 70,104
+    - Ppl: 70,104
+    - L'Europe Ca Suffit !: 70,104
+    - Prenons-Nous En Main: 70,104
+    - Forteresse Europe: 70,104
+    - Reveil Eur: 70,104
+    - Non À L'Ue Et À L'Otan, Communistes Pour La Paix Et Le Progrès Social: 70,104
+    - Ar: 70,104
+
+----------------------------------------
+[8] NUANCES POLITIQUES
+----------------------------------------
+  Nombre de nuances distinctes: 177
+  Toutes les nuances:
+    - 'LDIV': 2,047,289
+    - 'LEXG': 1,113,373
+    - 'DIV': 902,830
+    - 'NC': 894,059
+    - 'LDVD': 699,762
+    - 'LDV': 592,410
+    - 'EXG': 564,057
+    - 'LFN': 518,069
+    - 'SOC': 513,573
+    - 'ECO': 496,771
+    - 'LDVG': 495,541
+    - 'LAUT': 485,457
+    - 'LUG': 462,430
+    - 'DVD': 452,983
+    - 'UMP': 426,352
+    - 'FN': 407,252
+    - 'COM': 346,389
+    - 'LVEC': 329,445
+    - 'VEC': 295,275
+    - 'LECO': 288,633
+    - 'SARK': 267,098
+    - 'LEPE': 261,831
+    - 'DVG': 238,538
+    - 'LMAJ': 223,674
+    - 'LEXD': 219,235
+    - 'LRN': 216,846
+    - 'LUD': 215,516
+    - 'RN': 211,337
+    - 'LR': 197,922
+    - 'BAYR': 197,690
+    - 'LXG': 195,470
+    - 'ENS': 192,780
+    - 'LDD': 178,561
+    - 'REG': 169,495
+    - 'LUC': 152,485
+    - 'LSOC': 150,076
+    - 'CPNT': 147,087
+    - 'LUMP': 144,141
+    - 'LCMD': 142,866
+    - 'HOLL': 135,864
+    - 'ROYA': 131,234
+    - 'LAGU': 129,758
+    - 'BESA': 129,758
+    - 'CHIR': 128,282
+    - 'LCOP': 119,370
+    - 'LLR': 118,528
+    - 'REM': 111,583
+    - 'LFG': 109,639
+    - 'UDF': 109,285
+    - 'LDR': 107,871
+    - 'NUP': 107,392
+    - 'REC': 105,535
+    - 'BC-FN': 101,801
+    - 'LREG': 99,158
+    - 'LCOM': 98,972
+    - 'UG': 97,281
+    - 'EXD': 96,730
+    - 'LXD': 87,594
+    - 'BC-UD': 85,744
+    - 'DXG': 85,052
+    - 'LGA': 84,899
+    - 'MNR': 84,842
+    - 'MPF': 84,226
+    - 'LFI': 83,414
+    - 'LUGE': 82,133
+    - 'LVE': 81,590
+    - 'BC-DVD': 80,375
+    - 'BC-RN': 78,101
+    - 'FI': 73,530
+    - 'UDFD': 71,112
+    - 'LREC': 70,104
+    - 'LENS': 70,104
+    - 'DSV': 69,161
+    - 'JOLY': 67,932
+    - 'MELE': 67,932
+    - 'DUPO': 67,932
+    - 'CHEM': 67,932
+    - 'ARTH': 67,932
+    - 'POUT': 67,932
+    - 'FG': 67,532
+    - 'LDLF': 67,417
+    - 'BC-DVG': 66,375
+    - 'LCP': 65,969
+    - 'BOVE': 65,617
+    - 'BUFF': 65,617
+    - 'SCHI': 65,617
+    - 'VILL': 65,617
+    - 'VOYN': 65,617
+    - 'NIHO': 65,617
+    - 'LUDF': 64,761
+    - 'LPS': 64,761
+    - 'BC-SOC': 64,277
+    - 'MEGR': 64,141
+    - 'LEPA': 64,141
+    - 'GLUC': 64,141
+    - 'TAUB': 64,141
+    - 'SAIN': 64,141
+    - 'MAME': 64,141
+    - 'JOSP': 64,141
+    - 'BOUT': 64,141
+    - 'HUE': 64,141
+    - 'CHEV': 64,141
+    - 'MADE': 64,141
+    - 'MNA': 63,737
+    - 'GAU': 63,737
+    - 'FRN': 63,737
+    - 'DTE': 63,737
+    - 'LPC': 63,292
+    - 'LO': 62,718
+    - 'BC-UG': 57,144
+    - 'LEC': 51,360
+    - 'AUT': 49,058
+    - 'DLF': 48,237
+    - 'RDG': 47,077
+    - 'LCR': 46,640
+    - 'LDG': 46,208
+    - 'PREP': 41,853
+    - 'LDVC': 38,707
+    - 'CEN': 38,557
+    - 'LUCD': 38,470
+    - 'DVC': 36,066
+    - 'LRG': 35,890
+    - 'UDI': 33,739
+    - 'LDSV': 32,144
+    - 'BC-UGE': 31,731
+    - 'BC-FG': 30,066
+    - 'BC-DIV': 26,413
+    - 'BC-UCD': 25,564
+    - 'LVEG': 25,248
+    - 'BC-UMP': 23,365
+    - 'LNC': 20,275
+    - 'RPR': 18,976
+    - 'BC-COM': 18,887
+    - 'BC-LR': 18,156
+    - 'NCE': 16,647
+    - 'LREM': 16,612
+    - 'BC-DVC': 16,429
+    - 'MDM': 15,501
+    - 'UXD': 14,830
+    - 'BC-ECO': 14,377
+    - 'MAJ': 13,575
+    - 'PRG': 12,526
+    - 'BC-VEC': 12,327
+    - 'PRV': 12,221
+    - 'RPF': 10,579
+    - 'M-NC': 10,087
+    - 'LMDM': 7,637
+    - 'BC-UDI': 7,453
+    - 'BC-UC': 6,735
+    - 'BC-REM': 6,520
+    - 'ALLI': 6,228
+    - 'DL': 6,144
+    - 'BC-FI': 5,922
+    - 'LUDI': 5,862
+    - 'BC-DLF': 5,289
+    - 'MODM': 4,601
+    - 'LMC': 4,532
+    - 'BC-EXG': 4,374
+    - 'PG': 4,285
+    - 'M': 4,026
+    - 'HOR': 3,182
+    - 'BC-MDM': 2,584
+    - 'BC-REG': 2,524
+    - 'BC-RDG': 2,471
+    - 'LGC': 2,418
+    - 'BC-UCG': 2,354
+    - 'MDC': 2,162
+    - 'BC-DSV': 2,151
+    - 'LPG': 1,845
+    - 'DXD': 1,658
+    - 'BC-EXD': 1,562
+    - 'LRDG': 647
+    - 'BC-PG': 375
+    - 'BC-UXD': 338
+    - 'LGJ': 235
+    - 'BC-GJ': 196
+    - '2': 2
+
+----------------------------------------
+[9] TÊTES DE LISTE
+----------------------------------------
+  Nombre de têtes de liste distinctes: 34
+  Top 30 têtes de liste:
+    - AUBRY Manon: 69,297
+    - DE PREVOISIN Robert: 69,297
+    - CAMUS Renaud: 69,297
+    - MARIE Florie: 69,297
+    - LOISEAU Nathalie: 69,297
+    - TRAORÉ Hamada: 69,297
+    - PHILIPPOT Florian: 69,297
+    - ALEXANDRE Audric: 69,297
+    - BOURG Dominique: 69,297
+    - VAUCLIN Vincent: 69,297
+    - LAGARDE Jean-Christophe: 69,297
+    - GLUCKSMANN Raphaël: 69,297
+    - GERNIGON Yves: 69,297
+    - HELGEN Gilles: 69,297
+    - DUPONT-AIGNAN Nicolas: 69,297
+    - CAILLAUD Sophie: 69,297
+    - DELFEL Thérèse: 69,297
+    - ARTHAUD Nathalie: 69,297
+    - BROSSAT Ian: 69,297
+    - ASSELINEAU François: 69,297
+    - HAMON Benoît: 69,297
+    - TOMASINI Nathalie: 69,297
+    - BARDELLA Jordan: 69,297
+    - CORBET Cathy Denise Ginette: 69,297
+    - SANCHEZ Antonio: 69,297
+    - DIEUMEGARD Pierre: 69,297
+    - CHALENÇON Christophe: 69,297
+    - LALANNE Francis: 69,297
+    - BELLAMY François-Xavier: 69,297
+    - JADOT Yannick: 69,297
+
+----------------------------------------
+[10] NUMÉROS DE PANNEAU
+----------------------------------------
+  Valeurs distinctes: 577
+  Distribution (triée):
+    - Panneau 1: 1,211,403
+    - Panneau 2: 1,635,858
+    - Panneau 3: 1,449,766
+    - Panneau 4: 1,466,304
+    - Panneau 5: 1,403,742
+    - Panneau 6: 1,363,753
+    - Panneau 7: 1,269,405
+    - Panneau 8: 1,234,945
+    - Panneau 9: 1,152,811
+    - Panneau 10: 1,051,181
+    - Panneau 11: 1,024,528
+    - Panneau 12: 813,427
+    - Panneau 13: 533,135
+    - Panneau 14: 476,301
+    - Panneau 15: 467,406
+    - Panneau 16: 426,580
+    - Panneau 17: 346,014
+    - Panneau 18: 354,175
+    - Panneau 19: 351,758
+    - Panneau 20: 341,894
+    - Panneau 21: 279,525
+    - Panneau 22: 273,881
+    - Panneau 23: 272,663
+    - Panneau 24: 254,478
+    - Panneau 25: 246,793
+    - Panneau 26: 240,544
+    - Panneau 27: 213,464
+    - Panneau 28: 203,815
+    - Panneau 29: 200,994
+    - Panneau 30: 200,090
+    ... et 547 autres valeurs
+
+----------------------------------------
+[11] SEXE
+----------------------------------------
+    - 'M': 2,957,082
+    - 'F': 1,853,338
+    - 'H': 360,617
+    - 'LNC': 2
+
+----------------------------------------
+[12] STATISTIQUES SUR LES VOIX
+----------------------------------------
+  Basé sur 1,000,000 entrées (échantillon)
+  Total: 9,430,329
+  Moyenne: 9.43
+  Min: 0
+  Max: 9,089
+  Médiane: 0
+  25e percentile: 0
+  75e percentile: 7
+  90e percentile: 25
+  99e percentile: 132
+
+----------------------------------------
+[13] STATISTIQUES SUR % Voix/Inscrits
+----------------------------------------
+  Basé sur 1,000,000 entrées
+  Moyenne: 1.39%
+  Min: 0.00%
+  Max: 58.73%
+  Médiane: 0.00%
+
+----------------------------------------
+[14] STATISTIQUES SUR % Voix/Exprimés
+----------------------------------------
+  Basé sur 1,000,000 entrées
+  Moyenne: 2.77%
+  Min: 0.00%
+  Max: 100.00%
+  Médiane: 0.00%
+
+----------------------------------------
+[15] ÉCHANTILLON DE DONNÉES (5 premières lignes)
+----------------------------------------
+
+  Ligne 1:
+    id_election: 2019_euro_t1
+    id_brut_miom: 01001_0001
+    Code du département: 01
+    Code de la commune: 001
+    Code du b.vote: 0001
+    N°Panneau: 1
+    Libellé Abrégé Liste: La France Insoumise
+    Libellé Etendu Liste: La France Insoumise
+    Nom Tête de Liste: AUBRY Manon
+    Voix: 13
+    % Voix/Ins: 2.16
+    % Voix/Exp: 4.14
+    Sexe: 
+    Nom: 
+    Prénom: 
+    Nuance: 
+    Binôme: 
+    Liste: 
+
+  Ligne 2:
+    id_election: 2019_euro_t1
+    id_brut_miom: 01002_0001
+    Code du département: 01
+    Code de la commune: 002
+    Code du b.vote: 0001
+    N°Panneau: 1
+    Libellé Abrégé Liste: La France Insoumise
+    Libellé Etendu Liste: La France Insoumise
+    Nom Tête de Liste: AUBRY Manon
+    Voix: 6
+    % Voix/Ins: 2.86
+    % Voix/Exp: 4.44
+    Sexe: 
+    Nom: 
+    Prénom: 
+    Nuance: 
+    Binôme: 
+    Liste: 
+
+  Ligne 3:
+    id_election: 2019_euro_t1
+    id_brut_miom: 01004_0001
+    Code du département: 01
+    Code de la commune: 004
+    Code du b.vote: 0001
+    N°Panneau: 1
+    Libellé Abrégé Liste: La France Insoumise
+    Libellé Etendu Liste: La France Insoumise
+    Nom Tête de Liste: AUBRY Manon
+    Voix: 39
+    % Voix/Ins: 3.71
+    % Voix/Exp: 8.23
+    Sexe: 
+    Nom: 
+    Prénom: 
+    Nuance: 
+    Binôme: 
+    Liste: 
+
+  Ligne 4:
+    id_election: 2019_euro_t1
+    id_brut_miom: 01004_0002
+    Code du département: 01
+    Code de la commune: 004
+    Code du b.vote: 0002
+    N°Panneau: 1
+    Libellé Abrégé Liste: La France Insoumise
+    Libellé Etendu Liste: La France Insoumise
+    Nom Tête de Liste: AUBRY Manon
+    Voix: 42
+    % Voix/Ins: 3.8
+    % Voix/Exp: 7.78
+    Sexe: 
+    Nom: 
+    Prénom: 
+    Nuance: 
+    Binôme: 
+    Liste: 
+
+  Ligne 5:
+    id_election: 2019_euro_t1
+    id_brut_miom: 01004_0003
+    Code du département: 01
+    Code de la commune: 004
+    Code du b.vote: 0003
+    N°Panneau: 1
+    Libellé Abrégé Liste: La France Insoumise
+    Libellé Etendu Liste: La France Insoumise
+    Nom Tête de Liste: AUBRY Manon
+    Voix: 31
+    % Voix/Ins: 2.93
+    % Voix/Exp: 5.63
+    Sexe: 
+    Nom: 
+    Prénom: 
+    Nuance: 
+    Binôme: 
+    Liste: 
+
+================================================================================
+FIN DE L'ANALYSE
+================================================================================
