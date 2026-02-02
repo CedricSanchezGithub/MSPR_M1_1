@@ -48,6 +48,9 @@ wheels/
 Thumbs.db
 
 # Gros fichiers de données (trop volumineux pour git)
-data/input/
+data/input/*
+!data/input/nouveau/
+data/input/nouveau/*
+!data/input/nouveau/.gitkeep
 data/output/*.txt
 data/output/*.geojson
