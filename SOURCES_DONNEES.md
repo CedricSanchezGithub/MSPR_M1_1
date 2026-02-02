@@ -14,7 +14,7 @@ Ce fichier liste les liens pour télécharger les données utilisées dans ce pr
 - **Clé de jointure** : `CODGEO` (code INSEE commune)
 
 ### Revenus des Français par commune
-- **Lien** : *(à compléter)*
+- **Lien** : https://www.data.gouv.fr/datasets/revenu-des-francais-a-la-commune
 - **Fichier** : `revenu-des-francais-a-la-commune-*.csv` (4.8 MB)
 - **Description** : Revenus médians, quartiles, déciles par commune
 - **Clé de jointure** : `Code géographique` (code INSEE commune)
