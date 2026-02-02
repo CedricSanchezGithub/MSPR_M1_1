@@ -1,0 +1,525 @@
+================================================================================
+ANALYSE EXPLORATOIRE - Revenus des Français par commune
+================================================================================
+
+[1] DÉTECTION DU FORMAT
+----------------------------------------
+  Encodage détecté: utf-8
+  Séparateur détecté: ';'
+  Nombre de colonnes: 57
+
+[2] COLONNES
+----------------------------------------
+   1. Nom géographique GMS
+   2. Code géographique
+   3. Libellé géographique
+   4. [DISP] Nbre de ménages fiscaux
+   5. [DISP] Nbre de personnes dans les ménages fiscaux
+   6. [DISP] Nbre d'unités de consommation dans les ménages fiscaux
+   7. [DISP] 1ᵉʳ quartile (€)
+   8. [DISP] Médiane (€)
+   9. [DISP] 3ᵉ quartile (€)
+  10. [DISP] Écart interquartile (€)
+  11. [DISP] 1ᵉʳ décile (€)
+  12. [DISP] 2ᵉ décile (€)
+  13. [DISP]3ᵉ décile (€)
+  14. [DISP] 4ᵉ décile (€)
+  15. [DISP] 6ᵉ décile (€)
+  16. [DISP] 7ᵉ décile (€)
+  17. [DISP] 8ᵉ décile (€)
+  18. [DISP] 9ᵉ décile (€)
+  19. [DISP] Rapport interdécile 9ᵉ décile/1ᵉʳ decile
+  20. [DISP] S80/20
+  21. [DISP] Iice de Gini
+  22. [DISP] Part des revenus d’activité (%)
+  23. [DISP] dont part des salaires et traitements(%)
+  24. [DISP] dont part des iemnités de chômage (%)
+  25. [DISP] dont part des revenus des activités non salariées (%)
+  26. [DISP] Part des pensions, retraites et rentes (%)
+  27. [DISP] Part des revenus du patrimoine et autres revenus (%)
+  28. [DISP] Part de l'ensemble des prestations sociales (%)
+  29. [DISP] dont part des prestations familiales (%)
+  30. [DISP] dont part des minima sociaux (%)
+  31. [DISP] dont part des prestations logement (%)
+  32. [DISP] Part des impôts (%)
+  33. [DEC] Nbre de ménages fiscaux
+  34. [DEC] Nbre de personnes dans les ménages fiscaux
+  35. [DEC] Nbre d'unités de consommation dans les ménages fiscaux
+  36. [DEC] Part des ménages fiscaux imposés (%)
+  37. [DEC] 1ᵉʳ quartile (€)
+  38. [DEC] Médiane (€)
+  39. [DEC] 3ᵉ quartile (€)
+  40. [DEC] Écart interquartile (€)
+  41. [DEC] 1ᵉʳ décile (€)
+  42. [DEC] 2ᵉ décile (€)
+  43. [DEC] 3ᵉ décile  (€)
+  44. [DEC] 4ᵉ décile (€)
+  45. [DEC] 6ᵉ décile (€)
+  46. [DEC] 7ᵉ décile (€)
+  47. [DEC] 8ᵉ décile (€)
+  48. [DEC] 9ᵉ décile (€)
+  49. [DEC] Rapport interdécile D9/D1
+  50. [DEC] S80/S20
+  51. [DEC] Iice de Gini
+  52. [DEC] Part des revenus d’activité (%)
+  53. [DEC] dont part des salaires et traitements (%)
+  54. [DEC] dont part des iemnités de chômage (%)
+  55. [DEC] dont part des revenus des activités non salariées (%)
+  56. [DEC] Part des pensions, retraites et rentes (%)
+  57. [DEC] Part des autres revenus (%)
+
+[3] LECTURE DU FICHIER...
+----------------------------------------
+  Total de lignes: 34,926
+
+[4] TYPES DE COLONNES DÉTECTÉS
+----------------------------------------
+  Colonnes numériques: 9
+  Colonnes textuelles: 48
+
+[5] STATISTIQUES NUMÉRIQUES
+----------------------------------------
+
+  Code géographique:
+    Count:  34,566
+    Min:    1,001.00
+    Max:    97,424.00
+    Mean:   46,554.46
+    Median: 49,237.00
+
+  [DISP] Nbre de ménages fiscaux:
+    Count:  31,322
+    Min:    35.00
+    Max:    222,023.00
+    Mean:   914.86
+    Median: 227.00
+
+  [DISP] Nbre de personnes dans les ménages fiscaux:
+    Count:  31,322
+    Min:    78.00
+    Max:    420,447.00
+    Mean:   2,029.55
+    Median: 525.00
+
+  [DISP] Nbre d'unités de consommation dans les ménages fiscaux:
+    Count:  31,322
+    Min:    62.80
+    Max:    308,327.70
+    Mean:   1,405.92
+    Median: 360.20
+
+  [DISP] Médiane (€):
+    Count:  31,322
+    Min:    12,260.00
+    Max:    55,340.00
+    Mean:   23,244.47
+    Median: 22,810.00
+
+  [DEC] Nbre de ménages fiscaux:
+    Count:  31,323
+    Min:    35.00
+    Max:    222,262.00
+    Mean:   915.74
+    Median: 226.00
+
+  [DEC] Nbre de personnes dans les ménages fiscaux:
+    Count:  31,323
+    Min:    75.00
+    Max:    420,802.00
+    Mean:   2,030.91
+    Median: 525.00
+
+  [DEC] Nbre d'unités de consommation dans les ménages fiscaux:
+    Count:  31,323
+    Min:    61.70
+    Max:    308,620.50
+    Mean:   1,407.02
+    Median: 360.30
+
+  [DEC] Médiane (€):
+    Count:  31,323
+    Min:    8,760.00
+    Max:    60,920.00
+    Mean:   23,093.97
+    Median: 22,540.00
+
+[6] COLONNES TEXTUELLES - VALEURS UNIQUES
+----------------------------------------
+
+  Nom géographique GMS:
+    Valeurs uniques: 32,679
+    Top 10:
+      - Sainte-Colombe: 12
+      - Saint-Sauveur: 11
+      - Saint-Aubin: 10
+      - Beaulieu: 10
+      - Saint-Marcel: 9
+      - Saint-Michel: 9
+      - Le Pin: 9
+      - Sainte-Marie: 9
+      - Saint-Paul: 9
+      - Saint-Rémy: 8
+
+  Libellé géographique:
+    Valeurs uniques: 32,664
+    Top 10:
+      - Sainte-Colombe: 12
+      - Saint-Sauveur: 11
+      - Saint-Aubin: 10
+      - Beaulieu: 10
+      - Saint-Marcel: 9
+      - Saint-Michel: 9
+      - Le Pin: 9
+      - Sainte-Marie: 9
+      - Saint-Paul: 9
+      - Saint-Rémy: 8
+
+  [DISP] 1ᵉʳ quartile (€):
+    Valeurs uniques: 1
+    Distribution:
+      - (vide): 29,583
+
+  [DISP] 3ᵉ quartile (€):
+    Valeurs uniques: 1
+    Distribution:
+      - (vide): 29,583
+
+  [DISP] Écart interquartile (€):
+    Valeurs uniques: 1
+    Distribution:
+      - (vide): 29,583
+
+  [DISP] 1ᵉʳ décile (€):
+    Valeurs uniques: 1
+    Distribution:
+      - (vide): 29,583
+
+  [DISP] 2ᵉ décile (€):
+    Valeurs uniques: 1
+    Distribution:
+      - (vide): 29,583
+
+  [DISP]3ᵉ décile (€):
+    Valeurs uniques: 1
+    Distribution:
+      - (vide): 29,583
+
+  [DISP] 4ᵉ décile (€):
+    Valeurs uniques: 1
+    Distribution:
+      - (vide): 29,583
+
+  [DISP] 6ᵉ décile (€):
+    Valeurs uniques: 1
+    Distribution:
+      - (vide): 29,583
+
+[7] ÉCHANTILLON DE DONNÉES (5 premières lignes)
+----------------------------------------
+
+  Ligne 1:
+    Nom géographique GMS: L'Abergement-Clémenciat
+    Code géographique: 01001
+    Libellé géographique: L'Abergement-Clémenciat
+    [DISP] Nbre de ménages fiscaux: 346
+    [DISP] Nbre de personnes dans les ménages fiscaux: 895
+    [DISP] Nbre d'unités de consommation dans les ménages fiscaux: 590.8
+    [DISP] 1ᵉʳ quartile (€): (vide)
+    [DISP] Médiane (€): 25820
+    [DISP] 3ᵉ quartile (€): (vide)
+    [DISP] Écart interquartile (€): (vide)
+    [DISP] 1ᵉʳ décile (€): (vide)
+    [DISP] 2ᵉ décile (€): (vide)
+    [DISP]3ᵉ décile (€): (vide)
+    [DISP] 4ᵉ décile (€): (vide)
+    [DISP] 6ᵉ décile (€): (vide)
+    [DISP] 7ᵉ décile (€): (vide)
+    [DISP] 8ᵉ décile (€): (vide)
+    [DISP] 9ᵉ décile (€): (vide)
+    [DISP] Rapport interdécile 9ᵉ décile/1ᵉʳ decile: (vide)
+    [DISP] S80/20: (vide)
+    [DISP] Iice de Gini: (vide)
+    [DISP] Part des revenus d’activité (%): (vide)
+    [DISP] dont part des salaires et traitements(%): (vide)
+    [DISP] dont part des iemnités de chômage (%): (vide)
+    [DISP] dont part des revenus des activités non salariées (%): (vide)
+    [DISP] Part des pensions, retraites et rentes (%): (vide)
+    [DISP] Part des revenus du patrimoine et autres revenus (%): (vide)
+    [DISP] Part de l'ensemble des prestations sociales (%): (vide)
+    [DISP] dont part des prestations familiales (%): (vide)
+    [DISP] dont part des minima sociaux (%): (vide)
+    [DISP] dont part des prestations logement (%): (vide)
+    [DISP] Part des impôts (%): (vide)
+    [DEC] Nbre de ménages fiscaux: 346
+    [DEC] Nbre de personnes dans les ménages fiscaux: 895
+    [DEC] Nbre d'unités de consommation dans les ménages fiscaux: 590.8
+    [DEC] Part des ménages fiscaux imposés (%): (vide)
+    [DEC] 1ᵉʳ quartile (€): (vide)
+    [DEC] Médiane (€): 26410
+    [DEC] 3ᵉ quartile (€): (vide)
+    [DEC] Écart interquartile (€): (vide)
+    [DEC] 1ᵉʳ décile (€): (vide)
+    [DEC] 2ᵉ décile (€): (vide)
+    [DEC] 3ᵉ décile  (€): (vide)
+    [DEC] 4ᵉ décile (€): (vide)
+    [DEC] 6ᵉ décile (€): (vide)
+    [DEC] 7ᵉ décile (€): (vide)
+    [DEC] 8ᵉ décile (€): (vide)
+    [DEC] 9ᵉ décile (€): (vide)
+    [DEC] Rapport interdécile D9/D1: (vide)
+    [DEC] S80/S20: (vide)
+    [DEC] Iice de Gini: (vide)
+    [DEC] Part des revenus d’activité (%): (vide)
+    [DEC] dont part des salaires et traitements (%): (vide)
+    [DEC] dont part des iemnités de chômage (%): (vide)
+    [DEC] dont part des revenus des activités non salariées (%): (vide)
+    [DEC] Part des pensions, retraites et rentes (%): (vide)
+    [DEC] Part des autres revenus (%): (vide)
+
+  Ligne 2:
+    Nom géographique GMS: L'Abergement-de-Varey
+    Code géographique: 01002
+    Libellé géographique: L'Abergement-de-Varey
+    [DISP] Nbre de ménages fiscaux: 115
+    [DISP] Nbre de personnes dans les ménages fiscaux: 266
+    [DISP] Nbre d'unités de consommation dans les ménages fiscaux: 181
+    [DISP] 1ᵉʳ quartile (€): (vide)
+    [DISP] Médiane (€): 24480
+    [DISP] 3ᵉ quartile (€): (vide)
+    [DISP] Écart interquartile (€): (vide)
+    [DISP] 1ᵉʳ décile (€): (vide)
+    [DISP] 2ᵉ décile (€): (vide)
+    [DISP]3ᵉ décile (€): (vide)
+    [DISP] 4ᵉ décile (€): (vide)
+    [DISP] 6ᵉ décile (€): (vide)
+    [DISP] 7ᵉ décile (€): (vide)
+    [DISP] 8ᵉ décile (€): (vide)
+    [DISP] 9ᵉ décile (€): (vide)
+    [DISP] Rapport interdécile 9ᵉ décile/1ᵉʳ decile: (vide)
+    [DISP] S80/20: (vide)
+    [DISP] Iice de Gini: (vide)
+    [DISP] Part des revenus d’activité (%): (vide)
+    [DISP] dont part des salaires et traitements(%): (vide)
+    [DISP] dont part des iemnités de chômage (%): (vide)
+    [DISP] dont part des revenus des activités non salariées (%): (vide)
+    [DISP] Part des pensions, retraites et rentes (%): (vide)
+    [DISP] Part des revenus du patrimoine et autres revenus (%): (vide)
+    [DISP] Part de l'ensemble des prestations sociales (%): (vide)
+    [DISP] dont part des prestations familiales (%): (vide)
+    [DISP] dont part des minima sociaux (%): (vide)
+    [DISP] dont part des prestations logement (%): (vide)
+    [DISP] Part des impôts (%): (vide)
+    [DEC] Nbre de ménages fiscaux: 115
+    [DEC] Nbre de personnes dans les ménages fiscaux: 266
+    [DEC] Nbre d'unités de consommation dans les ménages fiscaux: 181
+    [DEC] Part des ménages fiscaux imposés (%): (vide)
+    [DEC] 1ᵉʳ quartile (€): (vide)
+    [DEC] Médiane (€): 24950
+    [DEC] 3ᵉ quartile (€): (vide)
+    [DEC] Écart interquartile (€): (vide)
+    [DEC] 1ᵉʳ décile (€): (vide)
+    [DEC] 2ᵉ décile (€): (vide)
+    [DEC] 3ᵉ décile  (€): (vide)
+    [DEC] 4ᵉ décile (€): (vide)
+    [DEC] 6ᵉ décile (€): (vide)
+    [DEC] 7ᵉ décile (€): (vide)
+    [DEC] 8ᵉ décile (€): (vide)
+    [DEC] 9ᵉ décile (€): (vide)
+    [DEC] Rapport interdécile D9/D1: (vide)
+    [DEC] S80/S20: (vide)
+    [DEC] Iice de Gini: (vide)
+    [DEC] Part des revenus d’activité (%): (vide)
+    [DEC] dont part des salaires et traitements (%): (vide)
+    [DEC] dont part des iemnités de chômage (%): (vide)
+    [DEC] dont part des revenus des activités non salariées (%): (vide)
+    [DEC] Part des pensions, retraites et rentes (%): (vide)
+    [DEC] Part des autres revenus (%): (vide)
+
+  Ligne 3:
+    Nom géographique GMS: Ambérieu-en-Bugey
+    Code géographique: 01004
+    Libellé géographique: Ambérieu-en-Bugey
+    [DISP] Nbre de ménages fiscaux: 6855
+    [DISP] Nbre de personnes dans les ménages fiscaux: 15092
+    [DISP] Nbre d'unités de consommation dans les ménages fiscaux: 10398.2
+    [DISP] 1ᵉʳ quartile (€): 15800
+    [DISP] Médiane (€): 21660
+    [DISP] 3ᵉ quartile (€): 28430
+    [DISP] Écart interquartile (€): 12630
+    [DISP] 1ᵉʳ décile (€): 11890
+    [DISP] 2ᵉ décile (€): 14640
+    [DISP]3ᵉ décile (€): 17040
+    [DISP] 4ᵉ décile (€): 19360
+    [DISP] 6ᵉ décile (€): 23980
+    [DISP] 7ᵉ décile (€): 26880
+    [DISP] 8ᵉ décile (€): 30590
+    [DISP] 9ᵉ décile (€): 36450
+    [DISP] Rapport interdécile 9ᵉ décile/1ᵉʳ decile: 3.1
+    [DISP] S80/20: 4.1
+    [DISP] Iice de Gini: 0.28
+    [DISP] Part des revenus d’activité (%): 72.3
+    [DISP] dont part des salaires et traitements(%): 65.7
+    [DISP] dont part des iemnités de chômage (%): 3.2
+    [DISP] dont part des revenus des activités non salariées (%): 3.4
+    [DISP] Part des pensions, retraites et rentes (%): 25.3
+    [DISP] Part des revenus du patrimoine et autres revenus (%): 10.2
+    [DISP] Part de l'ensemble des prestations sociales (%): 7
+    [DISP] dont part des prestations familiales (%): 2.6
+    [DISP] dont part des minima sociaux (%): 3
+    [DISP] dont part des prestations logement (%): 1.4
+    [DISP] Part des impôts (%): -14.8
+    [DEC] Nbre de ménages fiscaux: 6861
+    [DEC] Nbre de personnes dans les ménages fiscaux: 15103
+    [DEC] Nbre d'unités de consommation dans les ménages fiscaux: 10406.5
+    [DEC] Part des ménages fiscaux imposés (%): 50
+    [DEC] 1ᵉʳ quartile (€): 13180
+    [DEC] Médiane (€): 20940
+    [DEC] 3ᵉ quartile (€): 29260
+    [DEC] Écart interquartile (€): 16080
+    [DEC] 1ᵉʳ décile (€): 7070
+    [DEC] 2ᵉ décile (€): 11530
+    [DEC] 3ᵉ décile  (€): 15080
+    [DEC] 4ᵉ décile (€): 18120
+    [DEC] 6ᵉ décile (€): 23890
+    [DEC] 7ᵉ décile (€): 27290
+    [DEC] 8ᵉ décile (€): 31860
+    [DEC] 9ᵉ décile (€): 39380
+    [DEC] Rapport interdécile D9/D1: 5,6
+    [DEC] S80/S20: 8.1
+    [DEC] Iice de Gini: 0.368
+    [DEC] Part des revenus d’activité (%): 67.9
+    [DEC] dont part des salaires et traitements (%): 61.5
+    [DEC] dont part des iemnités de chômage (%): 3.2
+    [DEC] dont part des revenus des activités non salariées (%): 3.2
+    [DEC] Part des pensions, retraites et rentes (%): 24.4
+    [DEC] Part des autres revenus (%): 7.7
+
+  Ligne 4:
+    Nom géographique GMS: Ambérieux-en-Dombes
+    Code géographique: 01005
+    Libellé géographique: Ambérieux-en-Dombes
+    [DISP] Nbre de ménages fiscaux: 800
+    [DISP] Nbre de personnes dans les ménages fiscaux: 2028
+    [DISP] Nbre d'unités de consommation dans les ménages fiscaux: 1329.7
+    [DISP] 1ᵉʳ quartile (€): 20010
+    [DISP] Médiane (€): 24610
+    [DISP] 3ᵉ quartile (€): 31180
+    [DISP] Écart interquartile (€): 11170
+    [DISP] 1ᵉʳ décile (€): 15560
+    [DISP] 2ᵉ décile (€): 18980
+    [DISP]3ᵉ décile (€): 21100
+    [DISP] 4ᵉ décile (€): 22670
+    [DISP] 6ᵉ décile (€): 26470
+    [DISP] 7ᵉ décile (€): 29780
+    [DISP] 8ᵉ décile (€): 32780
+    [DISP] 9ᵉ décile (€): 40580
+    [DISP] Rapport interdécile 9ᵉ décile/1ᵉʳ decile: 2.6
+    [DISP] S80/20: 3.3
+    [DISP] Iice de Gini: 0.246
+    [DISP] Part des revenus d’activité (%): 81.5
+    [DISP] dont part des salaires et traitements(%): 74.9
+    [DISP] dont part des iemnités de chômage (%): 2.3
+    [DISP] dont part des revenus des activités non salariées (%): 4.3
+    [DISP] Part des pensions, retraites et rentes (%): 21.4
+    [DISP] Part des revenus du patrimoine et autres revenus (%): 10
+    [DISP] Part de l'ensemble des prestations sociales (%): 3.4
+    [DISP] dont part des prestations familiales (%): 2.1
+    [DISP] dont part des minima sociaux (%): 0.9
+    [DISP] dont part des prestations logement (%): 0.4
+    [DISP] Part des impôts (%): -16.3
+    [DEC] Nbre de ménages fiscaux: 801
+    [DEC] Nbre de personnes dans les ménages fiscaux: 2030
+    [DEC] Nbre d'unités de consommation dans les ménages fiscaux: 1331.2
+    [DEC] Part des ménages fiscaux imposés (%): 61
+    [DEC] 1ᵉʳ quartile (€): 18900
+    [DEC] Médiane (€): 24800
+    [DEC] 3ᵉ quartile (€): 32660
+    [DEC] Écart interquartile (€): 13760
+    [DEC] 1ᵉʳ décile (€): 13450
+    [DEC] 2ᵉ décile (€): 17650
+    [DEC] 3ᵉ décile  (€): 20350
+    [DEC] 4ᵉ décile (€): 22080
+    [DEC] 6ᵉ décile (€): 27070
+    [DEC] 7ᵉ décile (€): 30980
+    [DEC] 8ᵉ décile (€): 34570
+    [DEC] 9ᵉ décile (€): 43610
+    [DEC] Rapport interdécile D9/D1: 3,2
+    [DEC] S80/S20: 4.4
+    [DEC] Iice de Gini: 0.298
+    [DEC] Part des revenus d’activité (%): 73.2
+    [DEC] dont part des salaires et traitements (%): 67.2
+    [DEC] dont part des iemnités de chômage (%): 2.2
+    [DEC] dont part des revenus des activités non salariées (%): 3.8
+    [DEC] Part des pensions, retraites et rentes (%): 19.7
+    [DEC] Part des autres revenus (%): 7.1
+
+  Ligne 5:
+    Nom géographique GMS: Ambléon
+    Code géographique: 01006
+    Libellé géographique: Ambléon
+    [DISP] Nbre de ménages fiscaux: 51
+    [DISP] Nbre de personnes dans les ménages fiscaux: 107
+    [DISP] Nbre d'unités de consommation dans les ménages fiscaux: 76.6
+    [DISP] 1ᵉʳ quartile (€): (vide)
+    [DISP] Médiane (€): 24210
+    [DISP] 3ᵉ quartile (€): (vide)
+    [DISP] Écart interquartile (€): (vide)
+    [DISP] 1ᵉʳ décile (€): (vide)
+    [DISP] 2ᵉ décile (€): (vide)
+    [DISP]3ᵉ décile (€): (vide)
+    [DISP] 4ᵉ décile (€): (vide)
+    [DISP] 6ᵉ décile (€): (vide)
+    [DISP] 7ᵉ décile (€): (vide)
+    [DISP] 8ᵉ décile (€): (vide)
+    [DISP] 9ᵉ décile (€): (vide)
+    [DISP] Rapport interdécile 9ᵉ décile/1ᵉʳ decile: (vide)
+    [DISP] S80/20: (vide)
+    [DISP] Iice de Gini: (vide)
+    [DISP] Part des revenus d’activité (%): (vide)
+    [DISP] dont part des salaires et traitements(%): (vide)
+    [DISP] dont part des iemnités de chômage (%): (vide)
+    [DISP] dont part des revenus des activités non salariées (%): (vide)
+    [DISP] Part des pensions, retraites et rentes (%): (vide)
+    [DISP] Part des revenus du patrimoine et autres revenus (%): (vide)
+    [DISP] Part de l'ensemble des prestations sociales (%): (vide)
+    [DISP] dont part des prestations familiales (%): (vide)
+    [DISP] dont part des minima sociaux (%): (vide)
+    [DISP] dont part des prestations logement (%): (vide)
+    [DISP] Part des impôts (%): (vide)
+    [DEC] Nbre de ménages fiscaux: 51
+    [DEC] Nbre de personnes dans les ménages fiscaux: 107
+    [DEC] Nbre d'unités de consommation dans les ménages fiscaux: 76.6
+    [DEC] Part des ménages fiscaux imposés (%): (vide)
+    [DEC] 1ᵉʳ quartile (€): (vide)
+    [DEC] Médiane (€): 24080
+    [DEC] 3ᵉ quartile (€): (vide)
+    [DEC] Écart interquartile (€): (vide)
+    [DEC] 1ᵉʳ décile (€): (vide)
+    [DEC] 2ᵉ décile (€): (vide)
+    [DEC] 3ᵉ décile  (€): (vide)
+    [DEC] 4ᵉ décile (€): (vide)
+    [DEC] 6ᵉ décile (€): (vide)
+    [DEC] 7ᵉ décile (€): (vide)
+    [DEC] 8ᵉ décile (€): (vide)
+    [DEC] 9ᵉ décile (€): (vide)
+    [DEC] Rapport interdécile D9/D1: (vide)
+    [DEC] S80/S20: (vide)
+    [DEC] Iice de Gini: (vide)
+    [DEC] Part des revenus d’activité (%): (vide)
+    [DEC] dont part des salaires et traitements (%): (vide)
+    [DEC] dont part des iemnités de chômage (%): (vide)
+    [DEC] dont part des revenus des activités non salariées (%): (vide)
+    [DEC] Part des pensions, retraites et rentes (%): (vide)
+    [DEC] Part des autres revenus (%): (vide)
+
+[8] RÉSUMÉ
+================================================================================
+  Fichier: data_input/revenu-des-francais-a-la-commune-1765372688826.csv
+  Lignes: 34,926
+  Colonnes: 57
+  Colonnes numériques: 9
+  Colonnes textuelles: 48
+
+================================================================================
+FIN DE L'ANALYSE
+================================================================================
