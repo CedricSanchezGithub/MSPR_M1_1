@@ -1,0 +1,406 @@
+======================================================================
+ANALYSE EXPLORATOIRE - DIPLÔMES ET FORMATION (INSEE 2022)
+======================================================================
+
+Fichiers trouvés dans data/input/nouveau/:
+  - base-cc-diplomes-formation-2022-COM.CSV (0.00 MB)
+  - base-cc-diplomes-formation-2022.CSV (80.63 MB)
+  - meta_base-cc-diplomes-formation-2022-COM.CSV (0.01 MB)
+  - meta_base-cc-diplomes-formation-2022.CSV (2.02 MB)
+
+======================================================================
+FICHIER: meta_base-cc-diplomes-formation-2022-COM.CSV (0.01 MB)
+======================================================================
+
+  Encodage: utf-8
+  Séparateur: ';'
+  Colonnes: 7
+
+  COLONNES:
+      1. COD_VAR
+      2. LIB_VAR
+      3. LIB_VAR_LONG
+      4. COD_MOD
+      5. LIB_MOD
+      6. TYPE_VAR
+      7. LONG_VAR
+
+  LIGNES: 70
+
+  DISTRIBUTIONS (colonnes avec < 50 valeurs uniques):
+
+    COD_MOD (5 valeurs):
+      - (vide): 66
+      - 97501: 1
+      - 97502: 1
+      - 97701: 1
+      - 97801: 1
+
+    LIB_MOD (5 valeurs):
+      - (vide): 66
+      - Miquelon-Langlade: 1
+      - Saint-Pierre: 1
+      - Saint-Barthélemy: 1
+      - Saint-Martin: 1
+
+    TYPE_VAR (2 valeurs):
+      - NUM: 66
+      - CHAR: 4
+
+    LONG_VAR (2 valeurs):
+      - 16: 66
+      - 5: 4
+
+  ÉCHANTILLON (3 premières lignes):
+
+    Ligne 1:
+      COD_VAR: P22_POP0205
+      LIB_VAR: Pop 2-5 ans en 2022 (princ)
+      LIB_VAR_LONG: Nombre de personnes de 2 à 5 ans en 2022
+      COD_MOD: (vide)
+      LIB_MOD: (vide)
+      TYPE_VAR: NUM
+      LONG_VAR: 16
+
+    Ligne 2:
+      COD_VAR: P22_POP0610
+      LIB_VAR: Pop 6-10 ans en 2022 (princ)
+      LIB_VAR_LONG: Nombre de personnes de 6 à 10 ans en 2022
+      COD_MOD: (vide)
+      LIB_MOD: (vide)
+      TYPE_VAR: NUM
+      LONG_VAR: 16
+
+    Ligne 3:
+      COD_VAR: P22_POP1114
+      LIB_VAR: Pop 11-14 ans en 2022 (princ)
+      LIB_VAR_LONG: Nombre de personnes de 11 à 14 ans en 2022
+      COD_MOD: (vide)
+      LIB_MOD: (vide)
+      TYPE_VAR: NUM
+      LONG_VAR: 16
+
+======================================================================
+FICHIER: meta_base-cc-diplomes-formation-2022.CSV (2.02 MB)
+======================================================================
+
+  Encodage: utf-8
+  Séparateur: ';'
+  Colonnes: 7
+
+  COLONNES:
+      1. COD_VAR
+      2. LIB_VAR
+      3. LIB_VAR_LONG
+      4. COD_MOD
+      5. LIB_MOD
+      6. TYPE_VAR
+      7. LONG_VAR
+
+  LIGNES: 35,092
+
+  DISTRIBUTIONS (colonnes avec < 50 valeurs uniques):
+
+    TYPE_VAR (2 valeurs):
+      - CHAR: 34,903
+      - NUM: 189
+
+    LONG_VAR (3 valeurs):
+      - 5: 34,903
+      - 17: 174
+      - 16: 15
+
+  ÉCHANTILLON (3 premières lignes):
+
+    Ligne 1:
+      COD_VAR: P22_POP0205
+      LIB_VAR: Pop 2-5 ans en 2022 (princ)
+      LIB_VAR_LONG: Nombre de personnes de 2 à 5 ans en 2022
+      COD_MOD: (vide)
+      LIB_MOD: (vide)
+      TYPE_VAR: NUM
+      LONG_VAR: 17
+
+    Ligne 2:
+      COD_VAR: P22_POP0610
+      LIB_VAR: Pop 6-10 ans en 2022 (princ)
+      LIB_VAR_LONG: Nombre de personnes de 6 à 10 ans en 2022
+      COD_MOD: (vide)
+      LIB_MOD: (vide)
+      TYPE_VAR: NUM
+      LONG_VAR: 17
+
+    Ligne 3:
+      COD_VAR: P22_POP1114
+      LIB_VAR: Pop 11-14 ans en 2022 (princ)
+      LIB_VAR_LONG: Nombre de personnes de 11 à 14 ans en 2022
+      COD_MOD: (vide)
+      LIB_MOD: (vide)
+      TYPE_VAR: NUM
+      LONG_VAR: 17
+
+======================================================================
+FICHIER: base-cc-diplomes-formation-2022-COM.CSV (0.00 MB)
+======================================================================
+
+  Encodage: utf-8
+  Séparateur: ';'
+  Colonnes: 67
+
+  COLONNES:
+      1. CODGEO
+      2. P22_POP0205
+      3. P22_POP0610
+      4. P22_POP1114
+      5. P22_POP1517
+      6. P22_POP1824
+      7. P22_POP2529
+      8. P22_POP30P
+      9. P22_SCOL0205
+     10. P22_SCOL0610
+     11. P22_SCOL1114
+     12. P22_SCOL1517
+     13. P22_SCOL1824
+     14. P22_SCOL2529
+     15. P22_SCOL30P
+     16. P22_H0205
+     17. P22_H0610
+     18. P22_H1114
+     19. P22_H1517
+     20. P22_H1824
+     21. P22_H2529
+     22. P22_H30P
+     23. P22_HSCOL0205
+     24. P22_HSCOL0610
+     25. P22_HSCOL1114
+     26. P22_HSCOL1517
+     27. P22_HSCOL1824
+     28. P22_HSCOL2529
+     29. P22_HSCOL30P
+     30. P22_F0205
+    ... et 37 autres colonnes
+
+  LIGNES: 4
+
+  DISTRIBUTIONS (colonnes avec < 50 valeurs uniques):
+
+    CODGEO (4 valeurs):
+      - 97501: 1
+      - 97502: 1
+      - 97701: 1
+      - 97801: 1
+
+    P22_POP0205 (4 valeurs):
+      - 21: 1
+      - 146: 1
+      - 361.399042774753: 1
+      - 1690.76453396355: 1
+
+    P22_POP0610 (4 valeurs):
+      - 38: 1
+      - 311: 1
+      - 472.498698086751: 1
+      - 2528.47634325661: 1
+
+    P22_POP1114 (4 valeurs):
+      - 26: 1
+      - 286: 1
+      - 357.827788885775: 1
+      - 2149.14894610094: 1
+
+    P22_POP1517 (4 valeurs):
+      - 14: 1
+      - 209: 1
+      - 214.940088106012: 1
+      - 1546.99143906647: 1
+
+    P22_POP1824 (4 valeurs):
+      - 24: 1
+      - 204: 1
+      - 885.817030793152: 1
+      - 2151.66325195449: 1
+
+    P22_POP2529 (4 valeurs):
+      - 28: 1
+      - 260: 1
+      - 1011.85490761233: 1
+      - 1746.14323396355: 1
+
+    P22_POP30P (4 valeurs):
+      - 432: 1
+      - 3728: 1
+      - 7073.58626288734: 1
+      - 18860.3182833264: 1
+
+    P22_SCOL0205 (4 valeurs):
+      - 17: 1
+      - 122: 1
+      - 253.013055577199: 1
+      - 1267.75785764938: 1
+
+    P22_SCOL0610 (4 valeurs):
+      - 37: 1
+      - 305: 1
+      - 459.402364365163: 1
+      - 2309.17592692626: 1
+
+  ÉCHANTILLON (3 premières lignes):
+
+    Ligne 1:
+      CODGEO: 97501
+      P22_POP0205: 21
+      P22_POP0610: 38
+      P22_POP1114: 26
+      P22_POP1517: 14
+      P22_POP1824: 24
+      P22_POP2529: 28
+      P22_POP30P: 432
+      P22_SCOL0205: 17
+      P22_SCOL0610: 37
+      P22_SCOL1114: 26
+      P22_SCOL1517: 13
+      P22_SCOL1824: 2
+      P22_SCOL2529: 0
+      P22_SCOL30P: 1
+      ... et 52 autres champs
+
+    Ligne 2:
+      CODGEO: 97502
+      P22_POP0205: 146
+      P22_POP0610: 311
+      P22_POP1114: 286
+      P22_POP1517: 209
+      P22_POP1824: 204
+      P22_POP2529: 260
+      P22_POP30P: 3728
+      P22_SCOL0205: 122
+      P22_SCOL0610: 305
+      P22_SCOL1114: 284
+      P22_SCOL1517: 201
+      P22_SCOL1824: 48
+      P22_SCOL2529: 6
+      P22_SCOL30P: 23
+      ... et 52 autres champs
+
+    Ligne 3:
+      CODGEO: 97701
+      P22_POP0205: 361.399042774753
+      P22_POP0610: 472.498698086751
+      P22_POP1114: 357.827788885775
+      P22_POP1517: 214.940088106012
+      P22_POP1824: 885.817030793152
+      P22_POP2529: 1011.85490761233
+      P22_POP30P: 7073.58626288734
+      P22_SCOL0205: 253.013055577199
+      P22_SCOL0610: 459.402364365163
+      P22_SCOL1114: 356.838144464489
+      P22_SCOL1517: 201.983853218397
+      P22_SCOL1824: 144.347825316192
+      P22_SCOL2529: 17.8370287338253
+      P22_SCOL30P: 55.713515179447
+      ... et 52 autres champs
+
+======================================================================
+FICHIER: base-cc-diplomes-formation-2022.CSV (80.63 MB)
+======================================================================
+
+  Encodage: utf-8
+  Séparateur: ';'
+  Colonnes: 190
+
+  COLONNES:
+      1. CODGEO
+      2. P22_POP0205
+      3. P22_POP0610
+      4. P22_POP1114
+      5. P22_POP1517
+      6. P22_POP1824
+      7. P22_POP2529
+      8. P22_POP30P
+      9. P22_SCOL0205
+     10. P22_SCOL0610
+     11. P22_SCOL1114
+     12. P22_SCOL1517
+     13. P22_SCOL1824
+     14. P22_SCOL2529
+     15. P22_SCOL30P
+     16. P22_H0205
+     17. P22_H0610
+     18. P22_H1114
+     19. P22_H1517
+     20. P22_H1824
+     21. P22_H2529
+     22. P22_H30P
+     23. P22_HSCOL0205
+     24. P22_HSCOL0610
+     25. P22_HSCOL1114
+     26. P22_HSCOL1517
+     27. P22_HSCOL1824
+     28. P22_HSCOL2529
+     29. P22_HSCOL30P
+     30. P22_F0205
+    ... et 160 autres colonnes
+
+  LIGNES: 34,903
+
+  DISTRIBUTIONS (colonnes avec < 50 valeurs uniques):
+
+  ÉCHANTILLON (3 premières lignes):
+
+    Ligne 1:
+      CODGEO: 01001
+      P22_POP0205: 34
+      P22_POP0610: 56
+      P22_POP1114: 45
+      P22_POP1517: 36
+      P22_POP1824: 30
+      P22_POP2529: 37
+      P22_POP30P: 594
+      P22_SCOL0205: 26
+      P22_SCOL0610: 53
+      P22_SCOL1114: 43
+      P22_SCOL1517: 34
+      P22_SCOL1824: 10
+      P22_SCOL2529: 1
+      P22_SCOL30P: 0
+      ... et 175 autres champs
+
+    Ligne 2:
+      CODGEO: 01002
+      P22_POP0205: 14
+      P22_POP0610: 19
+      P22_POP1114: 20
+      P22_POP1517: 14
+      P22_POP1824: 11
+      P22_POP2529: 7
+      P22_POP30P: 184
+      P22_SCOL0205: 12
+      P22_SCOL0610: 17
+      P22_SCOL1114: 20
+      P22_SCOL1517: 13
+      P22_SCOL1824: 7
+      P22_SCOL2529: 0
+      P22_SCOL30P: 2
+      ... et 175 autres champs
+
+    Ligne 3:
+      CODGEO: 01004
+      P22_POP0205: 833.778507539282
+      P22_POP0610: 992.962423609689
+      P22_POP1114: 773.079155075357
+      P22_POP1517: 611.095184700315
+      P22_POP1824: 1470.39101358599
+      P22_POP2529: 1079.70432852828
+      P22_POP30P: 9400.46118518215
+      P22_SCOL0205: 572.334023568863
+      P22_SCOL0610: 963.571669806786
+      P22_SCOL1114: 762.15794021281
+      P22_SCOL1517: 573.737941943905
+      P22_SCOL1824: 601.409800388863
+      P22_SCOL2529: 26.554418184718
+      P22_SCOL30P: 77.1863961662459
+      ... et 175 autres champs
+
+======================================================================
+FIN DE L'ANALYSE
+======================================================================
