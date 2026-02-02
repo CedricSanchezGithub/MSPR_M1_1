@@ -8,8 +8,8 @@ from collections import Counter, defaultdict
 import sys
 
 # Configuration
-FILE_PATH = "data_input/revenu-des-francais-a-la-commune-1765372688826.csv"
-OUTPUT_FILE = "exploration_revenus_output.txt"
+FILE_PATH = "data/input/revenu-des-francais-a-la-commune-1765372688826.csv"
+OUTPUT_FILE = "outputs/exploration_revenus_output.txt"
 
 def main():
     output_lines = []

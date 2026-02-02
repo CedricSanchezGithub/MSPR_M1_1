@@ -34,9 +34,9 @@ except ImportError:
     import geopandas as gpd
 
 # Configuration
-INPUT_FILE = "candidats_classified.txt"
+INPUT_FILE = "data/output/candidats_classified.txt"
 SEPARATOR = ";"
-OUTPUT_DIR = "graphiques_presidentielles"
+OUTPUT_DIR = "graphiques/presidentielles"
 
 # Créer le dossier de sortie
 os.makedirs(OUTPUT_DIR, exist_ok=True)

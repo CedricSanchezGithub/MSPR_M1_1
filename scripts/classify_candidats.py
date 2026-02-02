@@ -8,8 +8,8 @@ import csv
 import sys
 
 # Configuration
-INPUT_FILE = "data_input/candidats_results.txt"
-OUTPUT_FILE = "candidats_classified.txt"
+INPUT_FILE = "data/input/candidats_results.txt"
+OUTPUT_FILE = "data/output/candidats_classified.txt"
 SEPARATOR = ";"
 
 # Classification des nuances politiques

@@ -10,8 +10,8 @@ from collections import Counter, defaultdict
 import sys
 
 # Configuration
-FILE_PATH = "data_input/candidats_results.txt"
-OUTPUT_FILE = "exploration_candidats_output.txt"
+FILE_PATH = "data/input/candidats_results.txt"
+OUTPUT_FILE = "outputs/exploration_candidats_output.txt"
 SEPARATOR = ";"
 
 def main():
