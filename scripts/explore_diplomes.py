@@ -8,7 +8,7 @@ import os
 from collections import Counter, defaultdict
 
 # Configuration
-INPUT_DIR = "data/input/nouveau"
+INPUT_DIR = "data/input/education"
 OUTPUT_FILE = "outputs/exploration_diplomes_output.txt"
 
 def analyze_file(filepath, output_lines, max_rows=100000):

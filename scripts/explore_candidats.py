@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 import sys
 
 # Configuration
-FILE_PATH = "data/input/candidats_results.txt"
+FILE_PATH = "data/input/elections/candidats_results.txt"
 OUTPUT_FILE = "outputs/exploration_candidats_output.txt"
 SEPARATOR = ";"
 

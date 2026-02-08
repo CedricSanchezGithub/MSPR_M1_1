@@ -1,0 +1,761 @@
+======================================================================
+ANALYSE EXPLORATOIRE - NOUVEAUX FICHIERS (data/input/nouveau/)
+======================================================================
+
+Fichiers trouvés:
+  - base-pop-historiques-1876-2023.xlsx (6.7 MB)
+  - fichier_pop_reference_6823.xlsx (16.7 MB)
+
+======================================================================
+FICHIER: base-pop-historiques-1876-2023.xlsx (6.7 MB)
+======================================================================
+
+  Nombre d'onglets: 3
+  Onglets: pop_1876_2023, Variables, Documentation
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: pop_1876_2023
+  ────────────────────────────────────────────────────────────
+  Colonnes (41):
+      1. Chiffres détaillés - Séries historiques de population (1876 à 2023) | type: object     | non-null: 30/30
+      2. Unnamed: 1                               | type: object     | non-null: 27/30
+      3. Unnamed: 2                               | type: object     | non-null: 27/30
+      4. Unnamed: 3                               | type: object     | non-null: 28/30
+      5. Unnamed: 4                               | type: object     | non-null: 27/30
+      6. Unnamed: 5                               | type: object     | non-null: 27/30
+      7. Unnamed: 6                               | type: object     | non-null: 27/30
+      8. Unnamed: 7                               | type: object     | non-null: 27/30
+      9. Unnamed: 8                               | type: object     | non-null: 27/30
+     10. Unnamed: 9                               | type: object     | non-null: 27/30
+     11. Unnamed: 10                              | type: object     | non-null: 27/30
+     12. Unnamed: 11                              | type: object     | non-null: 27/30
+     13. Unnamed: 12                              | type: object     | non-null: 27/30
+     14. Unnamed: 13                              | type: object     | non-null: 27/30
+     15. Unnamed: 14                              | type: object     | non-null: 27/30
+     16. Unnamed: 15                              | type: object     | non-null: 27/30
+     17. Unnamed: 16                              | type: object     | non-null: 27/30
+     18. Unnamed: 17                              | type: object     | non-null: 27/30
+     19. Unnamed: 18                              | type: object     | non-null: 27/30
+     20. Unnamed: 19                              | type: object     | non-null: 27/30
+     21. Unnamed: 20                              | type: object     | non-null: 27/30
+     22. Unnamed: 21                              | type: object     | non-null: 27/30
+     23. Unnamed: 22                              | type: object     | non-null: 27/30
+     24. Unnamed: 23                              | type: object     | non-null: 27/30
+     25. Unnamed: 24                              | type: object     | non-null: 27/30
+     26. Unnamed: 25                              | type: object     | non-null: 27/30
+     27. Unnamed: 26                              | type: object     | non-null: 27/30
+     28. Unnamed: 27                              | type: object     | non-null: 27/30
+     29. Unnamed: 28                              | type: object     | non-null: 27/30
+     30. Unnamed: 29                              | type: object     | non-null: 27/30
+     31. Unnamed: 30                              | type: object     | non-null: 27/30
+     32. Unnamed: 31                              | type: object     | non-null: 27/30
+     33. Unnamed: 32                              | type: object     | non-null: 27/30
+     34. Unnamed: 33                              | type: object     | non-null: 27/30
+     35. Unnamed: 34                              | type: object     | non-null: 27/30
+     36. Unnamed: 35                              | type: object     | non-null: 27/30
+     37. Unnamed: 36                              | type: object     | non-null: 27/30
+     38. Unnamed: 37                              | type: object     | non-null: 27/30
+     39. Unnamed: 38                              | type: object     | non-null: 27/30
+     40. Unnamed: 39                              | type: object     | non-null: 27/30
+     41. Unnamed: 40                              | type: object     | non-null: 27/30
+
+  Lignes totales (estimé): 34,883
+
+  APERÇU (5 premières lignes):
+      Chiffres détaillés - Séries historiques de population (1876 à 2023) Unnamed: 1   Unnamed: 2            Unnamed: 3          Unnamed: 4          Unnamed: 5          Unnamed: 6          Unnamed: 7          Unnamed: 8          Unnamed: 9         Unnamed: 10         Unnamed: 11         Unnamed: 12         Unnamed: 13         Unnamed: 14         Unnamed: 15         Unnamed: 16         Unnamed: 17         Unnamed: 18         Unnamed: 19         Unnamed: 20         Unnamed: 21         Unnamed: 22         Unnamed: 23         Unnamed: 24         Unnamed: 25         Unnamed: 26         Unnamed: 27         Unnamed: 28         Unnamed: 29         Unnamed: 30         Unnamed: 31         Unnamed: 32         Unnamed: 33         Unnamed: 34         Unnamed: 35         Unnamed: 36         Unnamed: 37         Unnamed: 38         Unnamed: 39         Unnamed: 40
+    0                     France hors Mayotte - Communes                         NaN          NaN                                       NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN
+    1  Mise en ligne : décembre 2025 - Géographie au ...                         NaN          NaN                   NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN
+    2  ©Insee - Source(s) : Insee, recensements de la...                         NaN          NaN                   NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN
+    3                                  Code géographique                      Région  Département  Libellé géographique  Population en 2023  Population en 2022  Population en 2021  Population en 2020  Population en 2019  Population en 2018  Population en 2017  Population en 2016  Population en 2015  Population en 2014  Population en 2013  Population en 2012  Population en 2011  Population en 2010  Population en 2009  Population en 2008  Population en 2007  Population en 2006  Population en 1999  Population en 1990  Population en 1982  Population en 1975  Population en 1968  Population en 1962  Population en 1954  Population en 1936  Population en 1931  Population en 1926  Population en 1921  Population en 1911  Population en 1906  Population en 1901  Population en 1896  Population en 1891  Population en 1886  Population en 1881  Population en 1876
+    4                                             CODGEO                         REG          DEP                LIBGEO            PMUN2023            PMUN2022            PMUN2021            PMUN2020            PMUN2019            PMUN2018            PMUN2017            PMUN2016            PMUN2015            PMUN2014            PMUN2013            PMUN2012            PMUN2011            PMUN2010            PMUN2009            PMUN2008            PMUN2007            PMUN2006            PSDC1999            PSDC1990            PSDC1982            PSDC1975            PSDC1968            PSDC1962            PTOT1954            PTOT1936            PTOT1931            PTOT1926            PTOT1921            PTOT1911            PTOT1906            PTOT1901            PTOT1896            PTOT1891            PTOT1886            PTOT1881            PTOT1876
+
+  VALEURS UNIQUES (colonnes texte):
+    Chiffres détaillés - Séries historiques de population (1876 à 2023): 30 valeurs uniques (trop pour lister)
+    Unnamed: 1 (3 valeurs):
+      - 84: 25
+      - Région: 1
+      - REG: 1
+    Unnamed: 2 (3 valeurs):
+      - 01: 25
+      - Département: 1
+      - DEP: 1
+    Unnamed: 3: 28 valeurs uniques (trop pour lister)
+    Unnamed: 4: 27 valeurs uniques (trop pour lister)
+    Unnamed: 5: 27 valeurs uniques (trop pour lister)
+    Unnamed: 6: 27 valeurs uniques (trop pour lister)
+    Unnamed: 7: 27 valeurs uniques (trop pour lister)
+    Unnamed: 8: 27 valeurs uniques (trop pour lister)
+    Unnamed: 9: 27 valeurs uniques (trop pour lister)
+    Unnamed: 10: 27 valeurs uniques (trop pour lister)
+    Unnamed: 11: 27 valeurs uniques (trop pour lister)
+    Unnamed: 12: 27 valeurs uniques (trop pour lister)
+    Unnamed: 13: 27 valeurs uniques (trop pour lister)
+    Unnamed: 14: 27 valeurs uniques (trop pour lister)
+    Unnamed: 15: 27 valeurs uniques (trop pour lister)
+    Unnamed: 16: 27 valeurs uniques (trop pour lister)
+    Unnamed: 17: 27 valeurs uniques (trop pour lister)
+    Unnamed: 18: 27 valeurs uniques (trop pour lister)
+    Unnamed: 19: 27 valeurs uniques (trop pour lister)
+    Unnamed: 20: 27 valeurs uniques (trop pour lister)
+    Unnamed: 21: 27 valeurs uniques (trop pour lister)
+    Unnamed: 22: 26 valeurs uniques (trop pour lister)
+    Unnamed: 23: 27 valeurs uniques (trop pour lister)
+    Unnamed: 24: 27 valeurs uniques (trop pour lister)
+    Unnamed: 25: 27 valeurs uniques (trop pour lister)
+    Unnamed: 26: 27 valeurs uniques (trop pour lister)
+    Unnamed: 27: 26 valeurs uniques (trop pour lister)
+    Unnamed: 28: 27 valeurs uniques (trop pour lister)
+    Unnamed: 29: 27 valeurs uniques (trop pour lister)
+    Unnamed: 30: 27 valeurs uniques (trop pour lister)
+    Unnamed: 31: 27 valeurs uniques (trop pour lister)
+    Unnamed: 32: 27 valeurs uniques (trop pour lister)
+    Unnamed: 33: 26 valeurs uniques (trop pour lister)
+    Unnamed: 34: 27 valeurs uniques (trop pour lister)
+    Unnamed: 35: 27 valeurs uniques (trop pour lister)
+    Unnamed: 36: 27 valeurs uniques (trop pour lister)
+    Unnamed: 37: 27 valeurs uniques (trop pour lister)
+    Unnamed: 38: 27 valeurs uniques (trop pour lister)
+    Unnamed: 39: 27 valeurs uniques (trop pour lister)
+    Unnamed: 40: 27 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: Variables
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Chiffres détaillés - Séries historiques de population (1876 à 2023) | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 26/30
+      3. Unnamed: 2                               | type: object     | non-null: 26/30
+
+  Lignes totales (estimé): 1,046
+
+  APERÇU (5 premières lignes):
+      Chiffres détaillés - Séries historiques de population (1876 à 2023) Unnamed: 1    Unnamed: 2
+    0                     France hors Mayotte - Communes                         NaN           NaN
+    1  Mise en ligne : décembre 2025 - Géographie au ...                         NaN           NaN
+    2  ©Insee - Source(s) : Insee, recensements de la...                         NaN           NaN
+    3                                                NaN                         NaN           NaN
+    4                                           VARIABLE                     LIB_VAR  LIB_VAR_LONG
+
+  VALEURS UNIQUES (colonnes texte):
+    Chiffres détaillés - Séries historiques de population (1876 à 2023): 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 26 valeurs uniques (trop pour lister)
+    Unnamed: 2: 26 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: Documentation
+  ────────────────────────────────────────────────────────────
+  Colonnes (1):
+      1. Chiffres détaillés - Séries historiques de population (1876 à 2023) | type: object     | non-null: 12/13
+
+  Lignes totales (estimé): 13
+
+  APERÇU (5 premières lignes):
+      Chiffres détaillés - Séries historiques de population (1876 à 2023)
+    0                     France hors Mayotte - Communes                 
+    1  Mise en ligne : décembre 2025 - Géographie au ...                 
+    2  ©Insee - Source(s) : Insee, recensements de la...                 
+    3                                                NaN                 
+    4                                         Géographie                 
+
+  VALEURS UNIQUES (colonnes texte):
+    Chiffres détaillés - Séries historiques de population (1876 à 2023) (12 valeurs):
+      - France hors Mayotte - Communes: 1
+      - Mise en ligne : décembre 2025 - Géographie au 01/0: 1
+      - ©Insee - Source(s) : Insee, recensements de la pop: 1
+      - Géographie: 1
+      - Les statistiques sont proposées dans la géographie: 1
+      - Définitions: 1
+      - Population municipale (depuis 2006): 1
+      - Le concept de population municipale est défini par: 1
+      - Population sans doubles comptes (1962 à 1999): 1
+      - La population sans doubles comptes comprend : 
+
+1 : 1
+
+======================================================================
+FICHIER: fichier_pop_reference_6823.xlsx (16.7 MB)
+======================================================================
+
+  Nombre d'onglets: 25
+  Onglets: Documentation et présentation, Modifications territoriales, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 1999, 1990, 1982, 1975, 1968
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: Documentation et présentation
+  ────────────────────────────────────────────────────────────
+  Colonnes (1):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 26/30
+
+  Lignes totales (estimé): 1,048,575
+
+  APERÇU (5 premières lignes):
+         Populations de référence communales depuis 1968
+    0                      Mise en ligne : décembre 2025
+    1  ©Insee       Source(s) : Insee, Recensements d...
+    2                                                NaN
+    3                                       Présentation
+    4  Ce fichier répertorie les populations de référ...
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 26 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: Modifications territoriales
+  ────────────────────────────────────────────────────────────
+  Colonnes (1):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 19/25
+
+  Lignes totales (estimé): 1,048,575
+
+  APERÇU (5 premières lignes):
+         Populations de référence communales depuis 1968
+    0                      Mise en ligne : décembre 2025
+    1                                                NaN
+    2                        Modifications territoriales
+    3  Certaines communes ont connu un ou des événeme...
+    4                                                NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968 (19 valeurs):
+      - Mise en ligne : décembre 2025: 1
+      - - changement de département: 1
+      - Le changement de département de la commune 14513 (: 1
+      - Les communes codées 02285, 02344, 14513, 28131, 38: 1
+      - Cas des changements de département :: 1
+      - Le fichier « Liste des événements survenus aux com: 1
+      - Toutes les informations sur ces modifications sont: 1
+      - - transformation de commune associée en commune dé: 1
+      - - transfert de chef-lieu avec changement de code: 1
+      - - suppression de commune déléguée: 1
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2023
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 34,906
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2023        NaN        NaN
+    1        Géographie communale au 1er janvier 2025        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2022
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 34,948
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2022        NaN        NaN
+    1        Géographie communale au 1er janvier 2024        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2021
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 34,968
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2021        NaN        NaN
+    1        Géographie communale au 1er janvier 2023        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2020
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 34,968
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2020        NaN        NaN
+    1        Géographie communale au 1er janvier 2022        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2019
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 34,981
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2019        NaN        NaN
+    1        Géographie communale au 1er janvier 2021        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2018
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 34,983
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2018        NaN        NaN
+    1        Géographie communale au 1er janvier 2020        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2017
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 34,983
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2017        NaN        NaN
+    1        Géographie communale au 1er janvier 2019        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2016
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 35,370
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2016        NaN        NaN
+    1        Géographie communale au 1er janvier 2018        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2015
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 35,429
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2015        NaN        NaN
+    1        Géographie communale au 1er janvier 2017        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2014
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 35,898
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2014        NaN        NaN
+    1        Géographie communale au 1er janvier 2016        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2013
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,671
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2013        NaN        NaN
+    1        Géographie communale au 1er janvier 2015        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2012
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,694
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2012        NaN        NaN
+    1        Géographie communale au 1er janvier 2014        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2011
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,694
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2011        NaN        NaN
+    1        Géographie communale au 1er janvier 2013        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2010
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,713
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2010        NaN        NaN
+    1        Géographie communale au 1er janvier 2012        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2009
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,710
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2009        NaN        NaN
+    1        Géographie communale au 1er janvier 2011        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2008
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,712
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2008        NaN        NaN
+    1        Géographie communale au 1er janvier 2010        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2007
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,712
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2007        NaN        NaN
+    1        Géographie communale au 1er janvier 2009        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 2006
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,711
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0       Population municipale au 1er janvier 2006        NaN        NaN
+    1        Géographie communale au 1er janvier 2008        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 1999
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,707
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0            Population municipale au 8 mars 1999        NaN        NaN
+    1             Géographie communale au 8 mars 1999        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 24 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 1990
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,692
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0            Population municipale au 5 mars 1990        NaN        NaN
+    1             Géographie communale au 5 mars 1990        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 1982
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,459
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0            Population municipale au 4 mars 1982        NaN        NaN
+    1             Géographie communale au 4 mars 1982        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 1975
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 36,780
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0        Population municipale au 20 février 1975        NaN        NaN
+    1         Géographie communale au 20 février 1975        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: 1968
+  ────────────────────────────────────────────────────────────
+  Colonnes (3):
+      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
+      2. Unnamed: 1                               | type: object     | non-null: 25/30
+      3. Unnamed: 2                               | type: object     | non-null: 25/30
+
+  Lignes totales (estimé): 37,734
+
+  APERÇU (5 premières lignes):
+      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
+    0          Population municipale au 1er mars 1968        NaN        NaN
+    1           Géographie communale au 1er mars 1968        NaN        NaN
+    2                   Mise en ligne : décembre 2025        NaN        NaN
+    3    Source : Insee, recensement de la population        NaN        NaN
+    4                                             NaN        NaN        NaN
+
+  VALEURS UNIQUES (colonnes texte):
+    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
+    Unnamed: 1: 25 valeurs uniques (trop pour lister)
+    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+
+======================================================================
+FIN DE L'ANALYSE
+======================================================================

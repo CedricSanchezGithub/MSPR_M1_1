@@ -23,7 +23,7 @@ except ImportError:
     import geopandas as gpd
 
 # Configuration
-REVENUS_FILE = "data/input/revenu-des-francais-a-la-commune-1765372688826.csv"
+REVENUS_FILE = "data/input/economie/revenu-des-francais-a-la-commune-1765372688826.csv"
 ELECTIONS_FILE = "data/output/candidats_classified.txt"
 OUTPUT_DIR = "graphiques/comparatifs"
 GEOJSON_PATH = "data/output/departements.geojson"

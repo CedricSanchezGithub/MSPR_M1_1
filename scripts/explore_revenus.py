@@ -8,7 +8,7 @@ from collections import Counter, defaultdict
 import sys
 
 # Configuration
-FILE_PATH = "data/input/revenu-des-francais-a-la-commune-1765372688826.csv"
+FILE_PATH = "data/input/economie/revenu-des-francais-a-la-commune-1765372688826.csv"
 OUTPUT_FILE = "outputs/exploration_revenus_output.txt"
 
 def main():

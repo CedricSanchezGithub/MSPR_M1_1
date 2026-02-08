@@ -1,0 +1,93 @@
+======================================================================
+ANALYSE EXPLORATOIRE - NOUVEAUX FICHIERS INSEE
+======================================================================
+
+Fichiers trouvés (3):
+  - pop-act2554-csp-cd-6822.xlsx (28.5 MB)
+  - pop-act2554-csp-dipl-cd-6822.xlsx (51.9 MB)
+  - pop-act2554-empl-sa-sexe-cd-6822.xlsx (23.5 MB)
+
+======================================================================
+FICHIER: pop-act2554-csp-cd-6822.xlsx (28.5 MB)
+======================================================================
+
+  Onglets (21): Présentation, Documentation, Modifications_territoriales, DEP_1968, DEP_1975, DEP_1982, DEP_1990, DEP_1999, DEP_2006, DEP_2011
+  ... et 11 autres
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: Présentation
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes (détection header):
+    Ligne 0: ['Catégorie Socioprofessionnelle des ']
+
+  Header non détecté, ligne 0 utilisée
+  Lignes estimées: 17
+  Colonnes: 1
+
+  COLONNES (1):
+      1. Catégorie Socioprofessionnelle des actifs - Données harmonisées RP1968-2022 | type: object     | non-null: 0/0
+  Années détectées dans les colonnes: ['1968', '2022']
+
+  APERÇU (5 premières lignes):
+    Empty DataFrame
+    Columns: [Catégorie Socioprofessionnelle des actifs - Données harmonisées RP1968-2022]
+    Index: []
+
+======================================================================
+FICHIER: pop-act2554-csp-dipl-cd-6822.xlsx (51.9 MB)
+======================================================================
+
+  Onglets (19): Présentation, Documentation, Modifications_territoriales, DEP_1968, DEP_1975, DEP_1982, DEP_1990, DEP_1999, DEP_2006, DEP_2011
+  ... et 9 autres
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: Présentation
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes (détection header):
+    Ligne 0: ['Catégories Socioprofessionnelles/Di']
+
+  Header non détecté, ligne 0 utilisée
+  Lignes estimées: 17
+  Colonnes: 1
+
+  COLONNES (1):
+      1. Catégories Socioprofessionnelles/Diplômes - Données harmonisées RP1968-2022 | type: object     | non-null: 0/0
+  Années détectées dans les colonnes: ['1968', '2022']
+
+  APERÇU (5 premières lignes):
+    Empty DataFrame
+    Columns: [Catégories Socioprofessionnelles/Diplômes - Données harmonisées RP1968-2022]
+    Index: []
+
+======================================================================
+FICHIER: pop-act2554-empl-sa-sexe-cd-6822.xlsx (23.5 MB)
+======================================================================
+
+  Onglets (21): Présentation, Documentation, Modifications_territoriales, DEP_1968, DEP_1975, DEP_1982, DEP_1990, DEP_1999, DEP_2006, DEP_2011
+  ... et 11 autres
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: Présentation
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes (détection header):
+    Ligne 0: ["Secteur d'activité des actifs - Don"]
+
+  Header non détecté, ligne 0 utilisée
+  Lignes estimées: 17
+  Colonnes: 1
+
+  COLONNES (1):
+      1. Secteur d'activité des actifs - Données harmonisées RP1968-2022 | type: object     | non-null: 0/0
+  Années détectées dans les colonnes: ['1968', '2022']
+
+  APERÇU (5 premières lignes):
+    Empty DataFrame
+    Columns: [Secteur d'activité des actifs - Données harmonisées RP1968-2022]
+    Index: []
+
+======================================================================
+FIN DE L'ANALYSE
+======================================================================

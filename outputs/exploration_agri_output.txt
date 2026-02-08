@@ -1,0 +1,98 @@
+======================================================================
+ANALYSE EXPLORATOIRE - agri.xlsx (1.0 MB)
+======================================================================
+
+  Onglets (2): Data, sau2020
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: Data
+  ────────────────────────────────────────────────────────────
+
+  Premières lignes brutes (détection du header):
+    Ligne 0: ['Observatoire des territoires -', 'nan', 'nan', 'nan']
+    Ligne 1: ['Recensement agricole (Commune ', 'nan', 'nan', 'nan']
+    Ligne 2: ['nan', 'nan', 'nan', 'nan']
+    Ligne 3: ['nan', 'nan', 'nan', 'Surface agricole utilisée (SAU']
+    Ligne 4: ['codgeo', 'libgeo', 'an', 'sau2020']
+    Ligne 5: ['01001', "L'Abergement-Clémenciat", '2020', '889']
+    Ligne 6: ['01002', "L'Abergement-de-Varey", '2020', '195']
+    Ligne 7: ['01004', 'Ambérieu-en-Bugey', '2020', '71']
+    Ligne 8: ['01005', 'Ambérieux-en-Dombes', '2020', '821']
+    Ligne 9: ['01006', 'Ambléon', '2020', '257']
+
+  Header détecté en ligne 4
+  Lignes estimées: 34,875
+  Colonnes: 4
+
+  COLONNES (4):
+      1. codgeo                                        | type: int64      | non-null: 30/30
+      2. libgeo                                        | type: object     | non-null: 30/30
+      3. an                                            | type: float64    | non-null: 26/30
+      4. sau2020                                       | type: float64    | non-null: 26/30
+
+  Colonnes géographiques: ['codgeo', 'libgeo']
+
+  APERÇU (5 premières lignes):
+       codgeo                   libgeo      an  sau2020
+    0    1001  L'Abergement-Clémenciat  2020.0    889.0
+    1    1002    L'Abergement-de-Varey  2020.0    195.0
+    2    1004        Ambérieu-en-Bugey  2020.0     71.0
+    3    1005      Ambérieux-en-Dombes  2020.0    821.0
+    4    1006                  Ambléon  2020.0    257.0
+
+  STATS (colonnes numériques):
+            codgeo      an  sau2020
+    count    30.00    26.0    26.00
+    mean   1017.33  2020.0   721.08
+    std       9.80     0.0  1033.24
+    min    1001.00  2020.0     8.00
+    25%    1009.25  2020.0   211.75
+    50%    1016.50  2020.0   424.00
+    75%    1025.75  2020.0   796.50
+    max    1033.00  2020.0  5289.00
+
+  VALEURS UNIQUES (colonnes texte):
+    libgeo: 30 valeurs uniques
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: sau2020
+  ────────────────────────────────────────────────────────────
+
+  Premières lignes brutes (détection du header):
+    Ligne 0: ['Surface agricole utilisée (SAU']
+    Ligne 1: ['nan']
+    Ligne 2: ['Source: ']
+    Ligne 3: ['Agreste - Recensement agricole']
+    Ligne 4: ['nan']
+    Ligne 5: ['Description:']
+    Ligne 6: ['nan']
+    Ligne 7: ['nan']
+    Ligne 8: ['an:']
+    Ligne 9: ['2020']
+
+  Header non détecté, utilisation de la ligne 0
+  Lignes estimées: 11
+  Colonnes: 1
+
+  COLONNES (1):
+      1. Surface agricole utilisée (SAU)               | type: object     | non-null: 5/9
+
+  APERÇU (5 premières lignes):
+           Surface agricole utilisée (SAU)
+    0                                  NaN
+    1                             Source: 
+    2  Agreste - Recensement agricole 2020
+    3                                  NaN
+    4                         Description:
+
+  VALEURS UNIQUES (colonnes texte):
+    Surface agricole utilisée (SAU) (5 valeurs):
+      - Source: : 1
+      - Agreste - Recensement agricole 2020: 1
+      - Description:: 1
+      - an:: 1
+      - 2020: 1
+
+======================================================================
+FIN DE L'ANALYSE
+======================================================================

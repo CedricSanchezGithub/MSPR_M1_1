@@ -1,0 +1,622 @@
+======================================================================
+ANALYSE EXPLORATOIRE - FICHIERS INSEE SÉRIES HISTORIQUES
+======================================================================
+  - pop-act2554-csp-cd-6822.xlsx (28.5 MB)
+  - pop-act2554-csp-dipl-cd-6822.xlsx (51.9 MB)
+  - pop-act2554-empl-sa-sexe-cd-6822.xlsx (23.5 MB)
+
+======================================================================
+FICHIER: pop-act2554-csp-cd-6822.xlsx (28.5 MB)
+======================================================================
+  Onglets (21): Présentation, Documentation, Modifications_territoriales, DEP_1968, DEP_1975, DEP_1982, DEP_1990, DEP_1999, DEP_2006, DEP_2011, DEP_2016, DEP_2022, COM_1968, COM_1975, COM_1982, COM_1990, COM_1999, COM_2006, COM_2011, COM_2016, COM_2022
+  Onglets de données: ['DEP_1968', 'DEP_1975', 'DEP_1982', 'DEP_1990', 'DEP_1999', 'DEP_2006', 'DEP_2011', 'DEP_2016', 'DEP_2022', 'COM_1968', 'COM_1975', 'COM_1982', 'COM_1990', 'COM_1999', 'COM_2006', 'COM_2011', 'COM_2016', 'COM_2022']
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: DEP_1968
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes:
+    Ligne 0: ['Recensement de la population de 1968', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 1: ['TABLEAU DÉPARTEMENTAL - POPULATION DES 2', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 2: ["France métropolitaine et départements d'", 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 3: ['Découpage géographique au 01/01/2024', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 4: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 5: ['Champ : actifs ayant un emploi et chômeu', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 6: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 7: ['Documentation', 'nan', 'Modifications territoriales', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 8: ['© Insee', 'Source : Insee, Base historique des rece', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 9: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 10: ['nan', 'nan', 'CS', '1', '1', '2', '2', '3']
+    Ligne 11: ['nan', 'nan', 'TYPE ACTIVITE', '1', '2', '1', '2', '1']
+
+  Header en ligne 12
+  Lignes: 101
+  Colonnes: 15
+
+  COLONNES (15):
+      1. Région                                                  | object     | 30/30
+      2. Département                                             | object     | 30/30
+      3. Libellé de
+département                                  | object     | 30/30
+      4. Agriculteurs
+Actifs ayant un emploi
+RP1968              | object     | 30/30
+      5. Agriculteurs
+Chômeurs
+RP1968                            | object     | 30/30
+      6. Artisans, commerçants, chefs d'entreprise
+Actifs ayant un emploi
+RP1968 | object     | 30/30
+      7. Artisans, commerçants, chefs d'entreprise
+Chômeurs
+RP1968 | object     | 30/30
+      8. Cadres et professions intellectuelles supérieures
+Actifs ayant un emploi
+RP1968 | object     | 30/30
+      9. Cadres et professions intellectuelles supérieures
+Chômeurs
+RP1968 | object     | 30/30
+     10. Professions intermédiaires
+Actifs ayant un emploi
+RP1968 | object     | 30/30
+     11. Professions intermédiaires
+Chômeurs
+RP1968              | object     | 30/30
+     12. Employés
+Actifs ayant un emploi
+RP1968                  | object     | 30/30
+     13. Employés
+Chômeurs
+RP1968                                | object     | 30/30
+     14. Ouvriers
+Actifs ayant un emploi
+RP1968                  | object     | 30/30
+     15. Ouvriers
+Chômeurs
+RP1968                                | object     | 30/30
+
+  Colonnes géo: ['Libellé de\ndépartement']
+  Années dans colonnes: ['1968']
+
+  APERÇU (3 premières lignes):
+      Région Département Libellé de\ndépartement Agriculteurs\nActifs ayant un emploi\nRP1968 Agriculteurs\nChômeurs\nRP1968 Artisans, commerçants, chefs d'entreprise\nActifs ayant un emploi\nRP1968 Artisans, commerçants, chefs d'entreprise\nChômeurs\nRP1968 Cadres et professions intellectuelles supérieures\nActifs ayant un emploi\nRP1968 Cadres et professions intellectuelles supérieures\nChômeurs\nRP1968 Professions intermédiaires\nActifs ayant un emploi\nRP1968 Professions intermédiaires\nChômeurs\nRP1968 Employés\nActifs ayant un emploi\nRP1968     Employés\nChômeurs\nRP1968 Ouvriers\nActifs ayant un emploi\nRP1968     Ouvriers\nChômeurs\nRP1968
+    0   RR24        DR24               LIBELLE24  csx_rec1taxtypac_rec1rpop1968                csx_rec1taxtypac_rec2rpop1968  csx_rec2taxtypac_rec1rpop1968                                             csx_rec2taxtypac_rec2rpop1968                               csx_rec3taxtypac_rec1rpop1968                                                     csx_rec3taxtypac_rec2rpop1968                                       csx_rec4taxtypac_rec1rpop1968                              csx_rec4taxtypac_rec2rpop1968                csx_rec5taxtypac_rec1rpop1968            csx_rec5taxtypac_rec2rpop1968  csx_rec6taxtypac_rec1rpop1968            csx_rec6taxtypac_rec2rpop1968
+    1     84          01                     Ain                          17420                                            0                          10480                                                                         0                                                        3324                                                                                28                                                               10004                                                         56                                        14608                                       96                          32784                                      380
+    2     32          02                   Aisne                          10528                                            0                          11268                                                                         0                                                        4564                                                                                28                                                               15116                                                         80                                        19864                                      364                          52916                                     1228
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: COM_2022
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes:
+    Ligne 0: ['Recensement de la population de 2022', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 1: ['TABLEAU COMMUNAL - POPULATION DES 25 À 5', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 2: ["France métropolitaine et départements d'", 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 3: ['Découpage géographique en géographie cou', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 4: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 5: ['Champ : actifs ayant un emploi et chômeu', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 6: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 7: ['Note de lecture : une case vide correspo', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 8: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 9: ['Documentation', 'nan', 'Modifications territoriales', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 10: ['© Insee', 'Source : Insee, Base historique des rece', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 11: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+
+  Header en ligne 14
+  Lignes: 39,215
+  Colonnes: 18
+
+  COLONNES (18):
+      1. Région 
+en géographie courante                          | object     | 30/30
+      2. Département
+en géographie courante                      | object     | 30/30
+      3. Commune
+en géographie courante                          | object     | 30/30
+      4. Indicateur de stabilité de la commune                   | object     | 30/30
+      5. Département
+en géographie 2024                          | object     | 30/30
+      6. Libellé de commune                                      | object     | 30/30
+      7. Agriculteurs
+Actifs ayant un emploi
+RP2022              | object     | 28/30
+      8. Agriculteurs
+Chômeurs
+RP2022                            | object     | 28/30
+      9. Artisans, commerçants, chefs d'entreprise
+Actifs ayant un emploi
+RP2022 | object     | 28/30
+     10. Artisans, commerçants, chefs d'entreprise
+Chômeurs
+RP2022 | object     | 28/30
+     11. Cadres et professions intellectuelles supérieures
+Actifs ayant un emploi
+RP2022 | object     | 28/30
+     12. Cadres et professions intellectuelles supérieures
+Chômeurs
+RP2022 | object     | 28/30
+     13. Professions intermédiaires
+Actifs ayant un emploi
+RP2022 | object     | 28/30
+     14. Professions intermédiaires
+Chômeurs
+RP2022              | object     | 28/30
+     15. Employés
+Actifs ayant un emploi
+RP2022                  | object     | 28/30
+     16. Employés
+Chômeurs
+RP2022                                | object     | 28/30
+     17. Ouvriers
+Actifs ayant un emploi
+RP2022                  | object     | 28/30
+     18. Ouvriers
+Chômeurs
+RP2022                                | object     | 28/30
+
+  Colonnes géo: ['Libellé de commune']
+  Années dans colonnes: ['2022', '2024']
+
+  APERÇU (3 premières lignes):
+      Région \nen géographie courante Département\nen géographie courante Commune\nen géographie courante Indicateur de stabilité de la commune Département\nen géographie 2024       Libellé de commune Agriculteurs\nActifs ayant un emploi\nRP2022 Agriculteurs\nChômeurs\nRP2022 Artisans, commerçants, chefs d'entreprise\nActifs ayant un emploi\nRP2022 Artisans, commerçants, chefs d'entreprise\nChômeurs\nRP2022 Cadres et professions intellectuelles supérieures\nActifs ayant un emploi\nRP2022 Cadres et professions intellectuelles supérieures\nChômeurs\nRP2022 Professions intermédiaires\nActifs ayant un emploi\nRP2022 Professions intermédiaires\nChômeurs\nRP2022 Employés\nActifs ayant un emploi\nRP2022     Employés\nChômeurs\nRP2022 Ouvriers\nActifs ayant un emploi\nRP2022     Ouvriers\nChômeurs\nRP2022
+    0                             RR                              DR                                  CR                          STABLE                                  DR24                   LIBELLE  csx_rec1taxtypac_rec1rpop2022                csx_rec1taxtypac_rec2rpop2022  csx_rec2taxtypac_rec1rpop2022                                             csx_rec2taxtypac_rec2rpop2022                               csx_rec3taxtypac_rec1rpop2022                                                     csx_rec3taxtypac_rec2rpop2022                                       csx_rec4taxtypac_rec1rpop2022                              csx_rec4taxtypac_rec2rpop2022                csx_rec5taxtypac_rec1rpop2022            csx_rec5taxtypac_rec2rpop2022  csx_rec6taxtypac_rec1rpop2022            csx_rec6taxtypac_rec2rpop2022
+    1                             84                              01                                 001                               1                                    01   L'Abergement-Clémenciat                              0                                            0                      14.725714                                                                         0                                                   53.994286                                                                                 0                                                           88.354286                                                          0                                    88.354286                                        0                      63.811429                                 4.908571
+    2                             84                              01                                 002                               1                                    01     L'Abergement-de-Varey                      24.818182                                            0                       4.963636                                                                         0                                                    9.927273                                                                                 0                                                           19.854545                                                          0                                    14.890909                                 4.963636                      14.890909                                        0
+
+======================================================================
+FICHIER: pop-act2554-csp-dipl-cd-6822.xlsx (51.9 MB)
+======================================================================
+  Onglets (19): Présentation, Documentation, Modifications_territoriales, DEP_1968, DEP_1975, DEP_1982, DEP_1990, DEP_1999, DEP_2006, DEP_2011, DEP_2022, COM_1968, COM_1975, COM_1982, COM_1990, COM_1999, COM_2006, COM_2011, COM_2022
+  Onglets de données: ['DEP_1968', 'DEP_1975', 'DEP_1982', 'DEP_1990', 'DEP_1999', 'DEP_2006', 'DEP_2011', 'DEP_2022', 'COM_1968', 'COM_1975', 'COM_1982', 'COM_1990', 'COM_1999', 'COM_2006', 'COM_2011', 'COM_2022']
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: DEP_1968
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes:
+    Ligne 0: ['Recensement de la population de 1968', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 1: ['TABLEAU DÉPARTEMENTAL - POPULATION DES 2', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 2: ["France métropolitaine et départements d'", 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 3: ['Découpage géographique au 01/01/2024', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 4: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 5: ['Champ : actifs ayant un emploi et chômeu', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 6: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 7: ['Documentation', 'nan', 'Modifications territoriales', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 8: ['© Insee', 'Source : Insee, Base historique des rece', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 9: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 10: ['nan', 'nan', 'CS', '1', '1', '1', '1', '1']
+    Ligne 11: ['nan', 'nan', 'DIPLÔME', '0', '1', '2', '3', '4']
+
+  Header en ligne 12
+  Lignes: 101
+  Colonnes: 39
+
+  COLONNES (39):
+      1. Région                                                  | object     | 30/30
+      2. Département                                             | object     | 30/30
+      3. Libellé de
+département                                  | object     | 30/30
+      4. Agriculteurs
+Aucun diplôme
+RP1968                       | object     | 30/30
+      5. Agriculteurs
+Diplôme de niveau CEP
+RP1968               | object     | 30/30
+      6. Agriculteurs
+Diplôme de niveau BEPC
+RP1968              | object     | 30/30
+      7. Agriculteurs
+Diplôme de niveau CAP-BEP
+RP1968           | object     | 30/30
+      8. Agriculteurs
+Diplôme de niveau bac général ou technique
+RP1968 | object     | 30/30
+      9. Agriculteurs
+Diplôme supérieur au baccalauréat
+RP1968   | object     | 30/30
+     10. Artisans, commerçants, chefs d'entreprises
+Aucun diplôme
+RP1968 | object     | 30/30
+     11. Artisans, commerçants, chefs d'entreprises
+Diplôme de niveau CEP
+RP1968 | object     | 30/30
+     12. Artisans, commerçants, chefs d'entreprises
+Diplôme de niveau BEPC
+RP1968 | object     | 30/30
+     13. Artisans, commerçants, chefs d'entreprises
+Diplôme de niveau CAP-BEP
+RP1968 | object     | 30/30
+     14. Artisans, commerçants, chefs d'entreprises
+Diplôme de niveau bac général ou technique
+RP1968 | object     | 30/30
+     15. Artisans, commerçants, chefs d'entreprises
+Diplôme supérieur au baccalauréat
+RP1968 | object     | 30/30
+     16. Cadres et professions intellectuelles supérieures
+Aucun diplôme
+RP1968 | object     | 30/30
+     17. Cadres et professions intellectuelles supérieures
+Diplôme de niveau CEP
+RP1968 | object     | 30/30
+     18. Cadres et professions intellectuelles supérieures
+Diplôme de niveau BEPC
+RP1968 | object     | 30/30
+     19. Cadres et professions intellectuelles supérieures
+Diplôme de niveau CAP-BEP
+RP1968 | object     | 30/30
+     20. Cadres et professions intellectuelles supérieures
+Diplôme de niveau bac général ou technique
+RP1968 | object     | 30/30
+     21. Cadres et professions intellectuelles supérieures
+Diplôme supérieur au baccalauréat
+RP1968 | object     | 30/30
+     22. Professions intermédiaires
+Aucun diplôme
+RP1968         | object     | 30/30
+     23. Professions intermédiaires
+Diplôme de niveau CEP
+RP1968 | object     | 30/30
+     24. Professions intermédiaires
+Diplôme de niveau BEPC
+RP1968 | object     | 30/30
+     25. Professions intermédiaires
+Diplôme de niveau CAP-BEP
+RP1968 | object     | 30/30
+     26. Professions intermédiaires
+Diplôme de niveau bac général ou technique
+RP1968 | object     | 30/30
+     27. Professions intermédiaires
+Diplôme supérieur au baccalauréat
+RP1968 | object     | 30/30
+     28. Employés
+Aucun diplôme
+RP1968                           | object     | 30/30
+     29. Employés
+Diplôme de niveau CEP
+RP1968                   | object     | 30/30
+     30. Employés
+Diplôme de niveau BEPC
+RP1968                  | object     | 30/30
+     31. Employés
+Diplôme de niveau CAP-BEP
+RP1968               | object     | 30/30
+     32. Employés
+Diplôme de niveau bac général ou technique
+RP1968 | object     | 30/30
+     33. Employés
+Diplôme supérieur au baccalauréat
+RP1968       | object     | 30/30
+     34. Ouvriers
+Aucun diplôme
+RP1968                           | object     | 30/30
+     35. Ouvriers
+Diplôme de niveau CEP
+RP1968                   | object     | 30/30
+     36. Ouvriers
+Diplôme de niveau BEPC
+RP1968                  | object     | 30/30
+     37. Ouvriers
+Diplôme de niveau CAP-BEP
+RP1968               | object     | 30/30
+     38. Ouvriers
+Diplôme de niveau bac général ou technique
+RP1968 | object     | 30/30
+     39. Ouvriers
+Diplôme supérieur au baccalauréat
+RP1968       | object     | 30/30
+
+  Colonnes géo: ['Libellé de\ndépartement']
+  Années dans colonnes: ['1968']
+
+  APERÇU (3 premières lignes):
+      Région Département Libellé de\ndépartement Agriculteurs\nAucun diplôme\nRP1968 Agriculteurs\nDiplôme de niveau CEP\nRP1968 Agriculteurs\nDiplôme de niveau BEPC\nRP1968 Agriculteurs\nDiplôme de niveau CAP-BEP\nRP1968 Agriculteurs\nDiplôme de niveau bac général ou technique\nRP1968 Agriculteurs\nDiplôme supérieur au baccalauréat\nRP1968 Artisans, commerçants, chefs d'entreprises\nAucun diplôme\nRP1968 Artisans, commerçants, chefs d'entreprises\nDiplôme de niveau CEP\nRP1968 Artisans, commerçants, chefs d'entreprises\nDiplôme de niveau BEPC\nRP1968 Artisans, commerçants, chefs d'entreprises\nDiplôme de niveau CAP-BEP\nRP1968 Artisans, commerçants, chefs d'entreprises\nDiplôme de niveau bac général ou technique\nRP1968 Artisans, commerçants, chefs d'entreprises\nDiplôme supérieur au baccalauréat\nRP1968 Cadres et professions intellectuelles supérieures\nAucun diplôme\nRP1968 Cadres et professions intellectuelles supérieures\nDiplôme de niveau CEP\nRP1968 Cadres et professions intellectuelles supérieures\nDiplôme de niveau BEPC\nRP1968 Cadres et professions intellectuelles supérieures\nDiplôme de niveau CAP-BEP\nRP1968 Cadres et professions intellectuelles supérieures\nDiplôme de niveau bac général ou technique\nRP1968 Cadres et professions intellectuelles supérieures\nDiplôme supérieur au baccalauréat\nRP1968 Professions intermédiaires\nAucun diplôme\nRP1968 Professions intermédiaires\nDiplôme de niveau CEP\nRP1968 Professions intermédiaires\nDiplôme de niveau BEPC\nRP1968 Professions intermédiaires\nDiplôme de niveau CAP-BEP\nRP1968 Professions intermédiaires\nDiplôme de niveau bac général ou technique\nRP1968 Professions intermédiaires\nDiplôme supérieur au baccalauréat\nRP1968 Employés\nAucun diplôme\nRP1968 Employés\nDiplôme de niveau CEP\nRP1968 Employés\nDiplôme de niveau BEPC\nRP1968 Employés\nDiplôme de niveau CAP-BEP\nRP1968 Employés\nDiplôme de niveau bac général ou technique\nRP1968 Employés\nDiplôme supérieur au baccalauréat\nRP1968 Ouvriers\nAucun diplôme\nRP1968 Ouvriers\nDiplôme de niveau CEP\nRP1968 Ouvriers\nDiplôme de niveau BEPC\nRP1968 Ouvriers\nDiplôme de niveau CAP-BEP\nRP1968 Ouvriers\nDiplôme de niveau bac général ou technique\nRP1968 Ouvriers\nDiplôme supérieur au baccalauréat\nRP1968
+    0   RR24        DR24               LIBELLE24       csx_rec1dpx_rec0rpop1968            csx_rec1dpx_rec1rpop1968                    csx_rec1dpx_rec2rpop1968                     csx_rec1dpx_rec3rpop1968                        csx_rec1dpx_rec4rpop1968                                         csx_rec1dpx_rec7rpop1968                                csx_rec2dpx_rec0rpop1968                                          csx_rec2dpx_rec1rpop1968                                                  csx_rec2dpx_rec2rpop1968                                                   csx_rec2dpx_rec3rpop1968                                                      csx_rec2dpx_rec4rpop1968                                                                       csx_rec2dpx_rec7rpop1968                                                              csx_rec3dpx_rec0rpop1968                                                 csx_rec3dpx_rec1rpop1968                                                         csx_rec3dpx_rec2rpop1968                                                          csx_rec3dpx_rec3rpop1968                                                             csx_rec3dpx_rec4rpop1968                                                                              csx_rec3dpx_rec7rpop1968                                                                     csx_rec4dpx_rec0rpop1968                          csx_rec4dpx_rec1rpop1968                                  csx_rec4dpx_rec2rpop1968                                   csx_rec4dpx_rec3rpop1968                                      csx_rec4dpx_rec4rpop1968                                                       csx_rec4dpx_rec7rpop1968                                              csx_rec5dpx_rec0rpop1968        csx_rec5dpx_rec1rpop1968                csx_rec5dpx_rec2rpop1968                 csx_rec5dpx_rec3rpop1968                    csx_rec5dpx_rec4rpop1968                                     csx_rec5dpx_rec7rpop1968                            csx_rec6dpx_rec0rpop1968        csx_rec6dpx_rec1rpop1968                csx_rec6dpx_rec2rpop1968                 csx_rec6dpx_rec3rpop1968                    csx_rec6dpx_rec4rpop1968                                     csx_rec6dpx_rec7rpop1968                     
+    1     84          01                     Ain                           8176                                8432                                         124                                          464                                             216                                                                8                                                    2328                                                              4908                                                                       416                                                                       2036                                                                           580                                                                                            212                                                                                   192                                                                      292                                                                              288                                                                               344                                                                                  624                                                                                                  1612                                                                                          944                                              1992                                                       964                                                       2296                                                          2912                                                                            952                                                                  3348                            6752                                    1236                                     2364                                         840                                                          164                                               17412                           10860                                     308                                     4028                                         456                                                          100                     
+    2     32          02                   Aisne                           4040                                5092                                         280                                          508                                             500                                                              108                                                    2968                                                              5268                                                                       512                                                                       1672                                                                           644                                                                                            204                                                                                   244                                                                      436                                                                              300                                                                               524                                                                                  828                                                                                                  2260                                                                                         1408                                              3608                                                      1136                                                       3360                                                          4496                                                                           1188                                                                  5720                            8876                                    1356                                     3372                                         796                                                          108                                               32264                           15840                                     288                                     4988                                         684                                                           80                     
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: COM_2022
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes:
+    Ligne 0: ['Recensement de la population de 2022', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 1: ['TABLEAU COMMUNAL - POPULATION DES 25 À 5', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 2: ["France métropolitaine et départements d'", 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 3: ['Découpage géographique en géographie cou', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 4: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 5: ['Champ : actifs ayant un emploi et chômeu', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 6: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 7: ['Note de lecture : une case vide correspo', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 8: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 9: ['Documentation', 'nan', 'Modifications territoriales', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 10: ['© Insee', 'Source : Insee, Base historique des rece', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 11: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+
+  Header en ligne 14
+  Lignes: 39,215
+  Colonnes: 48
+
+  COLONNES (48):
+      1. Région 
+en géographie courante                          | object     | 30/30
+      2. Département
+en géographie courante                      | object     | 30/30
+      3. Commune
+en géographie courante                          | object     | 30/30
+      4. Indicateur de stabilité de la commune                   | object     | 30/30
+      5. Département
+en géographie 2024                          | object     | 30/30
+      6. Libellé de commune                                      | object     | 30/30
+      7. Agriculteurs
+Aucun diplôme
+RP2022                       | object     | 28/30
+      8. Agriculteurs
+Diplôme de niveau CEP
+RP2022               | object     | 28/30
+      9. Agriculteurs
+Diplôme de niveau BEPC
+RP2022              | object     | 28/30
+     10. Agriculteurs
+Diplôme de niveau CAP-BEP
+RP2022           | object     | 28/30
+     11. Agriculteurs
+Diplôme de niveau bac général ou technique
+RP2022 | object     | 28/30
+     12. Agriculteurs
+Diplôme universitaire de 1er cycle
+RP2022  | object     | 28/30
+     13. Agriculteurs
+Diplôme universitaire de 2ème ou 3ème cycle
+RP2022 | object     | 28/30
+     14. Artisans, commerçants, chefs d'entreprises
+Aucun diplôme
+RP2022 | object     | 28/30
+     15. Artisans, commerçants, chefs d'entreprises
+Diplôme de niveau CEP
+RP2022 | object     | 28/30
+     16. Artisans, commerçants, chefs d'entreprises
+Diplôme de niveau BEPC
+RP2022 | object     | 28/30
+     17. Artisans, commerçants, chefs d'entreprises
+Diplôme de niveau CAP-BEP
+RP2022 | object     | 28/30
+     18. Artisans, commerçants, chefs d'entreprises
+Diplôme de niveau bac général ou technique
+RP2022 | object     | 28/30
+     19. Artisans, commerçants, chefs d'entreprises
+Diplôme universitaire de 1er cycle
+RP2022 | object     | 28/30
+     20. Artisans, commerçants, chefs d'entreprises
+Diplôme universitaire de 2ème ou 3ème cycle
+RP2022 | object     | 28/30
+     21. Cadres et professions intellectuelles supérieures
+Aucun diplôme
+RP2022 | object     | 28/30
+     22. Cadres et professions intellectuelles supérieures
+Diplôme de niveau CEP
+RP2022 | object     | 28/30
+     23. Cadres et professions intellectuelles supérieures
+Diplôme de niveau BEPC
+RP2022 | object     | 28/30
+     24. Cadres et professions intellectuelles supérieures
+Diplôme de niveau CAP-BEP
+RP2022 | object     | 28/30
+     25. Cadres et professions intellectuelles supérieures
+Diplôme de niveau bac général ou technique
+RP2022 | object     | 28/30
+     26. Cadres et professions intellectuelles supérieures
+Diplôme universitaire de 1er cycle
+RP2022 | object     | 28/30
+     27. Cadres et professions intellectuelles supérieures
+Diplôme universitaire de 2ème ou 3ème cycle
+RP2022 | object     | 28/30
+     28. Professions intermédiaires
+Aucun diplôme
+RP2022         | object     | 28/30
+     29. Professions intermédiaires
+Diplôme de niveau CEP
+RP2022 | object     | 28/30
+     30. Professions intermédiaires
+Diplôme de niveau BEPC
+RP2022 | object     | 28/30
+     31. Professions intermédiaires
+Diplôme de niveau CAP-BEP
+RP2022 | object     | 28/30
+     32. Professions intermédiaires
+Diplôme de niveau bac général ou technique
+RP2022 | object     | 28/30
+     33. Professions intermédiaires
+Diplôme universitaire de 1er cycle
+RP2022 | object     | 28/30
+     34. Professions intermédiaires
+Diplôme universitaire de 2ème ou 3ème cycle
+RP2022 | object     | 28/30
+     35. Employés
+Aucun diplôme
+RP2022                           | object     | 28/30
+     36. Employés
+Diplôme de niveau CEP
+RP2022                   | object     | 28/30
+     37. Employés
+Diplôme de niveau BEPC
+RP2022                  | object     | 28/30
+     38. Employés
+Diplôme de niveau CAP-BEP
+RP2022               | object     | 28/30
+     39. Employés
+Diplôme de niveau bac général ou technique
+RP2022 | object     | 28/30
+     40. Employés
+Diplôme universitaire de 1er cycle
+RP2022      | object     | 28/30
+     41. Employés
+Diplôme universitaire de 2ème ou 3ème cycle
+RP2022 | object     | 28/30
+     42. Ouvriers
+Aucun diplôme
+RP2022                           | object     | 28/30
+     43. Ouvriers
+Diplôme de niveau CEP
+RP2022                   | object     | 28/30
+     44. Ouvriers
+Diplôme de niveau BEPC
+RP2022                  | object     | 28/30
+     45. Ouvriers
+Diplôme de niveau CAP-BEP
+RP2022               | object     | 28/30
+     46. Ouvriers
+Diplôme de niveau bac général ou technique
+RP2022 | object     | 28/30
+     47. Ouvriers
+Diplôme universitaire de 1er cycle
+RP2022      | object     | 28/30
+     48. Ouvriers
+Diplôme universitaire de 2ème ou 3ème cycle
+RP2022 | object     | 28/30
+
+  Colonnes géo: ['Libellé de commune']
+  Années dans colonnes: ['2022', '2024']
+
+  APERÇU (3 premières lignes):
+      Région \nen géographie courante Département\nen géographie courante Commune\nen géographie courante Indicateur de stabilité de la commune Département\nen géographie 2024       Libellé de commune Agriculteurs\nAucun diplôme\nRP2022 Agriculteurs\nDiplôme de niveau CEP\nRP2022 Agriculteurs\nDiplôme de niveau BEPC\nRP2022 Agriculteurs\nDiplôme de niveau CAP-BEP\nRP2022 Agriculteurs\nDiplôme de niveau bac général ou technique\nRP2022 Agriculteurs\nDiplôme universitaire de 1er cycle\nRP2022 Agriculteurs\nDiplôme universitaire de 2ème ou 3ème cycle\nRP2022 Artisans, commerçants, chefs d'entreprises\nAucun diplôme\nRP2022 Artisans, commerçants, chefs d'entreprises\nDiplôme de niveau CEP\nRP2022 Artisans, commerçants, chefs d'entreprises\nDiplôme de niveau BEPC\nRP2022 Artisans, commerçants, chefs d'entreprises\nDiplôme de niveau CAP-BEP\nRP2022 Artisans, commerçants, chefs d'entreprises\nDiplôme de niveau bac général ou technique\nRP2022 Artisans, commerçants, chefs d'entreprises\nDiplôme universitaire de 1er cycle\nRP2022 Artisans, commerçants, chefs d'entreprises\nDiplôme universitaire de 2ème ou 3ème cycle\nRP2022 Cadres et professions intellectuelles supérieures\nAucun diplôme\nRP2022 Cadres et professions intellectuelles supérieures\nDiplôme de niveau CEP\nRP2022 Cadres et professions intellectuelles supérieures\nDiplôme de niveau BEPC\nRP2022 Cadres et professions intellectuelles supérieures\nDiplôme de niveau CAP-BEP\nRP2022 Cadres et professions intellectuelles supérieures\nDiplôme de niveau bac général ou technique\nRP2022 Cadres et professions intellectuelles supérieures\nDiplôme universitaire de 1er cycle\nRP2022 Cadres et professions intellectuelles supérieures\nDiplôme universitaire de 2ème ou 3ème cycle\nRP2022 Professions intermédiaires\nAucun diplôme\nRP2022 Professions intermédiaires\nDiplôme de niveau CEP\nRP2022 Professions intermédiaires\nDiplôme de niveau BEPC\nRP2022 Professions intermédiaires\nDiplôme de niveau CAP-BEP\nRP2022 Professions intermédiaires\nDiplôme de niveau bac général ou technique\nRP2022 Professions intermédiaires\nDiplôme universitaire de 1er cycle\nRP2022 Professions intermédiaires\nDiplôme universitaire de 2ème ou 3ème cycle\nRP2022 Employés\nAucun diplôme\nRP2022 Employés\nDiplôme de niveau CEP\nRP2022 Employés\nDiplôme de niveau BEPC\nRP2022 Employés\nDiplôme de niveau CAP-BEP\nRP2022 Employés\nDiplôme de niveau bac général ou technique\nRP2022 Employés\nDiplôme universitaire de 1er cycle\nRP2022 Employés\nDiplôme universitaire de 2ème ou 3ème cycle\nRP2022 Ouvriers\nAucun diplôme\nRP2022 Ouvriers\nDiplôme de niveau CEP\nRP2022 Ouvriers\nDiplôme de niveau BEPC\nRP2022 Ouvriers\nDiplôme de niveau CAP-BEP\nRP2022 Ouvriers\nDiplôme de niveau bac général ou technique\nRP2022 Ouvriers\nDiplôme universitaire de 1er cycle\nRP2022 Ouvriers\nDiplôme universitaire de 2ème ou 3ème cycle\nRP2022
+    0                             RR                              DR                                  CR                          STABLE                                  DR24                   LIBELLE       csx_rec1dpx_rec0rpop2022            csx_rec1dpx_rec1rpop2022                    csx_rec1dpx_rec2rpop2022                     csx_rec1dpx_rec3rpop2022                        csx_rec1dpx_rec4rpop2022                                         csx_rec1dpx_rec5rpop2022                                 csx_rec1dpx_rec6rpop2022                                          csx_rec2dpx_rec0rpop2022                                          csx_rec2dpx_rec1rpop2022                                                  csx_rec2dpx_rec2rpop2022                                                   csx_rec2dpx_rec3rpop2022                                                      csx_rec2dpx_rec4rpop2022                                                                       csx_rec2dpx_rec5rpop2022                                                               csx_rec2dpx_rec6rpop2022                                                                        csx_rec3dpx_rec0rpop2022                                                 csx_rec3dpx_rec1rpop2022                                                         csx_rec3dpx_rec2rpop2022                                                          csx_rec3dpx_rec3rpop2022                                                             csx_rec3dpx_rec4rpop2022                                                                              csx_rec3dpx_rec5rpop2022                                                                      csx_rec3dpx_rec6rpop2022                                                                               csx_rec4dpx_rec0rpop2022                          csx_rec4dpx_rec1rpop2022                                  csx_rec4dpx_rec2rpop2022                                   csx_rec4dpx_rec3rpop2022                                      csx_rec4dpx_rec4rpop2022                                                       csx_rec4dpx_rec5rpop2022                                               csx_rec4dpx_rec6rpop2022                                                        csx_rec5dpx_rec0rpop2022        csx_rec5dpx_rec1rpop2022                csx_rec5dpx_rec2rpop2022                 csx_rec5dpx_rec3rpop2022                    csx_rec5dpx_rec4rpop2022                                     csx_rec5dpx_rec5rpop2022                             csx_rec5dpx_rec6rpop2022                                      csx_rec6dpx_rec0rpop2022        csx_rec6dpx_rec1rpop2022                csx_rec6dpx_rec2rpop2022                 csx_rec6dpx_rec3rpop2022                    csx_rec6dpx_rec4rpop2022                                     csx_rec6dpx_rec5rpop2022                             csx_rec6dpx_rec6rpop2022                               
+    1                             84                              01                                 001                               1                                    01   L'Abergement-Clémenciat                              0                                   0                                           0                                            0                                               0                                                                0                                                        0                                                                 0                                                                 0                                                                  4.908571                                                                   4.908571                                                                             0                                                                                       4.908571                                                                                      0                                                                                        4.908571                                                                        0                                                                                0                                                                                 0                                                                             4.908571                                                                                             19.634286                                                                                     24.542857                                                                                               9.817143                                                 0                                                         0                                                   9.817143                                                      9.817143                                                                          34.36                                                              24.542857                                                                        4.908571                               0                                4.908571                                14.725714                                   39.268571                                                    14.725714                                             9.817143                                                     14.725714                               0                                4.908571                                24.542857                                   24.542857                                                            0                                                    0                               
+    2                             84                              01                                 002                               1                                    01     L'Abergement-de-Varey                              0                                   0                                           0                                            0                                       14.890909                                                         9.927273                                                        0                                                                 0                                                                 0                                                                         0                                                                   4.963636                                                                             0                                                                                              0                                                                                      0                                                                                               0                                                                        0                                                                                0                                                                                 0                                                                                    0                                                                                                     0                                                                                      9.927273                                                                                                      0                                                 0                                                         0                                                          0                                                             0                                                                       4.963636                                                              14.890909                                                                        9.927273                               0                                       0                                 4.963636                                    4.963636                                                            0                                                    0                                                      4.963636                               0                                       0                                        0                                    4.963636                                                     4.963636                                                    0                               
+
+======================================================================
+FICHIER: pop-act2554-empl-sa-sexe-cd-6822.xlsx (23.5 MB)
+======================================================================
+  Onglets (21): Présentation, Documentation, Modifications_territoriales, DEP_1968, DEP_1975, DEP_1982, DEP_1990, DEP_1999, DEP_2006, DEP_2011, DEP_2016, DEP_2022, COM_1968, COM_1975, COM_1982, COM_1990, COM_1999, COM_2006, COM_2011, COM_2016, COM_2022
+  Onglets de données: ['DEP_1968', 'DEP_1975', 'DEP_1982', 'DEP_1990', 'DEP_1999', 'DEP_2006', 'DEP_2011', 'DEP_2016', 'DEP_2022', 'COM_1968', 'COM_1975', 'COM_1982', 'COM_1990', 'COM_1999', 'COM_2006', 'COM_2011', 'COM_2016', 'COM_2022']
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: DEP_1968
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes:
+    Ligne 0: ['Recensement de la population de 1968', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 1: ['TABLEAU DÉPARTEMENTAL - POPULATION ACTIV', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 2: ["France métropolitaine et départements d'", 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 3: ['Découpage géographique au 01/01/2024', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 4: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 5: ['Champ : actifs ayant un emploi, âgés de ', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 6: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 7: ['Documentation', 'nan', 'Modifications territoriales', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 8: ['© Insee', 'Source : Insee, Base historique des rece', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 9: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 10: ['nan', 'nan', 'SA', '1', '1', '2', '2', '3']
+    Ligne 11: ['nan', 'nan', 'SEXE', '1', '2', '1', '2', '1']
+
+  Header en ligne 12
+  Lignes: 165
+  Colonnes: 11
+
+  COLONNES (11):
+      1. Région                                                  | object     | 30/30
+      2. Département                                             | object     | 30/30
+      3. Libellé de
+département                                  | object     | 30/30
+      4. Agriculture
+Hommes
+RP1968                               | object     | 30/30
+      5. Agriculture
+Femmes
+RP1968                               | object     | 30/30
+      6. Industrie
+Hommes
+RP1968                                 | object     | 30/30
+      7. Industrie
+Femmes
+RP1968                                 | object     | 30/30
+      8. Bâtiment et travaux publics
+Hommes
+RP1968               | object     | 30/30
+      9. Bâtiment et travaux publics
+Femmes
+RP1968               | object     | 30/30
+     10. Tertiaire
+Hommes
+RP1968                                 | object     | 30/30
+     11. Tertiaire
+Femmes
+RP1968                                 | object     | 30/30
+
+  Colonnes géo: ['Libellé de\ndépartement']
+  Années dans colonnes: ['1968']
+
+  APERÇU (3 premières lignes):
+      Région Département Libellé de\ndépartement Agriculture\nHommes\nRP1968 Agriculture\nFemmes\nRP1968 Industrie\nHommes\nRP1968 Industrie\nFemmes\nRP1968 Bâtiment et travaux publics\nHommes\nRP1968 Bâtiment et travaux publics\nFemmes\nRP1968 Tertiaire\nHommes\nRP1968 Tertiaire\nFemmes\nRP1968
+    0   RR24        DR24               LIBELLE24         nes4xlot1s1rpop1968         nes4xlot1s2rpop1968       nes4xlot2s1rpop1968       nes4xlot2s2rpop1968            nes4xlot3s1rpop1968                         nes4xlot3s2rpop1968                    nes4xlot4s1rpop1968       nes4xlot4s2rpop1968
+    1     84          01                     Ain                       10756                        8300                     19496                      6824                           9504                                         420                                  20272                     13048
+    2     32          02                   Aisne                       15112                        4856                     30788                      8544                           9076                                         404                                  27796                     17680
+
+  ────────────────────────────────────────────────────────────
+  ONGLET: COM_2022
+  ────────────────────────────────────────────────────────────
+
+  Lignes brutes:
+    Ligne 0: ['Recensement de la population de 2022', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 1: ['TABLEAU COMMUNAL - POPULATION ACTIVE OCC', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 2: ["France métropolitaine et départements d'", 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 3: ['Découpage géographique en géographie cou', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 4: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 5: ['Champ : actifs ayant un emploi, âgés de ', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 6: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 7: ['Note de lecture : une case vide correspo', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 8: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 9: ['Documentation', 'nan', 'Modifications territoriales', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 10: ['© Insee', 'Source : Insee, Base historique des rece', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+    Ligne 11: ['nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan', 'nan']
+
+  Header en ligne 14
+  Lignes: 39,215
+  Colonnes: 14
+
+  COLONNES (14):
+      1. Région 
+en géographie courante                          | object     | 30/30
+      2. Département
+en géographie courante                      | object     | 30/30
+      3. Commune
+en géographie courante                          | object     | 30/30
+      4. Indicateur de stabilité de la commune                   | object     | 30/30
+      5. Département
+en géographie 2024                          | object     | 30/30
+      6. Libellé de commune                                      | object     | 30/30
+      7. Agriculture
+Hommes
+RP2022                               | object     | 28/30
+      8. Agriculture
+Femmes
+RP2022                               | object     | 28/30
+      9. Industrie
+Hommes
+RP2022                                 | object     | 28/30
+     10. Industrie
+Femmes
+RP2022                                 | object     | 28/30
+     11. Bâtiment et travaux publics
+Hommes
+RP2022               | object     | 28/30
+     12. Bâtiment et travaux publics
+Femmes
+RP2022               | object     | 28/30
+     13. Tertiaire
+Hommes
+RP2022                                 | object     | 28/30
+     14. Tertiaire
+Femmes
+RP2022                                 | object     | 28/30
+
+  Colonnes géo: ['Libellé de commune']
+  Années dans colonnes: ['2022', '2024']
+
+  APERÇU (3 premières lignes):
+      Région \nen géographie courante Département\nen géographie courante Commune\nen géographie courante Indicateur de stabilité de la commune Département\nen géographie 2024       Libellé de commune Agriculture\nHommes\nRP2022 Agriculture\nFemmes\nRP2022 Industrie\nHommes\nRP2022 Industrie\nFemmes\nRP2022 Bâtiment et travaux publics\nHommes\nRP2022 Bâtiment et travaux publics\nFemmes\nRP2022 Tertiaire\nHommes\nRP2022 Tertiaire\nFemmes\nRP2022
+    0                             RR                              DR                                  CR                          STABLE                                  DR24                   LIBELLE         nes4xlot1s1rpop2022         nes4xlot1s2rpop2022       nes4xlot2s1rpop2022       nes4xlot2s2rpop2022            nes4xlot3s1rpop2022                         nes4xlot3s2rpop2022                    nes4xlot4s1rpop2022       nes4xlot4s2rpop2022
+    1                             84                              01                                 001                               1                                    01   L'Abergement-Clémenciat                           0                           0                 44.177143                 14.725714                          34.36                                    4.908571                              78.537143                132.531429
+    2                             84                              01                                 002                               1                                    01     L'Abergement-de-Varey                   14.890909                    9.927273                 14.890909                 19.854545                       9.927273                                           0                               4.963636                 14.890909
+
+======================================================================
+FIN
+======================================================================
