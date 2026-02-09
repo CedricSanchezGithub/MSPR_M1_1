@@ -8,14 +8,37 @@ On utilise un algorithme de **machine learning** (scikit-learn, pas un LLM type 
 
 ## Étape 1 — Construire le tableau d'entraînement
 
-On prend la base SQLite et on construit **un grand tableau** où chaque ligne = une commune, et chaque colonne = un indicateur :
+### La dimension temporelle
 
-| commune     | revenu_median | % cadres | % diplômé_sup | dette/hab | nb_catnat | ... | % Gauche |
-|-------------|--------------|----------|---------------|-----------|-----------|-----|----------|
-| Montpellier | 19 800       | 22.3     | 38.1          | 1 200     | 15        | ... | 62.4     |
-| Béziers     | 16 200       | 8.7      | 14.2          | 980       | 12        | ... | 31.8     |
-| Sète        | 18 100       | 12.1     | 21.5          | 1 450     | 18        | ... | 48.2     |
-| ...         | ...          | ...      | ...           | ...       | ...       | ... | ...      |
+On ne travaille pas sur une seule photo figée. On dispose de **5 élections présidentielles** (2002, 2007, 2012, 2017, 2022) et d'indicateurs qui évoluent dans le temps :
+
+| Donnée | Années disponibles |
+|--------|--------------------|
+| Élections (variable cible) | 2002, 2007, 2012, 2017, 2022 |
+| Population | 1968, 1975, 1982, 1990, 1999, 2006-2023 |
+| CSP (cadres, ouvriers...) | 1968, 1975, 1982, 1990, 1999, 2006, 2011, 2016, 2022 |
+| Comptes communes (dette, dépenses...) | 2000-2022 (annuel) |
+| Naissances / décès | 2008-2024 (annuel) |
+| Revenus | snapshot (une seule année) |
+| Diplômes | 2022 |
+| CatNat | 1985-2022+ (cumul) |
+
+### Le tableau
+
+On croise **commune × année d'élection** : chaque ligne = une commune à une année donnée, avec les indicateurs les plus proches de cette année.
+
+| commune     | année | population | % cadres | % ouvriers | dette/hab | nb_catnat | ... | % Gauche |
+|-------------|-------|-----------|----------|------------|-----------|-----------|-----|----------|
+| Montpellier | 2002  | 225 392   | 18.1     | 12.3       | 980       | 8         | ... | 55.2     |
+| Montpellier | 2007  | 248 252   | 19.5     | 11.1       | 1 050     | 10        | ... | 51.8     |
+| Montpellier | 2012  | 264 538   | 20.8     | 10.4       | 1 120     | 12        | ... | 58.3     |
+| Montpellier | 2022  | 295 542   | 22.3     | 8.7        | 1 200     | 15        | ... | 62.4     |
+| Béziers     | 2002  | 69 153    | 7.2      | 18.5       | 870       | 7         | ... | 38.1     |
+| ...         | ...   | ...       | ...      | ...        | ...       | ...       | ... | ...      |
+
+Ça donne environ **341 communes × 5 élections = ~1 700 lignes** d'entraînement au lieu de 341, ce qui rend le modèle plus robuste.
+
+L'avantage : le modèle apprend non seulement les corrélations statiques (*« commune riche → vote Gauche »*), mais aussi les **dynamiques** (*« quand la population augmente ET le % cadres monte → le vote évolue vers la Gauche »*).
 
 - Les colonnes à gauche = les **features** (ce que le modèle utilise pour deviner)
 - La dernière colonne = la **cible** (ce qu'il doit prédire : le % Gauche)
@@ -39,7 +62,14 @@ On teste plusieurs algorithmes (régression logistique, random forest, gradient 
 
 ## Étape 4 — Prédire le futur
 
-On modifie les valeurs des indicateurs pour simuler **2025, 2026, 2027** (en extrapolant les tendances : population qui augmente, revenus qui bougent...) et le modèle sort une **prédiction de vote** pour chaque commune.
+Pour prédire 2025, 2026 et 2027, on a besoin d'indicateurs futurs que l'on n'a pas encore. On les **extrapole** à partir des tendances passées :
+
+- **Population** : on a les chiffres de 1968 à 2023. On prolonge la courbe de chaque commune (régression linéaire sur les dernières années).
+- **CSP / diplômes** : on prolonge les tendances 2006 → 2022 (ex : si le % cadres monte de +0.5% par an, on continue).
+- **Finances** : idem avec les comptes communes 2000-2022.
+- **CatNat** : on garde le cumul connu (pas d'extrapolation, c'est un historique).
+
+On construit ainsi un tableau fictif pour 2025/2026/2027 avec les indicateurs projetés, et le modèle sort une **prédiction de vote** pour chaque commune à chaque horizon.
 
 ---
 
