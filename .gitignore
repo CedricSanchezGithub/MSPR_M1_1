@@ -60,3 +60,4 @@ data/input/**/*.json
 data/input/**/*.zip
 data/output/*.txt
 data/output/*.geojson
+data/output/*.db

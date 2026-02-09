@@ -10,6 +10,7 @@ Commandes disponibles:
     explore     - Lancer les analyses exploratoires
     classify    - Classifier les candidats (Gauche/Droite)
     visualize   - Générer tous les graphiques
+    etl         - Pipeline ETL : filtrer Hérault (34), charger SQLite
     all         - Exécuter toutes les étapes
 """
 
@@ -26,6 +27,7 @@ SCRIPTS = {
     "classify": os.path.join(SCRIPTS_DIR, "classify_candidats_v2.py"),
     "viz_presidentielles": os.path.join(SCRIPTS_DIR, "visualize_presidentielles.py"),
     "viz_comparatifs": os.path.join(SCRIPTS_DIR, "visualize_revenus_vs_votes.py"),
+    "etl": os.path.join(SCRIPTS_DIR, "etl_pipeline.py"),
 }
 
 
@@ -87,6 +89,12 @@ def cmd_visualize():
     run_script(SCRIPTS["viz_comparatifs"], "Graphiques revenus vs votes")
 
 
+def cmd_etl():
+    """Lancer le pipeline ETL (Phase 2)"""
+    print("\n🔄 PIPELINE ETL — HÉRAULT (34)")
+    run_script(SCRIPTS["etl"], "Pipeline ETL : extraction, transformation, chargement SQLite")
+
+
 def cmd_all():
     """Exécuter toutes les étapes"""
     cmd_explore()
@@ -117,6 +125,7 @@ def main():
         "classify": cmd_classify,
         "visualize": cmd_visualize,
         "viz": cmd_visualize,
+        "etl": cmd_etl,
         "all": cmd_all,
         "help": cmd_help,
         "-h": cmd_help,

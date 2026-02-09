@@ -119,23 +119,20 @@ Pour chaque table :
 
 | Tâche | Statut | Date | Notes |
 |-------|--------|------|-------|
-| MCD (conception tables/relations) | ⬜ À faire | | |
-| Vérification formats codgeo par dataset | ⬜ À faire | | |
-| Script ETL — extraction + filtrage dept 34 | ⬜ À faire | | |
-| Script ETL — transformation/normalisation | ⬜ À faire | | |
-| Script ETL — chargement SQLite | ⬜ À faire | | |
-| Validation post-chargement | ⬜ À faire | | |
-| Documentation schéma SQL | ⬜ À faire | | |
-| Intégration dans main.py | ⬜ À faire | | |
+| MCD (conception tables/relations) | ✅ Fait | 2026-02-09 | 12 tables, voir DDL dans etl_pipeline.py |
+| Vérification formats codgeo par dataset | ✅ Fait | 2026-02-09 | Fonction normalize_codgeo() + codgeo_from_single() |
+| Script ETL — extraction + filtrage dept 34 | ✅ Fait | 2026-02-09 | scripts/etl_pipeline.py |
+| Script ETL — transformation/normalisation | ✅ Fait | 2026-02-09 | Normalisation CODGEO, renommage colonnes, pivot population |
+| Script ETL — chargement SQLite | ✅ Fait | 2026-02-09 | data/output/electio_herault.db |
+| Validation post-chargement | ✅ Fait | 2026-02-09 | Comptages + vérif cohérence jointures |
+| Documentation schéma SQL | ✅ Fait | 2026-02-09 | DDL dans etl_pipeline.py |
+| Intégration dans main.py | ✅ Fait | 2026-02-09 | `python main.py etl` |
 | Commit & push | ⬜ À faire | | |
 
 ---
 
-## Décisions à prendre
+## Décisions prises (9 février 2026)
 
-1. **Granularité des élections** : toutes les élections (législatives, municipales…) ou seulement les présidentielles ?
-   - Recommandation : présidentielles uniquement (2002, 2007, 2012, 2017, 2022) — plus simple, directement lié au besoin de prédiction
-2. **Granularité temporelle des indicateurs** : garder toutes les années disponibles ou aligner sur les années d'élection ?
-   - Recommandation : garder toutes les années, interpoler si nécessaire en Phase 4
-3. **Classification Gauche/Droite** : la faire dans l'ETL ou en Phase 3 ?
-   - Recommandation : intégrer dans l'ETL (colonne `camp` dans la table `elections`)
+1. **Granularité des élections** : ✅ **Présidentielles uniquement** (2002, 2007, 2012, 2017, 2022)
+2. **Granularité temporelle des indicateurs** : ✅ **Toutes les années disponibles** (séries complètes)
+3. **Classification Gauche/Droite** : ✅ **Intégrée dans l'ETL** (colonne `camp` dans la table `elections`)
