@@ -2,8 +2,6 @@
 
 Ce fichier liste les liens pour télécharger les données utilisées dans ce projet.
 
-## Données INSEE
-
 ## Elections (`data/input/elections/`)
 
 ### Résultats électoraux par bureau de vote
@@ -88,10 +86,6 @@ Ce fichier liste les liens pour télécharger les données utilisées dans ce pr
 - **Description** : Nombre de décès domiciliés par commune et par année (bulletins d'état civil)
 - **Années** : 2008 à 2024 (annuel)
 - **Clé de jointure** : `GEO` (code INSEE commune) — filtrer sur `GEO_OBJECT = 'COM'`
-
-## Numérique (`data/input/numerique/`)
-
-*À venir (ex: taux d'installation de fibre)*
 
 ## Environnement (`data/input/environnement/`)
 
