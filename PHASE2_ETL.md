@@ -127,7 +127,7 @@ Pour chaque table :
 | Validation post-chargement | ✅ Fait | 2026-02-09 | Comptages + vérif cohérence jointures |
 | Documentation schéma SQL | ✅ Fait | 2026-02-09 | DDL dans etl_pipeline.py |
 | Intégration dans main.py | ✅ Fait | 2026-02-09 | `python main.py etl` |
-| Commit & push | ⬜ À faire | | |
+| Commit & push | ✅ Fait | 2026-02-09 | `23d05ca` poussé sur origin/main |
 
 ---
 
