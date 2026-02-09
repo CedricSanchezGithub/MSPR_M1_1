@@ -96,15 +96,15 @@ Les indicateurs cités dans le cahier des charges sont des **exemples** (*« com
 
 | Livrable | Statut |
 |----------|--------|
-| Pipeline ETL automatisé | Pas commencé |
-| Base de données structurée (SQL ou NoSQL) | Pas commencé |
-| Modèle Conceptuel de Données (MCD) | Pas commencé |
-| Analyse exploratoire + visualisations (cartes, histogrammes, heatmaps) | Pas commencé |
+| Pipeline ETL automatisé | ✅ `scripts/etl_pipeline.py` |
+| Base de données structurée (SQL ou NoSQL) | ✅ SQLite `data/output/electio_herault.db` (12 tables, 9.5 MB) |
+| Modèle Conceptuel de Données (MCD) | ✅ DDL dans `etl_pipeline.py`, relations dans `PHASE2_ETL.md` |
+| Analyse exploratoire + visualisations (cartes, histogrammes, heatmaps) | ✅ `scripts/analyse_exploratoire.py` (10 graphiques) |
 | Modèle prédictif supervisé (train/test, accuracy) | Pas commencé |
 | Prédictions à 1, 2 et 3 ans (courbes, cartes de chaleur, probabilités) | Pas commencé |
 | Dossier de synthèse / rapport | Pas commencé |
 | Support de soutenance | Pas commencé |
-| Code propre et commenté | En cours (scripts d'exploration seulement) |
+| Code propre et commenté | En cours |
 
 ---
 
@@ -116,26 +116,32 @@ Les indicateurs cités dans le cahier des charges sont des **exemples** (*« com
 - [x] **Périmètre géographique** : département de l'Hérault (34)
 - [ ] Justifier les choix (zone géo + indicateurs) dans le rapport
 
-### Phase 2 — Modélisation & ETL ← PROCHAINE ÉTAPE
+### Phase 2 — Modélisation & ETL (TERMINÉE)
 
-- [ ] **Concevoir le MCD** (tables, relations, clés)
-- [ ] **Créer la base de données** (SQL — PostgreSQL ou SQLite)
-- [ ] **Pipeline ETL** :
-  - [ ] Extraction : lecture des fichiers sources (CSV, XLSX)
-  - [ ] Transformation : nettoyage, normalisation, filtrage sur la zone choisie
-  - [ ] Chargement : insertion en base
-- [ ] Nommer les tables et champs de manière pertinente
-- [ ] Documenter le schéma
+- [x] **Concevoir le MCD** (12 tables, relations via `codgeo`)
+- [x] **Créer la base de données** (SQLite `data/output/electio_herault.db`)
+- [x] **Pipeline ETL** (`scripts/etl_pipeline.py`, commande `python main.py etl`) :
+  - [x] Extraction : lecture des 12 fichiers sources (CSV, XLSX, TXT 2.3 GB)
+  - [x] Transformation : normalisation codgeo, filtrage dept 34, classification Gauche/Droite
+  - [x] Chargement : 12 tables SQLite, 341 communes, ~100k lignes total
+- [x] Nommer les tables et champs de manière pertinente
+- [x] Documenter le schéma (DDL + `PHASE2_ETL.md`)
 
-### Phase 3 — Analyse exploratoire
+### Phase 3 — Analyse exploratoire (EN COURS)
 
-- [ ] Statistiques descriptives par indicateur
-- [ ] **Visualisations** (matplotlib / seaborn) :
-  - [ ] Histogrammes de distribution
-  - [ ] Heatmaps de corrélation (indicateurs vs résultats électoraux)
-  - [ ] Cartes géographiques (si possible)
-  - [ ] Évolutions temporelles
-- [ ] Identifier les indicateurs les plus corrélés aux résultats électoraux
+- [x] **Script** : `scripts/analyse_exploratoire.py` (commande `python main.py analyse`)
+- [x] **10 visualisations** dans `graphiques/phase3/` :
+  - [x] 01 — Évolution Gauche/Droite 2002-2022 (line chart)
+  - [x] 02 — Carte choroplèthe des communes (GeoJSON, T1 2022)
+  - [x] 03 — Revenu médian vs % Gauche (scatter + Pearson)
+  - [x] 04 — Heatmap de corrélation (9 indicateurs vs % Gauche)
+  - [x] 05 — Box plot revenus par camp
+  - [x] 06 — CSP : % cadres vs % ouvriers par camp (scatter)
+  - [x] 07 — Évolution population (top 10 croissance + top 10 déclin)
+  - [x] 08 — Dette par habitant vs % Gauche (scatter)
+  - [x] 09 — % Diplôme supérieur vs % Gauche (scatter + Pearson)
+  - [x] 10 — Top 20 communes CatNat par camp (bar chart)
+- [x] Identifier les indicateurs les plus corrélés aux résultats électoraux
 
 ### Phase 4 — Modèle prédictif
 

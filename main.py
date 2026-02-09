@@ -11,6 +11,7 @@ Commandes disponibles:
     classify    - Classifier les candidats (Gauche/Droite)
     visualize   - Générer tous les graphiques
     etl         - Pipeline ETL : filtrer Hérault (34), charger SQLite
+    analyse     - Analyse exploratoire Phase 3 (10 graphiques depuis SQLite)
     all         - Exécuter toutes les étapes
 """
 
@@ -22,12 +23,13 @@ import subprocess
 SCRIPTS_DIR = "scripts"
 
 SCRIPTS = {
-    "explore_candidats": os.path.join(SCRIPTS_DIR, "explore_candidats.py"),
-    "explore_revenus": os.path.join(SCRIPTS_DIR, "explore_revenus.py"),
-    "classify": os.path.join(SCRIPTS_DIR, "classify_candidats_v2.py"),
-    "viz_presidentielles": os.path.join(SCRIPTS_DIR, "visualize_presidentielles.py"),
-    "viz_comparatifs": os.path.join(SCRIPTS_DIR, "visualize_revenus_vs_votes.py"),
-    "etl": os.path.join(SCRIPTS_DIR, "etl_pipeline.py"),
+    "explore_candidats": os.path.join(SCRIPTS_DIR, "exploration", "explore_candidats.py"),
+    "explore_revenus": os.path.join(SCRIPTS_DIR, "exploration", "explore_revenus.py"),
+    "classify": os.path.join(SCRIPTS_DIR, "classification", "classify_candidats_v2.py"),
+    "viz_presidentielles": os.path.join(SCRIPTS_DIR, "visualisation", "visualize_presidentielles.py"),
+    "viz_comparatifs": os.path.join(SCRIPTS_DIR, "visualisation", "visualize_revenus_vs_votes.py"),
+    "etl": os.path.join(SCRIPTS_DIR, "etl", "etl_pipeline.py"),
+    "analyse": os.path.join(SCRIPTS_DIR, "analyse", "analyse_exploratoire.py"),
 }
 
 
@@ -42,14 +44,20 @@ def print_structure():
     print("""
 Structure du projet:
 ├── data/
-│   ├── input/          # Données brutes (candidats, revenus)
-│   └── output/         # Données générées (candidats_classified.txt)
-├── outputs/            # Résultats textuels des analyses
+│   ├── input/              # Données brutes (candidats, revenus, etc.)
+│   └── output/             # SQLite + données générées
+├── outputs/                # Résultats textuels des analyses
 ├── graphiques/
-│   ├── presidentielles/  # Graphiques des présidentielles
-│   └── comparatifs/      # Graphiques revenus vs votes
-├── scripts/            # Scripts Python
-├── main.py             # Ce fichier
+│   ├── presidentielles/    # Graphiques des présidentielles
+│   ├── comparatifs/        # Graphiques revenus vs votes
+│   └── phase3/             # Analyse exploratoire Hérault (10 graphiques)
+├── scripts/
+│   ├── exploration/        # Scripts d'exploration des données
+│   ├── classification/     # Classification Gauche/Droite
+│   ├── visualisation/      # Graphiques nationaux
+│   ├── etl/                # Pipeline ETL → SQLite
+│   └── analyse/            # Analyse exploratoire Phase 3
+├── main.py                 # Ce fichier
 └── requirements.txt
 """)
 
@@ -95,6 +103,12 @@ def cmd_etl():
     run_script(SCRIPTS["etl"], "Pipeline ETL : extraction, transformation, chargement SQLite")
 
 
+def cmd_analyse():
+    """Lancer l'analyse exploratoire (Phase 3)"""
+    print("\n🔬 ANALYSE EXPLORATOIRE — HÉRAULT (34)")
+    run_script(SCRIPTS["analyse"], "Analyse exploratoire : 10 visualisations depuis SQLite")
+
+
 def cmd_all():
     """Exécuter toutes les étapes"""
     cmd_explore()
@@ -126,6 +140,7 @@ def main():
         "visualize": cmd_visualize,
         "viz": cmd_visualize,
         "etl": cmd_etl,
+        "analyse": cmd_analyse,
         "all": cmd_all,
         "help": cmd_help,
         "-h": cmd_help,
