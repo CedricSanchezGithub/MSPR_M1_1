@@ -3,758 +3,903 @@ ANALYSE EXPLORATOIRE - NOUVEAUX FICHIERS (data/input/nouveau/)
 ======================================================================
 
 Fichiers trouvés:
-  - base-pop-historiques-1876-2023.xlsx (6.7 MB)
-  - fichier_pop_reference_6823.xlsx (16.7 MB)
+  - Arretes_de_catastrophe_naturelles.xlsx (4.4 MB)
+  - azi_gaspar.csv (3.5 MB)
+  - catnat_gaspar.csv (34.5 MB)
+  - dicrim_gaspar.csv (0.4 MB)
+  - pprm_gaspar.csv (0.3 MB)
+  - pprn_gaspar.csv (15.0 MB)
+  - pprt_gaspar.csv (0.9 MB)
+  - risq_gaspar.csv (8.4 MB)
+  - tim_gaspar.csv (0.7 MB)
 
 ======================================================================
-FICHIER: base-pop-historiques-1876-2023.xlsx (6.7 MB)
+FICHIER: Arretes_de_catastrophe_naturelles.xlsx (4.4 MB)
 ======================================================================
 
-  Nombre d'onglets: 3
-  Onglets: pop_1876_2023, Variables, Documentation
+  Nombre d'onglets: 1
+  Onglets: Données complètes
 
   ────────────────────────────────────────────────────────────
-  ONGLET: pop_1876_2023
+  ONGLET: Données complètes
   ────────────────────────────────────────────────────────────
-  Colonnes (41):
-      1. Chiffres détaillés - Séries historiques de population (1876 à 2023) | type: object     | non-null: 30/30
-      2. Unnamed: 1                               | type: object     | non-null: 27/30
-      3. Unnamed: 2                               | type: object     | non-null: 27/30
-      4. Unnamed: 3                               | type: object     | non-null: 28/30
-      5. Unnamed: 4                               | type: object     | non-null: 27/30
-      6. Unnamed: 5                               | type: object     | non-null: 27/30
-      7. Unnamed: 6                               | type: object     | non-null: 27/30
-      8. Unnamed: 7                               | type: object     | non-null: 27/30
-      9. Unnamed: 8                               | type: object     | non-null: 27/30
-     10. Unnamed: 9                               | type: object     | non-null: 27/30
-     11. Unnamed: 10                              | type: object     | non-null: 27/30
-     12. Unnamed: 11                              | type: object     | non-null: 27/30
-     13. Unnamed: 12                              | type: object     | non-null: 27/30
-     14. Unnamed: 13                              | type: object     | non-null: 27/30
-     15. Unnamed: 14                              | type: object     | non-null: 27/30
-     16. Unnamed: 15                              | type: object     | non-null: 27/30
-     17. Unnamed: 16                              | type: object     | non-null: 27/30
-     18. Unnamed: 17                              | type: object     | non-null: 27/30
-     19. Unnamed: 18                              | type: object     | non-null: 27/30
-     20. Unnamed: 19                              | type: object     | non-null: 27/30
-     21. Unnamed: 20                              | type: object     | non-null: 27/30
-     22. Unnamed: 21                              | type: object     | non-null: 27/30
-     23. Unnamed: 22                              | type: object     | non-null: 27/30
-     24. Unnamed: 23                              | type: object     | non-null: 27/30
-     25. Unnamed: 24                              | type: object     | non-null: 27/30
-     26. Unnamed: 25                              | type: object     | non-null: 27/30
-     27. Unnamed: 26                              | type: object     | non-null: 27/30
-     28. Unnamed: 27                              | type: object     | non-null: 27/30
-     29. Unnamed: 28                              | type: object     | non-null: 27/30
-     30. Unnamed: 29                              | type: object     | non-null: 27/30
-     31. Unnamed: 30                              | type: object     | non-null: 27/30
-     32. Unnamed: 31                              | type: object     | non-null: 27/30
-     33. Unnamed: 32                              | type: object     | non-null: 27/30
-     34. Unnamed: 33                              | type: object     | non-null: 27/30
-     35. Unnamed: 34                              | type: object     | non-null: 27/30
-     36. Unnamed: 35                              | type: object     | non-null: 27/30
-     37. Unnamed: 36                              | type: object     | non-null: 27/30
-     38. Unnamed: 37                              | type: object     | non-null: 27/30
-     39. Unnamed: 38                              | type: object     | non-null: 27/30
-     40. Unnamed: 39                              | type: object     | non-null: 27/30
-     41. Unnamed: 40                              | type: object     | non-null: 27/30
+  Colonnes (6):
+      1. INSEE                                    | type: object     | non-null: 30/30
+      2. Departement                              | type: object     | non-null: 30/30
+      3. Commune                                  | type: object     | non-null: 30/30
+      4. Périls                                   | type: object     | non-null: 30/30
+      5. Date début                               | type: datetime64[ns] | non-null: 30/30
+      6. Date fin                                 | type: datetime64[ns] | non-null: 30/30
 
-  Lignes totales (estimé): 34,883
+  Lignes totales (estimé): 0
 
   APERÇU (5 premières lignes):
-      Chiffres détaillés - Séries historiques de population (1876 à 2023) Unnamed: 1   Unnamed: 2            Unnamed: 3          Unnamed: 4          Unnamed: 5          Unnamed: 6          Unnamed: 7          Unnamed: 8          Unnamed: 9         Unnamed: 10         Unnamed: 11         Unnamed: 12         Unnamed: 13         Unnamed: 14         Unnamed: 15         Unnamed: 16         Unnamed: 17         Unnamed: 18         Unnamed: 19         Unnamed: 20         Unnamed: 21         Unnamed: 22         Unnamed: 23         Unnamed: 24         Unnamed: 25         Unnamed: 26         Unnamed: 27         Unnamed: 28         Unnamed: 29         Unnamed: 30         Unnamed: 31         Unnamed: 32         Unnamed: 33         Unnamed: 34         Unnamed: 35         Unnamed: 36         Unnamed: 37         Unnamed: 38         Unnamed: 39         Unnamed: 40
-    0                     France hors Mayotte - Communes                         NaN          NaN                                       NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN
-    1  Mise en ligne : décembre 2025 - Géographie au ...                         NaN          NaN                   NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN
-    2  ©Insee - Source(s) : Insee, recensements de la...                         NaN          NaN                   NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN                 NaN
-    3                                  Code géographique                      Région  Département  Libellé géographique  Population en 2023  Population en 2022  Population en 2021  Population en 2020  Population en 2019  Population en 2018  Population en 2017  Population en 2016  Population en 2015  Population en 2014  Population en 2013  Population en 2012  Population en 2011  Population en 2010  Population en 2009  Population en 2008  Population en 2007  Population en 2006  Population en 1999  Population en 1990  Population en 1982  Population en 1975  Population en 1968  Population en 1962  Population en 1954  Population en 1936  Population en 1931  Population en 1926  Population en 1921  Population en 1911  Population en 1906  Population en 1901  Population en 1896  Population en 1891  Population en 1886  Population en 1881  Population en 1876
-    4                                             CODGEO                         REG          DEP                LIBGEO            PMUN2023            PMUN2022            PMUN2021            PMUN2020            PMUN2019            PMUN2018            PMUN2017            PMUN2016            PMUN2015            PMUN2014            PMUN2013            PMUN2012            PMUN2011            PMUN2010            PMUN2009            PMUN2008            PMUN2007            PMUN2006            PSDC1999            PSDC1990            PSDC1982            PSDC1975            PSDC1968            PSDC1962            PTOT1954            PTOT1936            PTOT1931            PTOT1926            PTOT1921            PTOT1911            PTOT1906            PTOT1901            PTOT1896            PTOT1891            PTOT1886            PTOT1881            PTOT1876
+       INSEE Departement              Commune                          Périls Date début   Date fin
+    0  73181          73             Moûtiers           Mouvements de terrain 2015-04-07 2015-04-08
+    1  2B029          2B            Barbaggio  Inondations et coulées de boue 2015-03-15 2015-03-17
+    2  2B030          2B           Barrettali  Inondations et coulées de boue 2015-03-15 2015-03-17
+    3  2B054          2B              Campile  Inondations et coulées de boue 2015-03-15 2015-03-17
+    4  2B079          2B  Castello-di-Rostino  Inondations et coulées de boue 2015-03-15 2015-03-17
 
   VALEURS UNIQUES (colonnes texte):
-    Chiffres détaillés - Séries historiques de population (1876 à 2023): 30 valeurs uniques (trop pour lister)
-    Unnamed: 1 (3 valeurs):
-      - 84: 25
-      - Région: 1
-      - REG: 1
-    Unnamed: 2 (3 valeurs):
-      - 01: 25
-      - Département: 1
-      - DEP: 1
-    Unnamed: 3: 28 valeurs uniques (trop pour lister)
-    Unnamed: 4: 27 valeurs uniques (trop pour lister)
-    Unnamed: 5: 27 valeurs uniques (trop pour lister)
-    Unnamed: 6: 27 valeurs uniques (trop pour lister)
-    Unnamed: 7: 27 valeurs uniques (trop pour lister)
-    Unnamed: 8: 27 valeurs uniques (trop pour lister)
-    Unnamed: 9: 27 valeurs uniques (trop pour lister)
-    Unnamed: 10: 27 valeurs uniques (trop pour lister)
-    Unnamed: 11: 27 valeurs uniques (trop pour lister)
-    Unnamed: 12: 27 valeurs uniques (trop pour lister)
-    Unnamed: 13: 27 valeurs uniques (trop pour lister)
-    Unnamed: 14: 27 valeurs uniques (trop pour lister)
-    Unnamed: 15: 27 valeurs uniques (trop pour lister)
-    Unnamed: 16: 27 valeurs uniques (trop pour lister)
-    Unnamed: 17: 27 valeurs uniques (trop pour lister)
-    Unnamed: 18: 27 valeurs uniques (trop pour lister)
-    Unnamed: 19: 27 valeurs uniques (trop pour lister)
-    Unnamed: 20: 27 valeurs uniques (trop pour lister)
-    Unnamed: 21: 27 valeurs uniques (trop pour lister)
-    Unnamed: 22: 26 valeurs uniques (trop pour lister)
-    Unnamed: 23: 27 valeurs uniques (trop pour lister)
-    Unnamed: 24: 27 valeurs uniques (trop pour lister)
-    Unnamed: 25: 27 valeurs uniques (trop pour lister)
-    Unnamed: 26: 27 valeurs uniques (trop pour lister)
-    Unnamed: 27: 26 valeurs uniques (trop pour lister)
-    Unnamed: 28: 27 valeurs uniques (trop pour lister)
-    Unnamed: 29: 27 valeurs uniques (trop pour lister)
-    Unnamed: 30: 27 valeurs uniques (trop pour lister)
-    Unnamed: 31: 27 valeurs uniques (trop pour lister)
-    Unnamed: 32: 27 valeurs uniques (trop pour lister)
-    Unnamed: 33: 26 valeurs uniques (trop pour lister)
-    Unnamed: 34: 27 valeurs uniques (trop pour lister)
-    Unnamed: 35: 27 valeurs uniques (trop pour lister)
-    Unnamed: 36: 27 valeurs uniques (trop pour lister)
-    Unnamed: 37: 27 valeurs uniques (trop pour lister)
-    Unnamed: 38: 27 valeurs uniques (trop pour lister)
-    Unnamed: 39: 27 valeurs uniques (trop pour lister)
-    Unnamed: 40: 27 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: Variables
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Chiffres détaillés - Séries historiques de population (1876 à 2023) | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 26/30
-      3. Unnamed: 2                               | type: object     | non-null: 26/30
-
-  Lignes totales (estimé): 1,046
-
-  APERÇU (5 premières lignes):
-      Chiffres détaillés - Séries historiques de population (1876 à 2023) Unnamed: 1    Unnamed: 2
-    0                     France hors Mayotte - Communes                         NaN           NaN
-    1  Mise en ligne : décembre 2025 - Géographie au ...                         NaN           NaN
-    2  ©Insee - Source(s) : Insee, recensements de la...                         NaN           NaN
-    3                                                NaN                         NaN           NaN
-    4                                           VARIABLE                     LIB_VAR  LIB_VAR_LONG
-
-  VALEURS UNIQUES (colonnes texte):
-    Chiffres détaillés - Séries historiques de population (1876 à 2023): 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 26 valeurs uniques (trop pour lister)
-    Unnamed: 2: 26 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: Documentation
-  ────────────────────────────────────────────────────────────
-  Colonnes (1):
-      1. Chiffres détaillés - Séries historiques de population (1876 à 2023) | type: object     | non-null: 12/13
-
-  Lignes totales (estimé): 13
-
-  APERÇU (5 premières lignes):
-      Chiffres détaillés - Séries historiques de population (1876 à 2023)
-    0                     France hors Mayotte - Communes                 
-    1  Mise en ligne : décembre 2025 - Géographie au ...                 
-    2  ©Insee - Source(s) : Insee, recensements de la...                 
-    3                                                NaN                 
-    4                                         Géographie                 
-
-  VALEURS UNIQUES (colonnes texte):
-    Chiffres détaillés - Séries historiques de population (1876 à 2023) (12 valeurs):
-      - France hors Mayotte - Communes: 1
-      - Mise en ligne : décembre 2025 - Géographie au 01/0: 1
-      - ©Insee - Source(s) : Insee, recensements de la pop: 1
-      - Géographie: 1
-      - Les statistiques sont proposées dans la géographie: 1
-      - Définitions: 1
-      - Population municipale (depuis 2006): 1
-      - Le concept de population municipale est défini par: 1
-      - Population sans doubles comptes (1962 à 1999): 1
-      - La population sans doubles comptes comprend : 
-
-1 : 1
+    INSEE: 29 valeurs uniques (trop pour lister)
+    Departement (5 valeurs):
+      - 2B: 15
+      - 65: 6
+      - 62: 6
+      - 73: 2
+      - 76: 1
+    Commune: 29 valeurs uniques (trop pour lister)
+    Périls (3 valeurs):
+      - Inondations et coulées de boue: 24
+      - Mouvements de terrain: 4
+      - Avalanche: 2
 
 ======================================================================
-FICHIER: fichier_pop_reference_6823.xlsx (16.7 MB)
+FICHIER: azi_gaspar.csv (3.5 MB)
 ======================================================================
-
-  Nombre d'onglets: 25
-  Onglets: Documentation et présentation, Modifications territoriales, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 1999, 1990, 1982, 1975, 1968
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: Documentation et présentation
-  ────────────────────────────────────────────────────────────
-  Colonnes (1):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 26/30
-
-  Lignes totales (estimé): 1,048,575
-
-  APERÇU (5 premières lignes):
-         Populations de référence communales depuis 1968
-    0                      Mise en ligne : décembre 2025
-    1  ©Insee       Source(s) : Insee, Recensements d...
-    2                                                NaN
-    3                                       Présentation
-    4  Ce fichier répertorie les populations de référ...
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 26 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: Modifications territoriales
-  ────────────────────────────────────────────────────────────
-  Colonnes (1):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 19/25
-
-  Lignes totales (estimé): 1,048,575
+  Encodage: utf-8
+  Séparateur: ';'
+  Lignes totales: 18,864
+  Colonnes (16):
+      1. cod_nat_azi                              | type: object     | non-null: 30/30 | ex: 01DDT19880002
+      2. lib_azi                                  | type: object     | non-null: 30/30 | ex: Atlas des zones inondables de l'Ain
+      3. lib_bassin_risque                        | type: object     | non-null: 30/30 | ex: L'Ain
+      4. list_risques                             | type: object     | non-null: 30/30 | ex: Inondation ,Risque naturel
+      5. cod_commune                              | type: int64      | non-null: 30/30 | ex: 1007
+      6. lib_commune                              | type: object     | non-null: 30/30 | ex: Ambronay
+      7. dat_program_deb                          | type: object     | non-null: 30/30 | ex: 1988-03-01 01:00:00
+      8. dat_program_fin                          | type: object     | non-null: 30/30 | ex: 1988-03-01 01:00:00
+      9. dat_etu_deb                              | type: float64    | non-null: 0/30 | ex: NaN
+     10. dat_etu_fin                              | type: float64    | non-null: 0/30 | ex: NaN
+     11. dat_info_deb                             | type: float64    | non-null: 0/30 | ex: NaN
+     12. dat_info_fin                             | type: float64    | non-null: 0/30 | ex: NaN
+     13. dat_realisation                          | type: float64    | non-null: 0/30 | ex: NaN
+     14. dat_diffusion                            | type: object     | non-null: 30/30 | ex: 1988-03-01 01:00:00
+     15. dat_pub_net                              | type: float64    | non-null: 0/30 | ex: NaN
+     16. dat_maj                                  | type: object     | non-null: 30/30 | ex: 2010-05-21 02:00:00
 
   APERÇU (5 premières lignes):
-         Populations de référence communales depuis 1968
-    0                      Mise en ligne : décembre 2025
-    1                                                NaN
-    2                        Modifications territoriales
-    3  Certaines communes ont connu un ou des événeme...
-    4                                                NaN
+         cod_nat_azi                              lib_azi lib_bassin_risque                list_risques  cod_commune         lib_commune      dat_program_deb      dat_program_fin  dat_etu_deb  dat_etu_fin  dat_info_deb  dat_info_fin  dat_realisation        dat_diffusion  dat_pub_net              dat_maj
+    0  01DDT19880002  Atlas des zones inondables de l'Ain             L'Ain  Inondation ,Risque naturel         1007            Ambronay  1988-03-01 01:00:00  1988-03-01 01:00:00          NaN          NaN           NaN           NaN              NaN  1988-03-01 01:00:00          NaN  2010-05-21 02:00:00
+    1  01DDT19880002  Atlas des zones inondables de l'Ain             L'Ain  Inondation ,Risque naturel         1047               Blyes  1988-03-01 01:00:00  1988-03-01 01:00:00          NaN          NaN           NaN           NaN              NaN  1988-03-01 01:00:00          NaN  2010-05-21 02:00:00
+    2  01DDT19880002  Atlas des zones inondables de l'Ain             L'Ain  Inondation ,Risque naturel         1088     Charnoz-sur-Ain  1988-03-01 01:00:00  1988-03-01 01:00:00          NaN          NaN           NaN           NaN              NaN  1988-03-01 01:00:00          NaN  2010-05-21 02:00:00
+    3  01DDT19880002  Atlas des zones inondables de l'Ain             L'Ain  Inondation ,Risque naturel         1092  Châtillon-la-Palud  1988-03-01 01:00:00  1988-03-01 01:00:00          NaN          NaN           NaN           NaN              NaN  1988-03-01 01:00:00          NaN  2010-05-21 02:00:00
+    4  01DDT19880002  Atlas des zones inondables de l'Ain             L'Ain  Inondation ,Risque naturel         1099      Chazey-sur-Ain  1988-03-01 01:00:00  1988-03-01 01:00:00          NaN          NaN           NaN           NaN              NaN  1988-03-01 01:00:00          NaN  2010-05-21 02:00:00
 
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968 (19 valeurs):
-      - Mise en ligne : décembre 2025: 1
-      - - changement de département: 1
-      - Le changement de département de la commune 14513 (: 1
-      - Les communes codées 02285, 02344, 14513, 28131, 38: 1
-      - Cas des changements de département :: 1
-      - Le fichier « Liste des événements survenus aux com: 1
-      - Toutes les informations sur ces modifications sont: 1
-      - - transformation de commune associée en commune dé: 1
-      - - transfert de chef-lieu avec changement de code: 1
-      - - suppression de commune déléguée: 1
+  VALEURS UNIQUES (colonnes texte, sur 30 lignes):
+    cod_nat_azi (2 valeurs):
+      - 01DDT19880002: 19
+      - 01DDT19930002: 11
+    lib_azi (2 valeurs):
+      - Atlas des zones inondables de l'Ain: 19
+      - Atlas des zones inondables de l'Albarine: 11
+    lib_bassin_risque (2 valeurs):
+      - L'Ain: 19
+      - L'Albarine: 11
+    list_risques (1 valeurs):
+      - Inondation ,Risque naturel: 30
+    lib_commune: 29 valeurs uniques (trop pour lister)
+    dat_program_deb (2 valeurs):
+      - 1988-03-01 01:00:00: 19
+      - 1993-06-01 02:00:00: 11
+    dat_program_fin (2 valeurs):
+      - 1988-03-01 01:00:00: 19
+      - 1993-06-01 02:00:00: 11
+    dat_diffusion (2 valeurs):
+      - 1988-03-01 01:00:00: 19
+      - 1993-06-01 02:00:00: 11
+    dat_maj (1 valeurs):
+      - 2010-05-21 02:00:00: 30
 
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2023
-  ────────────────────────────────────────────────────────────
+======================================================================
+FICHIER: catnat_gaspar.csv (34.5 MB)
+======================================================================
+  Encodage: utf-8
+  Séparateur: ';'
+  Lignes totales: 260,799
+  Colonnes (10):
+      1. cod_nat_catnat                           | type: object     | non-null: 30/30 | ex: BUDD8750027A
+      2. cod_commune                              | type: object     | non-null: 30/30 | ex: 06120
+      3. lib_commune                              | type: object     | non-null: 30/30 | ex: Saint-Étienne-de-Tinée
+      4. num_risque_jo                            | type: object     | non-null: 30/30 | ex: GLT
+      5. lib_risque_jo                            | type: object     | non-null: 30/30 | ex: Glissement de Terrain
+      6. dat_deb                                  | type: object     | non-null: 30/30 | ex: 1985-01-01
+      7. dat_fin                                  | type: object     | non-null: 30/30 | ex: 1986-12-31
+      8. dat_pub_arrete                           | type: object     | non-null: 30/30 | ex: 1987-05-20
+      9. dat_pub_jo                               | type: object     | non-null: 30/30 | ex: 1987-05-24
+     10. dat_maj                                  | type: object     | non-null: 30/30 | ex: 2022-05-20 15:53:47.090
+
+  APERÇU (5 premières lignes):
+      cod_nat_catnat cod_commune             lib_commune num_risque_jo                      lib_risque_jo     dat_deb     dat_fin dat_pub_arrete  dat_pub_jo                  dat_maj
+    0   BUDD8750027A       06120  Saint-Étienne-de-Tinée           GLT              Glissement de Terrain  1985-01-01  1986-12-31     1987-05-20  1987-05-24  2022-05-20 15:53:47.090
+    1   BUDD8750038A       2B050                   Calvi           ICB  Inondations et/ou Coulées de Boue  1987-01-14  1987-01-15     1987-06-24  1987-07-10  2022-05-20 15:53:47.111
+    2   BUDD8750038A       30006               Aimargues           ICB  Inondations et/ou Coulées de Boue  1987-02-11  1987-02-13     1987-06-24  1987-07-10  2022-05-20 15:53:47.138
+    3   BUDD8750038A       30020                  Aubord           ICB  Inondations et/ou Coulées de Boue  1987-02-11  1987-02-13     1987-06-24  1987-07-10  2022-05-20 15:53:47.138
+    4   BUDD8750038A       30033              Beauvoisin           ICB  Inondations et/ou Coulées de Boue  1987-02-11  1987-02-13     1987-06-24  1987-07-10  2022-05-20 15:53:47.138
+
+  VALEURS UNIQUES (colonnes texte, sur 30 lignes):
+    cod_nat_catnat (3 valeurs):
+      - BUDD8750038A: 22
+      - BUDD8750048A: 7
+      - BUDD8750027A: 1
+    cod_commune: 30 valeurs uniques (trop pour lister)
+    lib_commune: 30 valeurs uniques (trop pour lister)
+    num_risque_jo (3 valeurs):
+      - ICB: 24
+      - MVT: 4
+      - GLT: 2
+    lib_risque_jo (3 valeurs):
+      - Inondations et/ou Coulées de Boue: 24
+      - Mouvement de Terrain: 4
+      - Glissement de Terrain: 2
+    dat_deb (11 valeurs):
+      - 1987-02-11: 16
+      - 1987-02-03: 3
+      - 1987-06-06: 2
+      - 1987-04-25: 2
+      - 1985-01-01: 1
+      - 1987-01-14: 1
+      - 1986-12-11: 1
+      - 1987-02-05: 1
+      - 1987-02-28: 1
+      - 1987-04-26: 1
+    dat_fin (10 valeurs):
+      - 1987-02-13: 16
+      - 1987-02-04: 3
+      - 1987-04-26: 3
+      - 1987-06-06: 2
+      - 1986-12-31: 1
+      - 1987-01-15: 1
+      - 1986-12-12: 1
+      - 1987-02-05: 1
+      - 1987-02-28: 1
+      - 1987-04-19: 1
+    dat_pub_arrete (3 valeurs):
+      - 1987-06-24: 22
+      - 1987-07-27: 7
+      - 1987-05-20: 1
+    dat_pub_jo (3 valeurs):
+      - 1987-07-10: 22
+      - 1987-08-18: 7
+      - 1987-05-24: 1
+    dat_maj (11 valeurs):
+      - 2022-05-20 15:53:47.138: 16
+      - 2022-05-20 15:53:47.144: 3
+      - 2022-05-20 15:53:47.196: 2
+      - 2022-05-20 15:53:47.211: 2
+      - 2022-05-20 15:53:47.090: 1
+      - 2022-05-20 15:53:47.111: 1
+      - 2022-05-20 15:53:47.146: 1
+      - 2022-05-20 15:53:47.148: 1
+      - 2022-05-20 15:53:47.191: 1
+      - 2022-05-20 15:53:47.192: 1
+
+======================================================================
+FICHIER: dicrim_gaspar.csv (0.4 MB)
+======================================================================
+  Encodage: utf-8
+  Séparateur: ';'
+  Lignes totales: 9,788
   Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 34,906
+      1. cod_commune                              | type: int64      | non-null: 30/30 | ex: 76663
+      2. lib_commune                              | type: object     | non-null: 30/30 | ex: Sassetot-le-Mauconduit
+      3. dat_publi_dicrim                         | type: object     | non-null: 30/30 | ex: 2003-12-31 01:00:00
 
   APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2023        NaN        NaN
-    1        Géographie communale au 1er janvier 2025        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
+       cod_commune             lib_commune     dat_publi_dicrim
+    0        76663  Sassetot-le-Mauconduit  2003-12-31 01:00:00
+    1        76651           Saint-Sylvain  2020-12-31 01:00:00
+    2        95580              Saint-Witz  1999-01-01 01:00:00
+    3        95541    Saint-Clair-sur-Epte  1999-01-01 01:00:00
+    4        95523          La Roche-Guyon  1999-01-01 01:00:00
 
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+  VALEURS UNIQUES (colonnes texte, sur 30 lignes):
+    lib_commune: 30 valeurs uniques (trop pour lister)
+    dat_publi_dicrim (6 valeurs):
+      - 1998-01-01 01:00:00: 12
+      - 1999-01-01 01:00:00: 9
+      - 1997-01-01 01:00:00: 4
+      - 1996-01-01 01:00:00: 3
+      - 2003-12-31 01:00:00: 1
+      - 2020-12-31 01:00:00: 1
 
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2022
-  ────────────────────────────────────────────────────────────
+======================================================================
+FICHIER: pprm_gaspar.csv (0.3 MB)
+======================================================================
+  Encodage: utf-8
+  Séparateur: ';'
+  Lignes totales: 996
+  Colonnes (37):
+      1. CODE MODELE                              | type: object     | non-null: 30/30 | ex: PPRM
+      2. LIBELLE MODELE                           | type: object     | non-null: 30/30 | ex: Plan de Prévention des Risques Miniers
+      3. CODE PROECEDURE                          | type: object     | non-null: 30/30 | ex: 42DDT20130002
+      4. LIBELLE PROCEDURE                        | type: object     | non-null: 30/30 | ex: PPRM DE LA VALLEE DU GIER
+      5. LIBELLE ORGANISME                        | type: object     | non-null: 30/30 | ex: Direction départementale des territoires
+      6. BASSIN RISQUE                            | type: object     | non-null: 13/30 | ex: GIER
+      7. BASSINS HYDROGRAPHIQUES                  | type: float64    | non-null: 0/30 | ex: NaN
+      8. COURS EAU                                | type: float64    | non-null: 0/30 | ex: NaN
+      9. CODE INSEE REGION                        | type: float64    | non-null: 28/30 | ex: 84.0
+     10. NOM REGION                               | type: object     | non-null: 28/30 | ex: AUVERGNE-RHONE-ALPES
+     11. CODE INSEE DEPARTEMENT                   | type: int64      | non-null: 30/30 | ex: 42
+     12. NOM DEPARTEMENT                          | type: object     | non-null: 30/30 | ex: LOIRE
+     13. CODE INSEE COMMUNE                       | type: int64      | non-null: 30/30 | ex: 42053
+     14. NOM COMMUNE                              | type: object     | non-null: 30/30 | ex: Châteauneuf
+     15. CODE RISQUE 1                            | type: int64      | non-null: 30/30 | ex: 30
+     16. LIBELLE RISQUE 1                         | type: object     | non-null: 30/30 | ex: Risque minier
+     17. CODE RISQUE 2                            | type: int64      | non-null: 30/30 | ex: 34
+     18. LIBELLE RISQUE 2                         | type: object     | non-null: 30/30 | ex: Echauffement des terrains de dépôts
+     19. CODE RISQUE 2.1                          | type: float64    | non-null: 25/30 | ex: 317.0
+     20. LIBELLE RISQUE 3                         | type: object     | non-null: 25/30 | ex: Ecroulements rocheux
+     21. PROCEDURE REVISANTE                      | type: object     | non-null: 30/30 | ex: FAUX
+     22. CODES REVISES                            | type: object     | non-null: 5/30 | ex: 57DDT20100005
+     23. PROCEDURE REVISEE                        | type: object     | non-null: 30/30 | ex: FAUX
+     24. CODES REVISANTS                          | type: object     | non-null: 3/30 | ex: 57DDT20200011
+     25. PRESCRIPTION                             | type: object     | non-null: 30/30 | ex: 2014-10-15
+     26. ENQUETE_PUBL_DEBUT                       | type: object     | non-null: 14/30 | ex: 2018-12-10
+     27. ENQUETE_PUBL_FIN                         | type: object     | non-null: 14/30 | ex: 2019-01-25
+     28. ANNEX_PLU                                | type: float64    | non-null: 0/30 | ex: NaN
+     29. DEPRESCRIPTION                           | type: float64    | non-null: 0/30 | ex: NaN
+     30. APPROBATION                              | type: object     | non-null: 30/30 | ex: 2019-03-29
+     31. ANNULATION                               | type: object     | non-null: 2/30 | ex: 2015-12-30
+     32. ABROGATION                               | type: object     | non-null: 5/30 | ex: 2015-04-17
+     33. LIBELLE ETAT                             | type: object     | non-null: 30/30 | ex: Opposable
+     34. DATE ETAT                                | type: object     | non-null: 30/30 | ex: 2020-01-01
+     35. LIBELLE SOUS-ETAT                        | type: object     | non-null: 30/30 | ex: Approuvé
+     36. DATE SOUS-ETAT                           | type: object     | non-null: 30/30 | ex: 2020-01-01
+     37. DATE DERNIERE MISE A JOUR                | type: object     | non-null: 30/30 | ex: 2025-01-21
+
+  APERÇU (5 premières lignes):
+      CODE MODELE                          LIBELLE MODELE CODE PROECEDURE              LIBELLE PROCEDURE                                  LIBELLE ORGANISME     BASSIN RISQUE  BASSINS HYDROGRAPHIQUES  COURS EAU  CODE INSEE REGION            NOM REGION  CODE INSEE DEPARTEMENT NOM DEPARTEMENT  CODE INSEE COMMUNE          NOM COMMUNE  CODE RISQUE 1 LIBELLE RISQUE 1  CODE RISQUE 2                     LIBELLE RISQUE 2  CODE RISQUE 2.1           LIBELLE RISQUE 3 PROCEDURE REVISANTE  CODES REVISES PROCEDURE REVISEE CODES REVISANTS PRESCRIPTION ENQUETE_PUBL_DEBUT ENQUETE_PUBL_FIN  ANNEX_PLU  DEPRESCRIPTION APPROBATION ANNULATION ABROGATION LIBELLE ETAT   DATE ETAT LIBELLE SOUS-ETAT DATE SOUS-ETAT DATE DERNIERE MISE A JOUR
+    0        PPRM  Plan de Prévention des Risques Miniers   42DDT20130002      PPRM DE LA VALLEE DU GIER           Direction départementale des territoires              GIER                      NaN        NaN               84.0  AUVERGNE-RHONE-ALPES                      42           LOIRE               42053          Châteauneuf             30    Risque minier             34  Echauffement des terrains de dépôts              NaN                        NaN                FAUX            NaN              FAUX             NaN   2014-10-15         2018-12-10       2019-01-25        NaN             NaN  2019-03-29        NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-01-21
+    1        PPRM  Plan de Prévention des Risques Miniers   12DDT20120002  PPRM du bassin de Decazeville           Direction départementale des territoires               NaN                      NaN        NaN               76.0             OCCITANIE                      12         AVEYRON               12016               Auzits             30    Risque minier             31                  Affaissement minier            317.0       Ecroulements rocheux                FAUX            NaN              FAUX             NaN   2012-12-21                NaN              NaN        NaN             NaN  2017-06-19        NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-02-07
+    2        PPRM  Plan de Prévention des Risques Miniers  59DDTM20140005  PPRM couronne de Valenciennes  Direction départementale des territoires et de...               NaN                      NaN        NaN               32.0       HAUTS-DE-FRANCE                      59            NORD               59564        La Sentinelle             30    Risque minier             31                  Affaissement minier            314.0                 Tassements                FAUX            NaN              FAUX             NaN   2014-11-17                NaN              NaN        NaN             NaN  2018-07-06        NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-03-26
+    3        PPRM  Plan de Prévention des Risques Miniers   57DDT20140009     PPRM-Bassin Sud révision 2           Direction départementale des territoires  Bassin ferrifère                      NaN        NaN               44.0             GRAND EST                      57         MOSELLE               57481  Montois-la-Montagne             30    Risque minier             31                  Affaissement minier            313.0  Affaissements progressifs                VRAI  57DDT20100005              FAUX             NaN   2014-07-29                NaN              NaN        NaN             NaN  2016-03-08        NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-01-09
+    4        PPRM  Plan de Prévention des Risques Miniers  62DDTM20150002                PPRm du LENSOIS  Direction départementale des territoires et de...           Lensois                      NaN        NaN               32.0       HAUTS-DE-FRANCE                      62   PAS-DE-CALAIS               62427       Hénin-Beaumont             30    Risque minier             33  Emissions en surface de gaz de mine              NaN                        NaN                FAUX            NaN              FAUX             NaN   2015-06-10                NaN              NaN        NaN             NaN  2017-11-17        NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2022-03-04
+
+  VALEURS UNIQUES (colonnes texte, sur 30 lignes):
+    CODE MODELE (1 valeurs):
+      - PPRM: 30
+    LIBELLE MODELE (1 valeurs):
+      - Plan de Prévention des Risques Miniers: 30
+    CODE PROECEDURE: 22 valeurs uniques (trop pour lister)
+    LIBELLE PROCEDURE: 22 valeurs uniques (trop pour lister)
+    LIBELLE ORGANISME (2 valeurs):
+      - Direction départementale des territoires: 24
+      - Direction départementale des territoires et de la mer: 6
+    BASSIN RISQUE (6 valeurs):
+      - Bassin ferrifère: 4
+      - GIER: 3
+      - Largentière : 2
+      - Béthunois: 2
+      - Lensois: 1
+      - Mines de Littry: 1
+    NOM REGION (6 valeurs):
+      - GRAND EST: 10
+      - AUVERGNE-RHONE-ALPES: 8
+      - OCCITANIE: 4
+      - HAUTS-DE-FRANCE: 4
+      - PROVENCE-ALPES-COTE D'AZUR: 1
+      - NORMANDIE: 1
+    NOM DEPARTEMENT (11 valeurs):
+      - MEURTHE-ET-MOSELLE: 6
+      - LOIRE: 5
+      - MOSELLE: 4
+      - PAS-DE-CALAIS: 3
+      - ARDECHE: 3
+      - AVEYRON: 2
+      - TARN: 2
+      - ISERE: 2
+      - NORD: 1
+      - BOUCHES-DU-RHONE: 1
+    NOM COMMUNE: 29 valeurs uniques (trop pour lister)
+    LIBELLE RISQUE 1 (1 valeurs):
+      - Risque minier: 30
+    LIBELLE RISQUE 2 (3 valeurs):
+      - Affaissement minier: 25
+      - Emissions en surface de gaz de mine: 3
+      - Echauffement des terrains de dépôts: 2
+    LIBELLE RISQUE 3 (6 valeurs):
+      - Tassements: 11
+      - Effondrements localisés: 4
+      - Glissements ou mouvements de pente: 4
+      - Ecroulements rocheux: 2
+      - Affaissements progressifs: 2
+      - Effondrements généralisés: 2
+    PROCEDURE REVISANTE (2 valeurs):
+      - FAUX: 25
+      - VRAI: 5
+    CODES REVISES (5 valeurs):
+      - 57DDT20100005: 1
+      - 57DDT20100007: 1
+      - 57DDT20100010: 1
+      - 57DDT20100002: 1
+      - 54DDT20080009: 1
+    PROCEDURE REVISEE (2 valeurs):
+      - FAUX: 27
+      - VRAI: 3
+    CODES REVISANTS (3 valeurs):
+      - 57DDT20200011: 1
+      - 54DDT20140041: 1
+      - PPRM_2022_0001: 1
+    PRESCRIPTION: 21 valeurs uniques (trop pour lister)
+    ENQUETE_PUBL_DEBUT (9 valeurs):
+      - 2018-12-10: 3
+      - 2010-10-04: 2
+      - 2010-09-06: 2
+      - 2025-03-03: 2
+      - 2016-11-09: 1
+      - 2013-02-01: 1
+      - 2018-12-05: 1
+      - 2025-05-12: 1
+      - 2012-10-11: 1
+    ENQUETE_PUBL_FIN (9 valeurs):
+      - 2019-01-25: 3
+      - 2010-11-05: 2
+      - 2010-10-08: 2
+      - 2025-04-11: 2
+      - 2016-12-09: 1
+      - 2013-03-27: 1
+      - 2019-01-19: 1
+      - 2025-06-03: 1
+      - 2012-11-12: 1
+    APPROBATION: 21 valeurs uniques (trop pour lister)
+    ANNULATION (1 valeurs):
+      - 2015-12-30: 2
+    ABROGATION (4 valeurs):
+      - 2015-04-17: 2
+      - 2021-12-22: 1
+      - 2016-08-23: 1
+      - 2022-11-15: 1
+    LIBELLE ETAT (2 valeurs):
+      - Opposable: 23
+      - Caduque: 7
+    DATE ETAT (1 valeurs):
+      - 2020-01-01: 30
+    LIBELLE SOUS-ETAT (3 valeurs):
+      - Approuvé: 23
+      - Abrogé: 5
+      - Annulé: 2
+    DATE SOUS-ETAT (1 valeurs):
+      - 2020-01-01: 30
+    DATE DERNIERE MISE A JOUR (16 valeurs):
+      - 2025-02-27: 6
+      - 2025-01-21: 3
+      - 2025-02-18: 3
+      - 2025-02-07: 2
+      - 2025-01-09: 2
+      - 2016-02-25: 2
+      - 2021-02-24: 2
+      - 2025-07-22: 2
+      - 2025-03-26: 1
+      - 2022-03-04: 1
+
+======================================================================
+FICHIER: pprn_gaspar.csv (15.0 MB)
+======================================================================
+  Encodage: utf-8
+  Séparateur: ';'
+  Lignes totales: 32,621
+  Colonnes (59):
+      1. CODE MODELE                              | type: object     | non-null: 30/30 | ex: PPRN-Multi
+      2. LIBELLE MODELE                           | type: object     | non-null: 30/30 | ex: Plan de Prévention des Risques Naturels Multi-risques
+      3. CODE PROECEDURE                          | type: object     | non-null: 30/30 | ex: 01DDT20210001
+      4. LIBELLE PROCEDURE                        | type: object     | non-null: 30/30 | ex: PPRN inondation Rhône-Séran et chute de blocs CulozBéon
+      5. LIBELLE ORGANISME                        | type: object     | non-null: 30/30 | ex: Direction départementale des territoires
+      6. BASSIN RISQUE                            | type: object     | non-null: 24/30 | ex: Rhône - Grand Colombier
+      7. BASSINS HYDROGRAPHIQUES                  | type: object     | non-null: 4/30 | ex: Le Rhône et les cours d'eau côtiers méditerranéens
+      8. COURS EAU                                | type: object     | non-null: 5/30 | ex: le Séran
+      9. CODE INSEE REGION                        | type: int64      | non-null: 30/30 | ex: 84
+     10. NOM REGION                               | type: object     | non-null: 30/30 | ex: AUVERGNE-RHONE-ALPES
+     11. CODE INSEE DEPARTEMENT                   | type: int64      | non-null: 30/30 | ex: 1
+     12. NOM DEPARTEMENT                          | type: object     | non-null: 30/30 | ex: AIN
+     13. CODE INSEE COMMUNE                       | type: int64      | non-null: 30/30 | ex: 1039
+     14. NOM COMMUNE                              | type: object     | non-null: 30/30 | ex: Béon
+     15. CODE RISQUE 1                            | type: int64      | non-null: 30/30 | ex: 10
+     16. LIBELLE RISQUE 1                         | type: object     | non-null: 30/30 | ex: Risque naturel
+     17. CODE RISQUE 2                            | type: int64      | non-null: 30/30 | ex: 12
+     18. LIBELLE RISQUE 2                         | type: object     | non-null: 30/30 | ex: Mouvement de terrain
+     19. CODE RISQUE 2.1                          | type: float64    | non-null: 27/30 | ex: 123.0
+     20. LIBELLE RISQUE 3                         | type: object     | non-null: 27/30 | ex: Eboulement ou chutes de pierres et de blocs
+     21. PROCEDURE REVISANTE                      | type: object     | non-null: 30/30 | ex: VRAI
+     22. CODES REVISES                            | type: object     | non-null: 2/30 | ex: 69SNRS20050001 | 01DDT20090003
+     23. PROCEDURE REVISEE                        | type: object     | non-null: 30/30 | ex: FAUX
+     24. CODES REVISANTS                          | type: object     | non-null: 8/30 | ex: 01DDT20200017
+     25. PROGRAMMATION_DEBUT                      | type: object     | non-null: 1/30 | ex: 1986-02-07
+     26. PROGRAMMATION_FIN                        | type: object     | non-null: 1/30 | ex: 1986-02-07
+     27. MONTAGE_DEBUT                            | type: object     | non-null: 15/30 | ex: 2001-01-26
+     28. MONTAGE_FIN                              | type: object     | non-null: 15/30 | ex: 2001-01-26
+     29. PRESCRIPTION                             | type: object     | non-null: 30/30 | ex: 2021-07-29
+     30. ETUDES_HYDR_DEBUT                        | type: float64    | non-null: 0/30 | ex: NaN
+     31. ETUDES_HYDR_FIN                          | type: float64    | non-null: 0/30 | ex: NaN
+     32. CARTE_ALEAS_DEBUT                        | type: object     | non-null: 7/30 | ex: 2021-07-29
+     33. CARTE_ALEAS_FIN                          | type: object     | non-null: 4/30 | ex: 2016-08-30
+     34. CARTE_ENJEUX_DEBUT                       | type: object     | non-null: 3/30 | ex: 2021-07-29
+     35. CARTE_ENJEUX_FIN                         | type: object     | non-null: 1/30 | ex: 2015-11-04
+     36. ZONAGE_REGL_DEBUT                        | type: object     | non-null: 23/30 | ex: 2024-12-12
+     37. ZONAGE_REGL_FIN                          | type: object     | non-null: 14/30 | ex: 2016-08-30
+     38. REG_ET_NOTE_PRES_DEBUT                   | type: float64    | non-null: 0/30 | ex: NaN
+     39. REG_ET_NOTE_PRES_FIN                     | type: float64    | non-null: 0/30 | ex: NaN
+     40. CONCERTATION_DEBUT                       | type: float64    | non-null: 0/30 | ex: NaN
+     41. CONCERTATION_FIN                         | type: float64    | non-null: 0/30 | ex: NaN
+     42. CONSULTATION_DEBUT                       | type: object     | non-null: 1/30 | ex: 2005-09-19
+     43. CONSULTATION_FIN                         | type: object     | non-null: 1/30 | ex: 2005-11-19
+     44. CONSULT_SERV_DEBUT                       | type: float64    | non-null: 0/30 | ex: NaN
+     45. CONSULT_SERV_FIN                         | type: float64    | non-null: 0/30 | ex: NaN
+     46. ENQUETE_PUBL_DEBUT                       | type: object     | non-null: 18/30 | ex: 2024-09-16
+     47. ENQUETE_PUBL_FIN                         | type: object     | non-null: 18/30 | ex: 2024-10-19
+     48. ANNEX_PLU                                | type: object     | non-null: 1/30 | ex: 2014-01-08
+     49. PROROGATION                              | type: object     | non-null: 1/30 | ex: 2024-02-09
+     50. APPLIC_ANTIC                             | type: float64    | non-null: 0/30 | ex: NaN
+     51. DEPRESCRIPTION                           | type: float64    | non-null: 0/30 | ex: NaN
+     52. APPROBATION                              | type: object     | non-null: 29/30 | ex: 2024-12-12
+     53. ANNULATION                               | type: float64    | non-null: 0/30 | ex: NaN
+     54. ABROGATION                               | type: object     | non-null: 6/30 | ex: 2024-05-28
+     55. LIBELLE ETAT                             | type: object     | non-null: 30/30 | ex: Opposable
+     56. DATE ETAT                                | type: object     | non-null: 30/30 | ex: 2020-01-01
+     57. LIBELLE SOUS-ETAT                        | type: object     | non-null: 30/30 | ex: Approuvé
+     58. DATE SOUS-ETAT                           | type: object     | non-null: 30/30 | ex: 2020-01-01
+     59. DATE DERNIERE MISE A JOUR                | type: object     | non-null: 30/30 | ex: 2025-01-14
+
+  APERÇU (5 premières lignes):
+      CODE MODELE                                     LIBELLE MODELE  CODE PROECEDURE                                  LIBELLE PROCEDURE                                  LIBELLE ORGANISME             BASSIN RISQUE                            BASSINS HYDROGRAPHIQUES   COURS EAU  CODE INSEE REGION                  NOM REGION  CODE INSEE DEPARTEMENT          NOM DEPARTEMENT  CODE INSEE COMMUNE                 NOM COMMUNE  CODE RISQUE 1 LIBELLE RISQUE 1  CODE RISQUE 2      LIBELLE RISQUE 2  CODE RISQUE 2.1                                   LIBELLE RISQUE 3 PROCEDURE REVISANTE                   CODES REVISES PROCEDURE REVISEE CODES REVISANTS PROGRAMMATION_DEBUT PROGRAMMATION_FIN MONTAGE_DEBUT MONTAGE_FIN PRESCRIPTION  ETUDES_HYDR_DEBUT  ETUDES_HYDR_FIN CARTE_ALEAS_DEBUT CARTE_ALEAS_FIN CARTE_ENJEUX_DEBUT CARTE_ENJEUX_FIN ZONAGE_REGL_DEBUT ZONAGE_REGL_FIN  REG_ET_NOTE_PRES_DEBUT  REG_ET_NOTE_PRES_FIN  CONCERTATION_DEBUT  CONCERTATION_FIN CONSULTATION_DEBUT CONSULTATION_FIN  CONSULT_SERV_DEBUT  CONSULT_SERV_FIN ENQUETE_PUBL_DEBUT ENQUETE_PUBL_FIN   ANNEX_PLU PROROGATION  APPLIC_ANTIC  DEPRESCRIPTION APPROBATION  ANNULATION ABROGATION LIBELLE ETAT   DATE ETAT LIBELLE SOUS-ETAT DATE SOUS-ETAT DATE DERNIERE MISE A JOUR
+    0  PPRN-Multi  Plan de Prévention des Risques Naturels Multi-...    01DDT20210001  PPRN inondation Rhône-Séran et chute de blocs ...           Direction départementale des territoires   Rhône - Grand Colombier  Le Rhône et les cours d'eau côtiers méditerran...    le Séran                 84        AUVERGNE-RHONE-ALPES                       1                      AIN                1039                        Béon             10   Risque naturel             12  Mouvement de terrain            123.0        Eboulement ou chutes de pierres et de blocs                VRAI  69SNRS20050001 | 01DDT20090003              FAUX             NaN                 NaN               NaN           NaN         NaN   2021-07-29                NaN              NaN        2021-07-29             NaN         2021-07-29              NaN        2024-12-12             NaN                     NaN                   NaN                 NaN               NaN                NaN              NaN                 NaN               NaN         2024-09-16       2024-10-19         NaN  2024-02-09           NaN             NaN  2024-12-12         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-01-14
+    1  PPRN-Multi  Plan de Prévention des Risques Naturels Multi-...    04DDT20060004  PPRN-Multi - Château-Arnoux-Saint-Auban 2013 [...           Direction départementale des territoires                   Durance                                                NaN  la Durance                 93  PROVENCE-ALPES-COTE D'AZUR                       4  ALPES-DE-HAUTE-PROVENCE                4049  Château-Arnoux-Saint-Auban             10   Risque naturel             13                Séisme              NaN                                                NaN                FAUX                             NaN              FAUX             NaN                 NaN               NaN           NaN         NaN   2004-06-07                NaN              NaN        2016-08-30      2016-08-30                NaN              NaN        2004-06-07      2016-08-30                     NaN                   NaN                 NaN               NaN                NaN              NaN                 NaN               NaN                NaN              NaN  2014-01-08         NaN           NaN             NaN  2013-11-06         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2022-09-09
+    2      PPRN-I  Plan de Prévention des Risques Naturels Inonda...    02DDT20070018                       PPR entre Charly et Villiers           Direction départementale des territoires                     Marne                                                NaN         NaN                 32             HAUTS-DE-FRANCE                       2                    AISNE                2242          Crouttes-sur-Marne             10   Risque naturel             11            Inondation            113.0  Par une crue torrentielle ou à montée rapide d...                FAUX                             NaN              FAUX             NaN                 NaN               NaN    2001-01-26  2001-01-26   2004-12-06                NaN              NaN               NaN             NaN                NaN              NaN        2012-12-28      2012-12-28                     NaN                   NaN                 NaN               NaN                NaN              NaN                 NaN               NaN                NaN              NaN         NaN         NaN           NaN             NaN  2012-12-28         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2024-11-27
+    3     PPRN-IF  Plan de Prévention des Risques Naturels Incend...  06DREAL20190006          PPRN-IF - Théoule-sur-Mer 2022 Révision 1  Direction régionale de l'environnement, de l'a...                       NaN                                                NaN         NaN                 93  PROVENCE-ALPES-COTE D'AZUR                       6          ALPES-MARITIMES                6138             Théoule-sur-Mer             10   Risque naturel             16          Feu de forêt              NaN                                                NaN                VRAI                  06DDTM20060008              FAUX             NaN                 NaN               NaN           NaN         NaN   2019-01-30                NaN              NaN               NaN             NaN                NaN              NaN        2022-04-27      2022-04-27                     NaN                   NaN                 NaN               NaN                NaN              NaN                 NaN               NaN                NaN              NaN         NaN         NaN           NaN             NaN  2022-04-27         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-04-03
+    4      PPRN-I  Plan de Prévention des Risques Naturels Inonda...    01DDT19990006                                    PPRi _Misérieux           Direction départementale des territoires  Le Formans et le Morbier                                                NaN         NaN                 84        AUVERGNE-RHONE-ALPES                       1                      AIN                1250                   Misérieux             10   Risque naturel             11            Inondation            113.0  Par une crue torrentielle ou à montée rapide d...                FAUX                             NaN              FAUX             NaN                 NaN               NaN    1999-03-19  1999-03-19   1999-03-19                NaN              NaN        2002-03-07             NaN         2002-03-07              NaN        2002-03-07             NaN                     NaN                   NaN                 NaN               NaN                NaN              NaN                 NaN               NaN         1999-03-19       1999-03-19         NaN         NaN           NaN             NaN  2002-03-07         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-03-24
+
+  VALEURS UNIQUES (colonnes texte, sur 30 lignes):
+    CODE MODELE (4 valeurs):
+      - PPRN-Multi: 15
+      - PPRN-I: 9
+      - PPRN-Mvt: 5
+      - PPRN-IF: 1
+    LIBELLE MODELE (4 valeurs):
+      - Plan de Prévention des Risques Naturels Multi-risques: 15
+      - Plan de Prévention des Risques Naturels Inondation: 9
+      - Plan de Prévention des Risques Naturels Mouvement de terrain: 5
+      - Plan de Prévention des Risques Naturels Incendie Feu de Forê: 1
+    CODE PROECEDURE: 30 valeurs uniques (trop pour lister)
+    LIBELLE PROCEDURE: 30 valeurs uniques (trop pour lister)
+    LIBELLE ORGANISME (3 valeurs):
+      - Direction départementale des territoires: 24
+      - Direction départementale des territoires et de la mer: 5
+      - Direction régionale de l'environnement, de l'aménagement et : 1
+    BASSIN RISQUE (20 valeurs):
+      - -: 3
+      - Marne: 2
+      - Saône: 2
+      - Rhône - Grand Colombier: 1
+      - Ubaye: 1
+      - Clapière Auron: 1
+      - Bléone: 1
+      - Allier: 1
+      - Verdon: 1
+      - Paillons - pays niçois: 1
+    BASSINS HYDROGRAPHIQUES (2 valeurs):
+      - Le Rhône et les cours d'eau côtiers méditerranéens: 3
+      - La Meuse: 1
+    COURS EAU (5 valeurs):
+      - le Séran: 1
+      - la Durance: 1
+      - la Chiers|la Meuse: 1
+      - l'Oise: 1
+      - l'Allier: 1
+    NOM REGION (5 valeurs):
+      - PROVENCE-ALPES-COTE D'AZUR: 15
+      - AUVERGNE-RHONE-ALPES: 8
+      - HAUTS-DE-FRANCE: 4
+      - OCCITANIE: 2
+      - GRAND EST: 1
+    NOM DEPARTEMENT (9 valeurs):
+      - AIN: 6
+      - ALPES-MARITIMES: 6
+      - HAUTES-ALPES: 5
+      - ALPES-DE-HAUTE-PROVENCE: 4
+      - AISNE: 4
+      - ARIEGE: 2
+      - ARDENNES: 1
+      - ARDECHE: 1
+      - ALLIER: 1
+    NOM COMMUNE: 30 valeurs uniques (trop pour lister)
+    LIBELLE RISQUE 1 (1 valeurs):
+      - Risque naturel: 30
+    LIBELLE RISQUE 2 (4 valeurs):
+      - Inondation: 17
+      - Mouvement de terrain: 10
+      - Séisme: 2
+      - Feu de forêt: 1
+    LIBELLE RISQUE 3 (7 valeurs):
+      - Par une crue à débordement lent de cours d'eau: 9
+      - Eboulement ou chutes de pierres et de blocs: 5
+      - Par une crue torrentielle ou à montée rapide de cours d'eau: 5
+      - Glissement de terrain: 3
+      - Affaissements et effondrements d'origine anthropique (ancien: 2
+      - Par ruissellement et coulée de boue: 2
+      - Par lave torrentielle (torrent et talweg): 1
+    PROCEDURE REVISANTE (2 valeurs):
+      - FAUX: 28
+      - VRAI: 2
+    CODES REVISES (2 valeurs):
+      - 69SNRS20050001 | 01DDT20090003: 1
+      - 06DDTM20060008: 1
+    PROCEDURE REVISEE (2 valeurs):
+      - FAUX: 22
+      - VRAI: 8
+    CODES REVISANTS (7 valeurs):
+      - 01DDT20120022: 2
+      - 01DDT20200017: 1
+      - 06DREAL20150017 | 06DREAL20200001: 1
+      - 04DDT20210001: 1
+      - 04DDT20090004: 1
+      - 13DREAL20120014: 1
+      - PPRN-S_2025_0001: 1
+    PROGRAMMATION_DEBUT (1 valeurs):
+      - 1986-02-07: 1
+    PROGRAMMATION_FIN (1 valeurs):
+      - 1986-02-07: 1
+    MONTAGE_DEBUT (13 valeurs):
+      - 2001-01-26: 3
+      - 1999-03-19: 1
+      - 1997-09-17: 1
+      - 2012-08-01: 1
+      - 2001-05-16: 1
+      - 2008-01-02: 1
+      - 2000-01-17: 1
+      - 1986-02-05: 1
+      - 1996-05-17: 1
+      - 2000-03-14: 1
+    MONTAGE_FIN (13 valeurs):
+      - 2001-01-26: 3
+      - 1999-03-19: 1
+      - 1997-09-17: 1
+      - 2013-12-19: 1
+      - 2001-05-16: 1
+      - 2008-04-20: 1
+      - 2000-01-17: 1
+      - 1986-02-05: 1
+      - 1996-05-17: 1
+      - 2000-03-14: 1
+    PRESCRIPTION: 28 valeurs uniques (trop pour lister)
+    CARTE_ALEAS_DEBUT (7 valeurs):
+      - 2021-07-29: 1
+      - 2016-08-30: 1
+      - 2002-03-07: 1
+      - 2013-12-19: 1
+      - 2002-02-15: 1
+      - 2015-11-04: 1
+      - 1997-05-01: 1
+    CARTE_ALEAS_FIN (4 valeurs):
+      - 2016-08-30: 1
+      - 2014-02-24: 1
+      - 2015-11-04: 1
+      - 1998-09-17: 1
+    CARTE_ENJEUX_DEBUT (3 valeurs):
+      - 2021-07-29: 1
+      - 2002-03-07: 1
+      - 2015-11-04: 1
+    CARTE_ENJEUX_FIN (1 valeurs):
+      - 2015-11-04: 1
+    ZONAGE_REGL_DEBUT: 23 valeurs uniques (trop pour lister)
+    ZONAGE_REGL_FIN (14 valeurs):
+      - 2016-08-30: 1
+      - 2012-12-28: 1
+      - 2022-04-27: 1
+      - 2016-11-28: 1
+      - 2014-10-01: 1
+      - 2015-11-04: 1
+      - 2012-01-09: 1
+      - 1998-09-17: 1
+      - 2001-05-02: 1
+      - 2017-01-31: 1
+    CONSULTATION_DEBUT (1 valeurs):
+      - 2005-09-19: 1
+    CONSULTATION_FIN (1 valeurs):
+      - 2005-11-19: 1
+    ENQUETE_PUBL_DEBUT (18 valeurs):
+      - 2024-09-16: 1
+      - 1999-03-19: 1
+      - 1997-07-31: 1
+      - 1996-08-08: 1
+      - 2015-05-05: 1
+      - 2000-11-15: 1
+      - 1997-10-24: 1
+      - 1998-08-06: 1
+      - 2008-01-18: 1
+      - 1997-11-12: 1
+    ENQUETE_PUBL_FIN (18 valeurs):
+      - 2024-10-19: 1
+      - 1999-03-19: 1
+      - 1997-07-31: 1
+      - 1996-08-08: 1
+      - 2015-06-11: 1
+      - 2000-11-15: 1
+      - 1997-10-24: 1
+      - 1998-08-06: 1
+      - 2008-02-22: 1
+      - 1997-11-12: 1
+    ANNEX_PLU (1 valeurs):
+      - 2014-01-08: 1
+    PROROGATION (1 valeurs):
+      - 2024-02-09: 1
+    APPROBATION: 28 valeurs uniques (trop pour lister)
+    ABROGATION (5 valeurs):
+      - 2015-03-25: 2
+      - 2024-05-28: 1
+      - 2015-07-28: 1
+      - 2008-07-30: 1
+      - 2007-07-31: 1
+    LIBELLE ETAT (3 valeurs):
+      - Opposable: 23
+      - Caduque: 6
+      - Prescrit: 1
+    DATE ETAT (1 valeurs):
+      - 2020-01-01: 30
+    LIBELLE SOUS-ETAT (3 valeurs):
+      - Approuvé: 23
+      - Abrogé: 6
+      - Prescrit: 1
+    DATE SOUS-ETAT (1 valeurs):
+      - 2020-01-01: 30
+    DATE DERNIERE MISE A JOUR: 24 valeurs uniques (trop pour lister)
+
+======================================================================
+FICHIER: pprt_gaspar.csv (0.9 MB)
+======================================================================
+  Encodage: utf-8
+  Séparateur: ';'
+  Lignes totales: 2,413
+  Colonnes (37):
+      1. CODE MODELE                              | type: object     | non-null: 30/30 | ex: PPRT
+      2. LIBELLE MODELE                           | type: object     | non-null: 30/30 | ex: Plan de Prévention des Risques Technologiques
+      3. CODE PROECEDURE                          | type: object     | non-null: 30/30 | ex: 83DREAL20140146
+      4. LIBELLE PROCEDURE                        | type: object     | non-null: 30/30 | ex: PPRT - Site militaire [ Tourris ] 2014
+      5. LIBELLE ORGANISME                        | type: object     | non-null: 30/30 | ex: Direction régionale de l'environnement, de l'aménagement et 
+      6. BASSIN RISQUE                            | type: object     | non-null: 12/30 | ex: PPRT PLANETE ARTIFICES - Chaill sous les Ormeaux - 85
+      7. BASSINS HYDROGRAPHIQUES                  | type: float64    | non-null: 0/30 | ex: NaN
+      8. COURS EAU                                | type: float64    | non-null: 0/30 | ex: NaN
+      9. CODE INSEE REGION                        | type: int64      | non-null: 30/30 | ex: 93
+     10. NOM REGION                               | type: object     | non-null: 30/30 | ex: PROVENCE-ALPES-COTE D'AZUR
+     11. CODE INSEE DEPARTEMENT                   | type: int64      | non-null: 30/30 | ex: 83
+     12. NOM DEPARTEMENT                          | type: object     | non-null: 30/30 | ex: VAR
+     13. CODE INSEE COMMUNE                       | type: int64      | non-null: 30/30 | ex: 83132
+     14. NOM COMMUNE                              | type: object     | non-null: 30/30 | ex: Solliès-Ville
+     15. CODE RISQUE 1                            | type: int64      | non-null: 30/30 | ex: 20
+     16. LIBELLE RISQUE 1                         | type: object     | non-null: 30/30 | ex: Risque technologique
+     17. CODE RISQUE 2                            | type: int64      | non-null: 30/30 | ex: 21
+     18. LIBELLE RISQUE 2                         | type: object     | non-null: 30/30 | ex: Risque industriel
+     19. CODE RISQUE 2.1                          | type: int64      | non-null: 30/30 | ex: 214
+     20. LIBELLE RISQUE 3                         | type: object     | non-null: 30/30 | ex: Effet de projection
+     21. PROCEDURE REVISANTE                      | type: object     | non-null: 30/30 | ex: FAUX
+     22. CODES REVISES                            | type: object     | non-null: 1/30 | ex: 13DREAL20090004
+     23. PROCEDURE REVISEE                        | type: object     | non-null: 30/30 | ex: FAUX
+     24. CODES REVISANTS                          | type: object     | non-null: 1/30 | ex: 38DDT20140007
+     25. PRESCRIPTION                             | type: object     | non-null: 30/30 | ex: 2012-03-22
+     26. ENQUETE_PUBL_DEBUT                       | type: object     | non-null: 19/30 | ex: 2013-01-04
+     27. ENQUETE_PUBL_FIN                         | type: object     | non-null: 19/30 | ex: 2013-02-04
+     28. ANNEX_PLU                                | type: object     | non-null: 3/30 | ex: 2015-12-07
+     29. DEPRESCRIPTION                           | type: object     | non-null: 1/30 | ex: 2014-05-06
+     30. APPROBATION                              | type: object     | non-null: 28/30 | ex: 2014-03-06
+     31. ANNULATION                               | type: float64    | non-null: 0/30 | ex: NaN
+     32. ABROGATION                               | type: object     | non-null: 2/30 | ex: 2021-08-26
+     33. LIBELLE ETAT                             | type: object     | non-null: 30/30 | ex: Opposable
+     34. DATE ETAT                                | type: object     | non-null: 30/30 | ex: 2020-01-01
+     35. LIBELLE SOUS-ETAT                        | type: object     | non-null: 30/30 | ex: Approuvé
+     36. DATE SOUS-ETAT                           | type: object     | non-null: 30/30 | ex: 2020-01-01
+     37. DATE DERNIERE MISE A JOUR                | type: object     | non-null: 30/30 | ex: 2025-04-15
+
+  APERÇU (5 premières lignes):
+      CODE MODELE                                 LIBELLE MODELE  CODE PROECEDURE                       LIBELLE PROCEDURE                                  LIBELLE ORGANISME BASSIN RISQUE  BASSINS HYDROGRAPHIQUES  COURS EAU  CODE INSEE REGION                  NOM REGION  CODE INSEE DEPARTEMENT   NOM DEPARTEMENT  CODE INSEE COMMUNE         NOM COMMUNE  CODE RISQUE 1      LIBELLE RISQUE 1  CODE RISQUE 2   LIBELLE RISQUE 2  CODE RISQUE 2.1      LIBELLE RISQUE 3 PROCEDURE REVISANTE CODES REVISES PROCEDURE REVISEE CODES REVISANTS PRESCRIPTION ENQUETE_PUBL_DEBUT ENQUETE_PUBL_FIN ANNEX_PLU DEPRESCRIPTION APPROBATION  ANNULATION ABROGATION LIBELLE ETAT   DATE ETAT LIBELLE SOUS-ETAT DATE SOUS-ETAT DATE DERNIERE MISE A JOUR
+    0        PPRT  Plan de Prévention des Risques Technologiques  83DREAL20140146  PPRT - Site militaire [ Tourris ] 2014  Direction régionale de l'environnement, de l'a...           NaN                      NaN        NaN                 93  PROVENCE-ALPES-COTE D'AZUR                      83               VAR               83132       Solliès-Ville             20  Risque technologique             21  Risque industriel              214   Effet de projection                FAUX           NaN              FAUX             NaN   2012-03-22                NaN              NaN       NaN            NaN  2014-03-06         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-04-15
+    1        PPRT  Plan de Prévention des Risques Technologiques    26DDT20100008                             PPRT - DPPV           Direction départementale des territoires           NaN                      NaN        NaN                 84        AUVERGNE-RHONE-ALPES                      26             DROME               26252  Portes-lès-Valence             20  Risque technologique             21  Risque industriel              212  Effet de surpression                FAUX           NaN              FAUX             NaN   2011-05-12         2013-01-04       2013-02-04       NaN            NaN  2013-06-12         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-04-09
+    2        PPRT  Plan de Prévention des Risques Technologiques  13DREAL20140011              PPRT - CDH [ Rognac ] 2016  Direction régionale de l'environnement, de l'a...           NaN                      NaN        NaN                 93  PROVENCE-ALPES-COTE D'AZUR                      13  BOUCHES-DU-RHONE               13081              Rognac             20  Risque technologique             21  Risque industriel              211       Effet thermique                FAUX           NaN              FAUX             NaN   2009-11-10                NaN              NaN       NaN            NaN         NaN         NaN        NaN     Prescrit  2020-01-01          Prescrit     2020-01-01                2025-04-09
+    3        PPRT  Plan de Prévention des Risques Technologiques  60DREAL20140002                        WEYLCHEM LAMOTTE  Direction régionale de l'environnement, de l'a...           NaN                      NaN        NaN                 32             HAUTS-DE-FRANCE                      60              OISE               60647       Trosly-Breuil             20  Risque technologique             21  Risque industriel              212  Effet de surpression                FAUX           NaN              FAUX             NaN   2010-10-12         2014-09-30       2014-11-05       NaN            NaN  2014-12-19         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-03-27
+    4        PPRT  Plan de Prévention des Risques Technologiques  18DREAL20140002                  BUTAGAZ (Aubigny/Nère)  Direction régionale de l'environnement, de l'a...           NaN                      NaN        NaN                 24         CENTRE-VAL DE LOIRE                      18              CHER               18015    Aubigny-sur-Nère             20  Risque technologique             21  Risque industriel              212  Effet de surpression                FAUX           NaN              FAUX             NaN   2009-06-25         2013-01-08       2013-02-08       NaN            NaN  2014-04-01         NaN        NaN    Opposable  2020-01-01          Approuvé     2020-01-01                2025-04-02
+
+  VALEURS UNIQUES (colonnes texte, sur 30 lignes):
+    CODE MODELE (1 valeurs):
+      - PPRT: 30
+    LIBELLE MODELE (1 valeurs):
+      - Plan de Prévention des Risques Technologiques: 30
+    CODE PROECEDURE: 30 valeurs uniques (trop pour lister)
+    LIBELLE PROCEDURE: 30 valeurs uniques (trop pour lister)
+    LIBELLE ORGANISME (4 valeurs):
+      - Direction régionale de l'environnement, de l'aménagement et : 18
+      - Direction départementale des territoires: 6
+      - Direction départementale des territoires et de la mer: 5
+      - Direction Régionale et Interdépartementale de l'Environnemen: 1
+    BASSIN RISQUE (11 valeurs):
+      - Pyrotechnie militaire: 2
+      - PPRT PLANETE ARTIFICES - Chaill sous les Ormeaux - 85: 1
+      - 68 PPRT PPC CRISTAL: 1
+      - PPRT HUNTSMAN: 1
+      - PSV (89): 1
+      - Annecy: 1
+      - SAINT-GAUDENS: 1
+      - PPRT SDPN: 1
+      - Genay: 1
+      - 67 PPRT BASF: 1
+    NOM REGION (12 valeurs):
+      - AUVERGNE-RHONE-ALPES: 4
+      - HAUTS-DE-FRANCE: 4
+      - CENTRE-VAL DE LOIRE: 4
+      - GRAND EST: 4
+      - PROVENCE-ALPES-COTE D'AZUR: 3
+      - PAYS DE LA LOIRE: 2
+      - OCCITANIE: 2
+      - BRETAGNE: 2
+      - ILE-DE-FRANCE: 2
+      - BOURGOGNE-FRANCHE-COMTE: 1
+    NOM DEPARTEMENT: 23 valeurs uniques (trop pour lister)
+    NOM COMMUNE: 30 valeurs uniques (trop pour lister)
+    LIBELLE RISQUE 1 (1 valeurs):
+      - Risque technologique: 30
+    LIBELLE RISQUE 2 (1 valeurs):
+      - Risque industriel: 30
+    LIBELLE RISQUE 3 (4 valeurs):
+      - Effet thermique: 14
+      - Effet de surpression: 11
+      - Effet toxique: 3
+      - Effet de projection: 2
+    PROCEDURE REVISANTE (2 valeurs):
+      - FAUX: 29
+      - VRAI: 1
+    CODES REVISES (1 valeurs):
+      - 13DREAL20090004: 1
+    PROCEDURE REVISEE (2 valeurs):
+      - FAUX: 29
+      - VRAI: 1
+    CODES REVISANTS (1 valeurs):
+      - 38DDT20140007: 1
+    PRESCRIPTION: 29 valeurs uniques (trop pour lister)
+    ENQUETE_PUBL_DEBUT (19 valeurs):
+      - 2013-01-04: 1
+      - 2013-08-22: 1
+      - 2014-04-14: 1
+      - 2017-06-19: 1
+      - 2011-11-03: 1
+      - 2010-10-15: 1
+      - 2011-11-02: 1
+      - 2013-05-30: 1
+      - 2011-10-21: 1
+      - 2011-06-23: 1
+    ENQUETE_PUBL_FIN (19 valeurs):
+      - 2013-02-04: 1
+      - 2013-09-23: 1
+      - 2014-05-21: 1
+      - 2017-07-28: 1
+      - 2011-12-05: 1
+      - 2010-11-15: 1
+      - 2011-12-02: 1
+      - 2013-06-29: 1
+      - 2011-11-21: 1
+      - 2011-06-23: 1
+    ANNEX_PLU (3 valeurs):
+      - 2015-12-07: 1
+      - 2016-07-21: 1
+      - 2011-11-04: 1
+    DEPRESCRIPTION (1 valeurs):
+      - 2014-05-06: 1
+    APPROBATION: 28 valeurs uniques (trop pour lister)
+    ABROGATION (2 valeurs):
+      - 2021-08-26: 1
+      - 2015-05-22: 1
+    LIBELLE ETAT (3 valeurs):
+      - Opposable: 26
+      - Caduque: 3
+      - Prescrit: 1
+    DATE ETAT (1 valeurs):
+      - 2020-01-01: 30
+    LIBELLE SOUS-ETAT (4 valeurs):
+      - Approuvé: 26
+      - Abrogé: 2
+      - Prescrit: 1
+      - Déprescrit: 1
+    DATE SOUS-ETAT (1 valeurs):
+      - 2020-01-01: 30
+    DATE DERNIERE MISE A JOUR (14 valeurs):
+      - 2025-04-09: 8
+      - 2025-04-10: 5
+      - 2025-04-04: 3
+      - 2025-03-27: 2
+      - 2025-04-16: 2
+      - 2025-03-28: 2
+      - 2025-04-15: 1
+      - 2025-04-02: 1
+      - 2012-01-23: 1
+      - 2025-07-15: 1
+
+======================================================================
+FICHIER: risq_gaspar.csv (8.4 MB)
+======================================================================
+  Encodage: utf-8
+  Séparateur: ';'
+  Lignes totales: 172,595
+  Colonnes (4):
+      1. cod_commune                              | type: int64      | non-null: 30/30 | ex: 1001
+      2. lib_commune                              | type: object     | non-null: 30/30 | ex: L'Abergement-Clémenciat
+      3. lib_risque                               | type: object     | non-null: 30/30 | ex: Inondation
+      4. num_risque                               | type: int64      | non-null: 30/30 | ex: 11
+
+  APERÇU (5 premières lignes):
+       cod_commune              lib_commune                                      lib_risque  num_risque
+    0         1001  L'Abergement-Clémenciat                                      Inondation          11
+    1         1001  L'Abergement-Clémenciat  Par une crue à débordement lent de cours d'eau         112
+    2         1001  L'Abergement-Clémenciat                                          Séisme          13
+    3         1001  L'Abergement-Clémenciat           Transport de marchandises dangereuses          24
+    4         1002    L'Abergement-de-Varey                            Mouvement de terrain          12
+
+  VALEURS UNIQUES (colonnes texte, sur 30 lignes):
+    lib_commune (10 valeurs):
+      - Ambérieu-en-Bugey: 5
+      - Ambronay: 5
+      - L'Abergement-Clémenciat: 4
+      - Anglefort: 4
+      - L'Abergement-de-Varey: 3
+      - Andert-et-Condon: 3
+      - Ambérieux-en-Dombes: 2
+      - Ambutrix: 2
+      - Ambléon: 1
+      - Apremont: 1
+    lib_risque (8 valeurs):
+      - Séisme: 9
+      - Inondation: 5
+      - Par une crue à débordement lent de cours d'eau: 3
+      - Transport de marchandises dangereuses: 3
+      - Mouvement de terrain: 3
+      - Par une crue torrentielle ou à montée rapide de cours d'eau: 3
+      - Glissement de terrain: 2
+      - Rupture de barrage: 2
+
+======================================================================
+FICHIER: tim_gaspar.csv (0.7 MB)
+======================================================================
+  Encodage: utf-8
+  Séparateur: ';'
+  Lignes totales: 18,502
   Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 34,948
+      1. cod_commune                              | type: int64      | non-null: 30/30 | ex: 66003
+      2. lib_commune                              | type: object     | non-null: 30/30 | ex: Amélie-les-Bains-Palalda
+      3. dat_transmission_tim                     | type: object     | non-null: 30/30 | ex: 2024-06-06 02:00:00
 
   APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2022        NaN        NaN
-    1        Géographie communale au 1er janvier 2024        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2021
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 34,968
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2021        NaN        NaN
-    1        Géographie communale au 1er janvier 2023        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2020
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 34,968
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2020        NaN        NaN
-    1        Géographie communale au 1er janvier 2022        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2019
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 34,981
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2019        NaN        NaN
-    1        Géographie communale au 1er janvier 2021        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2018
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 34,983
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2018        NaN        NaN
-    1        Géographie communale au 1er janvier 2020        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2017
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 34,983
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2017        NaN        NaN
-    1        Géographie communale au 1er janvier 2019        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2016
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 35,370
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2016        NaN        NaN
-    1        Géographie communale au 1er janvier 2018        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2015
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 35,429
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2015        NaN        NaN
-    1        Géographie communale au 1er janvier 2017        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2014
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 35,898
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2014        NaN        NaN
-    1        Géographie communale au 1er janvier 2016        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2013
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,671
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2013        NaN        NaN
-    1        Géographie communale au 1er janvier 2015        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2012
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,694
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2012        NaN        NaN
-    1        Géographie communale au 1er janvier 2014        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2011
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,694
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2011        NaN        NaN
-    1        Géographie communale au 1er janvier 2013        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2010
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,713
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2010        NaN        NaN
-    1        Géographie communale au 1er janvier 2012        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2009
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,710
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2009        NaN        NaN
-    1        Géographie communale au 1er janvier 2011        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2008
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,712
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2008        NaN        NaN
-    1        Géographie communale au 1er janvier 2010        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2007
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,712
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2007        NaN        NaN
-    1        Géographie communale au 1er janvier 2009        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 2006
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,711
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0       Population municipale au 1er janvier 2006        NaN        NaN
-    1        Géographie communale au 1er janvier 2008        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 1999
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,707
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0            Population municipale au 8 mars 1999        NaN        NaN
-    1             Géographie communale au 8 mars 1999        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 24 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 1990
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,692
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0            Population municipale au 5 mars 1990        NaN        NaN
-    1             Géographie communale au 5 mars 1990        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 1982
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,459
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0            Population municipale au 4 mars 1982        NaN        NaN
-    1             Géographie communale au 4 mars 1982        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 1975
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 36,780
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0        Population municipale au 20 février 1975        NaN        NaN
-    1         Géographie communale au 20 février 1975        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
-
-  ────────────────────────────────────────────────────────────
-  ONGLET: 1968
-  ────────────────────────────────────────────────────────────
-  Colonnes (3):
-      1. Populations de référence communales depuis 1968 | type: object     | non-null: 29/30
-      2. Unnamed: 1                               | type: object     | non-null: 25/30
-      3. Unnamed: 2                               | type: object     | non-null: 25/30
-
-  Lignes totales (estimé): 37,734
-
-  APERÇU (5 premières lignes):
-      Populations de référence communales depuis 1968 Unnamed: 1 Unnamed: 2
-    0          Population municipale au 1er mars 1968        NaN        NaN
-    1           Géographie communale au 1er mars 1968        NaN        NaN
-    2                   Mise en ligne : décembre 2025        NaN        NaN
-    3    Source : Insee, recensement de la population        NaN        NaN
-    4                                             NaN        NaN        NaN
-
-  VALEURS UNIQUES (colonnes texte):
-    Populations de référence communales depuis 1968: 29 valeurs uniques (trop pour lister)
-    Unnamed: 1: 25 valeurs uniques (trop pour lister)
-    Unnamed: 2: 25 valeurs uniques (trop pour lister)
+       cod_commune               lib_commune dat_transmission_tim
+    0        66003  Amélie-les-Bains-Palalda  2024-06-06 02:00:00
+    1        88006                 Ambacourt  2025-01-22 01:00:00
+    2        88292              Mattaincourt  2024-08-22 02:00:00
+    3        88082         Celles-sur-Plaine  2025-01-22 01:00:00
+    4        88295                   Mazirot  2024-08-22 02:00:00
+
+  VALEURS UNIQUES (colonnes texte, sur 30 lignes):
+    lib_commune: 30 valeurs uniques (trop pour lister)
+    dat_transmission_tim (6 valeurs):
+      - 2024-09-30 02:00:00: 18
+      - 2025-01-22 01:00:00: 4
+      - 2024-08-22 02:00:00: 3
+      - 2025-01-23 01:00:00: 3
+      - 2024-06-06 02:00:00: 1
+      - 2024-10-09 02:00:00: 1
 
 ======================================================================
 FIN DE L'ANALYSE
