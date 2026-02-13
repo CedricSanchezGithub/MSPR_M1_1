@@ -79,7 +79,7 @@ def get_conn():
     return sqlite3.connect(DB_PATH)
 
 
-def calcul_pct_gauche_par_commune(conn, annee=2022, tour=1):
+def calcul_pct_gauche_par_commune(conn, annee=2020, tour=1):
     """Calcule le % de voix Gauche par commune pour une élection donnée.
 
     Retourne un DataFrame avec colonnes : codgeo, pct_gauche
@@ -154,8 +154,8 @@ def sauvegarder(fig, nom_fichier):
 # ============================================================================
 
 def plot_01_evolution_vote(conn):
-    """Line chart : évolution Gauche/Droite dans le 34 (présidentielles T1)."""
-    print("\n[1/10] Évolution du vote Gauche/Droite (2002-2022)...")
+    """Line chart : évolution Gauche/Droite dans le 34 (municipales T1)."""
+    print("\n[1/10] Évolution du vote Gauche/Droite (2008-2020)...")
 
     query = """
         SELECT annee, camp, SUM(voix) as total_voix
@@ -192,7 +192,7 @@ def plot_01_evolution_vote(conn):
 
     ax.set_xlabel('Année', fontsize=12)
     ax.set_ylabel('% des voix', fontsize=12)
-    ax.set_title("Évolution Gauche/Droite — Présidentielles T1 — Hérault (34)\n(LREM classé à droite)",
+    ax.set_title("Évolution Gauche/Droite — Municipales T1 — Hérault (34)\n(LREM classé à droite)",
                  fontsize=14, fontweight='bold')
     ax.legend(fontsize=12)
     ax.grid(True, alpha=0.3)
@@ -208,13 +208,13 @@ def plot_01_evolution_vote(conn):
 # ============================================================================
 
 def plot_02_carte_communes(conn):
-    """Carte choroplèthe : % Gauche par commune (T1 2022)."""
-    print("\n[2/10] Carte des communes par vote majoritaire (T1 2022)...")
+    """Carte choroplèthe : % Gauche par commune (T1 2020)."""
+    print("\n[2/10] Carte des communes par vote majoritaire (T1 2020)...")
 
-    pct = calcul_pct_gauche_par_commune(conn, annee=2022, tour=1)
+    pct = calcul_pct_gauche_par_commune(conn, annee=2020, tour=1)
 
     if pct.empty:
-        print("  ⚠ Pas de données pour 2022 T1")
+        print("  ⚠ Pas de données pour 2020 T1")
         return
 
     # Télécharger le GeoJSON des communes du 34
@@ -239,12 +239,12 @@ def plot_02_carte_communes(conn):
              legend_kwds={'label': '% Gauche', 'shrink': 0.6})
 
     ax.axis('off')
-    ax.set_title("Vote Gauche/Droite par commune — Présidentielle T1 2022 — Hérault\n"
+    ax.set_title("Vote Gauche/Droite par commune — Municipales T1 2020 — Hérault\n"
                  "(Bleu = Gauche, Rouge = Droite)",
                  fontsize=14, fontweight='bold')
 
     plt.tight_layout()
-    sauvegarder(fig, "02_carte_communes_2022.png")
+    sauvegarder(fig, "02_carte_communes_2020.png")
 
 
 # ============================================================================
@@ -255,7 +255,7 @@ def plot_03_revenu_vs_vote(conn):
     """Scatter plot : revenu médian vs % Gauche, avec droite de tendance."""
     print("\n[3/10] Revenu médian vs % vote Gauche...")
 
-    pct = calcul_pct_gauche_par_commune(conn, annee=2022, tour=1)
+    pct = calcul_pct_gauche_par_commune(conn, annee=2020, tour=1)
 
     revenus = pd.read_sql_query(
         'SELECT codgeo, "[disp]_mediane_(€)" as revenu_median FROM revenus', conn)
@@ -300,7 +300,7 @@ def plot_03_revenu_vs_vote(conn):
                         xytext=(5, 5), textcoords='offset points')
 
     ax.set_xlabel('Revenu médian (€)', fontsize=12)
-    ax.set_ylabel('% Vote Gauche (T1 2022)', fontsize=12)
+    ax.set_ylabel('% Vote Gauche (T1 2020)', fontsize=12)
     ax.set_title(f"Revenu médian vs Vote Gauche par commune — Hérault\n"
                  f"Corrélation de Pearson : r = {correlation:.3f}",
                  fontsize=14, fontweight='bold')
@@ -319,7 +319,7 @@ def plot_04_heatmap_correlations(conn):
     """Heatmap : matrice de corrélation entre indicateurs socio-éco et % Gauche."""
     print("\n[4/10] Heatmap de corrélation indicateurs vs % Gauche...")
 
-    pct = calcul_pct_gauche_par_commune(conn, annee=2022, tour=1)
+    pct = calcul_pct_gauche_par_commune(conn, annee=2020, tour=1)
 
     # --- Revenu médian ---
     revenus = pd.read_sql_query(
@@ -342,12 +342,12 @@ def plot_04_heatmap_correlations(conn):
     dipl_df['pct_diplome_sup'] = 100 * dipl_df['diplome_sup'] / dipl_df['pop_nscol'].replace(0, np.nan)
     dipl_df = dipl_df[['codgeo', 'pct_sans_diplome', 'pct_diplome_sup']].dropna()
 
-    # --- Dette par habitant (comptes_communes 2022) ---
+    # --- Dette par habitant (comptes_communes, année la plus proche de 2020) ---
     comptes_query = """
         SELECT c.codgeo, c.dette, p.population
         FROM comptes_communes c
-        JOIN population p ON c.codgeo = p.codgeo AND p.annee = 2022
-        WHERE c.annee = 2022
+        JOIN population p ON c.codgeo = p.codgeo AND p.annee = 2020
+        WHERE c.annee = (SELECT MAX(annee) FROM comptes_communes WHERE annee <= 2020)
     """
     comptes_df = pd.read_sql_query(comptes_query, conn)
     # dette est en milliers d'€ parfois — vérifier les ordres de grandeur
@@ -363,7 +363,7 @@ def plot_04_heatmap_correlations(conn):
     catnat_df = pd.read_sql_query(catnat_query, conn)
 
     # --- Population 2022 ---
-    pop_query = "SELECT codgeo, population as pop_2022 FROM population WHERE annee = 2022"
+    pop_query = "SELECT codgeo, population as pop_2020 FROM population WHERE annee = 2020"
     pop_df = pd.read_sql_query(pop_query, conn)
 
     # --- Taux de natalité (naissances / population) ---
@@ -372,7 +372,7 @@ def plot_04_heatmap_correlations(conn):
                AVG(CAST(n.naissances AS REAL)) as moy_naissances,
                p.population
         FROM naissances_deces n
-        JOIN population p ON n.codgeo = p.codgeo AND p.annee = 2022
+        JOIN population p ON n.codgeo = p.codgeo AND p.annee = 2020
         WHERE n.annee >= 2018
         GROUP BY n.codgeo
     """
@@ -395,7 +395,7 @@ def plot_04_heatmap_correlations(conn):
         'pct_diplome_sup': '% Diplôme sup.',
         'dette_par_hab': 'Dette/hab (€)',
         'nb_catnat': 'Nb CatNat',
-        'pop_2022': 'Population',
+        'pop_2020': 'Population',
         'taux_natalite': 'Taux natalité (‰)',
     }
 
@@ -419,7 +419,7 @@ def plot_04_heatmap_correlations(conn):
                 ax=ax, square=True, linewidths=0.5)
 
     ax.set_title("Matrice de corrélation — Indicateurs socio-économiques vs Vote\n"
-                 "Hérault (34), Présidentielle T1 2022",
+                 "Hérault (34), Municipales T1 2020",
                  fontsize=14, fontweight='bold')
 
     plt.tight_layout()
@@ -434,7 +434,7 @@ def plot_05_boxplot_revenus(conn):
     """Box plot : revenus médians des communes Gauche vs Droite."""
     print("\n[5/10] Box plot revenus par camp...")
 
-    pct = calcul_pct_gauche_par_commune(conn, annee=2022, tour=1)
+    pct = calcul_pct_gauche_par_commune(conn, annee=2020, tour=1)
     revenus = pd.read_sql_query(
         'SELECT codgeo, "[disp]_mediane_(€)" as revenu_median FROM revenus', conn)
 
@@ -472,7 +472,7 @@ def plot_05_boxplot_revenus(conn):
 
     ax.set_ylabel('Revenu médian (€)', fontsize=12)
     ax.set_title("Distribution des revenus médians selon le vote majoritaire\n"
-                 "Hérault (34), Présidentielle T1 2022",
+                 "Hérault (34), Municipales T1 2020",
                  fontsize=14, fontweight='bold')
     ax.grid(True, alpha=0.3, axis='y')
 
@@ -488,7 +488,7 @@ def plot_06_csp_vote(conn):
     """Scatter : % cadres (X) vs % ouvriers (Y), couleur par camp majoritaire."""
     print("\n[6/10] CSP et vote : cadres vs ouvriers...")
 
-    pct = calcul_pct_gauche_par_commune(conn, annee=2022, tour=1)
+    pct = calcul_pct_gauche_par_commune(conn, annee=2020, tour=1)
 
     csp_df = _calcul_csp_pct(conn)
 
@@ -528,7 +528,7 @@ def plot_06_csp_vote(conn):
     ax.set_xlabel('% Cadres (actifs ayant un emploi)', fontsize=12)
     ax.set_ylabel('% Ouvriers (actifs ayant un emploi)', fontsize=12)
     ax.set_title("Structure socio-professionnelle et vote — Hérault (34)\n"
-                 "Présidentielle T1 2022",
+                 "Municipales T1 2020",
                  fontsize=14, fontweight='bold')
     ax.grid(True, alpha=0.3)
 
@@ -620,7 +620,7 @@ def plot_08_dette_vs_vote(conn):
     """Scatter : dette par habitant vs % Gauche."""
     print("\n[8/10] Finances locales : dette vs % Gauche...")
 
-    pct = calcul_pct_gauche_par_commune(conn, annee=2022, tour=1)
+    pct = calcul_pct_gauche_par_commune(conn, annee=2020, tour=1)
 
     # Année la plus récente disponible dans comptes_communes
     annee_cc = conn.execute(
@@ -677,7 +677,7 @@ def plot_08_dette_vs_vote(conn):
                         xytext=(5, 5), textcoords='offset points')
 
     ax.set_xlabel('Dette par habitant (€)', fontsize=12)
-    ax.set_ylabel('% Vote Gauche (T1 2022)', fontsize=12)
+    ax.set_ylabel('% Vote Gauche (T1 2020)', fontsize=12)
     ax.set_title(f"Finances locales et vote — Dette par habitant vs % Gauche\n"
                  f"Hérault (34), Corrélation : r = {correlation:.3f}",
                  fontsize=14, fontweight='bold')
@@ -696,7 +696,7 @@ def plot_09_diplomes_vs_vote(conn):
     """Scatter : % diplôme supérieur vs % Gauche."""
     print("\n[9/10] Diplômes et vote : % diplôme supérieur vs % Gauche...")
 
-    pct = calcul_pct_gauche_par_commune(conn, annee=2022, tour=1)
+    pct = calcul_pct_gauche_par_commune(conn, annee=2020, tour=1)
 
     dipl_query = """
         SELECT codgeo,
@@ -743,7 +743,7 @@ def plot_09_diplomes_vs_vote(conn):
                         xytext=(5, 5), textcoords='offset points')
 
     ax.set_xlabel('% Diplôme supérieur (Bac+2 et plus)', fontsize=12)
-    ax.set_ylabel('% Vote Gauche (T1 2022)', fontsize=12)
+    ax.set_ylabel('% Vote Gauche (T1 2020)', fontsize=12)
     ax.set_title(f"Diplômes et vote — % Diplôme supérieur vs % Gauche\n"
                  f"Hérault (34), Corrélation : r = {correlation:.3f}",
                  fontsize=14, fontweight='bold')
@@ -762,7 +762,7 @@ def plot_10_catnat_vs_vote(conn):
     """Bar chart horizontal : top 20 communes par nb CatNat, coloré par camp."""
     print("\n[10/10] Catastrophes naturelles et vote...")
 
-    pct = calcul_pct_gauche_par_commune(conn, annee=2022, tour=1)
+    pct = calcul_pct_gauche_par_commune(conn, annee=2020, tour=1)
 
     catnat_query = """
         SELECT c.codgeo, com.nom, COUNT(*) as nb_catnat
@@ -804,7 +804,7 @@ def plot_10_catnat_vs_vote(conn):
 
     ax.set_xlabel("Nombre d'arrêtés CatNat", fontsize=12)
     ax.set_title("Top 20 communes — Arrêtés de catastrophe naturelle\n"
-                 "Hérault (34), couleur = camp majoritaire (T1 2022)",
+                 "Hérault (34), couleur = camp majoritaire (T1 2020)",
                  fontsize=14, fontweight='bold')
     ax.grid(True, alpha=0.3, axis='x')
 

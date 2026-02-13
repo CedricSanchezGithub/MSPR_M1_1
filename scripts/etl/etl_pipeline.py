@@ -46,41 +46,62 @@ RISQUES_FILE = "data/input/environnement/risq_gaspar.csv"
 COMPTES_FILES = sorted(glob_module.glob("data/input/economie/comptes_communes_*.csv"))
 
 # ============================================================================
-# CLASSIFICATION GAUCHE / DROITE (copié de classify_candidats_v2.py)
+# CLASSIFICATION GAUCHE / DROITE (par nuance, pour municipales)
 # ============================================================================
 
-CANDIDATS_GAUCHE_ALL = {
-    'MÉLENCHON', 'MELENCHON', 'POUTOU', 'ARTHAUD', 'BESANCENOT',
-    'LAGUILLER', 'BUFFET', 'HUE', 'JOSPIN', 'ROYAL', 'HOLLANDE',
-    'HAMON', 'JOLY', 'BOVÉ', 'BOVE', 'VOYNET', 'MAMÈRE', 'MAMERE',
-    'GLUCKSTEIN', 'TAUBIRA', 'SCHIVARDI', 'CHEVÈNEMENT', 'CHEVENEMENT',
-    'HIDALGO', 'JADOT', 'ROUSSEL',
+GAUCHE_NUANCES = {
+    'EXG', 'LEXG', 'LXG', 'DXG', 'LO', 'LCR',
+    'COM', 'LCOM', 'HUE',
+    'FG', 'LFG', 'NUP', 'FI', 'LFI', 'PG', 'LPG', 'MELE',
+    'SOC', 'LSOC', 'HOLL', 'JOSP', 'ROYA',
+    'VEC', 'LVEC', 'ECO', 'LECO', 'LVEG', 'LVE', 'LEC', 'JOLY', 'BOVE',
+    'DVG', 'LDVG', 'UG', 'LUG', 'LUGE', 'RDG', 'LRDG', 'LRG', 'LDG', 'PRG',
+    'MDC', 'GAU',
+    'BC-SOC', 'BC-COM', 'BC-FG', 'BC-ECO', 'BC-VEC', 'BC-DVG',
+    'BC-EXG', 'BC-UG', 'BC-UGE', 'BC-FI', 'BC-RDG', 'BC-UCG', 'BC-PG',
+    'ARTH', 'POUT', 'BUFF', 'GLUC', 'TAUB', 'SCHI', 'BESA', 'LAGU',
 }
 
-CANDIDATS_DROITE = {
-    'CHIRAC', 'LE PEN', 'BAYROU', 'LEPAGE', 'BOUTIN', 'MADELIN',
-    'SAINT-JOSSE', 'MÉGRET', 'MEGRET',
-    'SARKOZY', 'VILLIERS', 'NIHOUS',
-    'DUPONT-AIGNAN', 'CHEMINADE',
-    'MACRON', 'FILLON', 'LASSALLE', 'ASSELINEAU',
-    'ZEMMOUR', 'PÉCRESSE', 'PECRESSE',
+DROITE_NUANCES = {
+    'EXD', 'LEXD', 'LXD', 'DXD', 'UXD',
+    'FN', 'LFN', 'RN', 'LRN', 'MNR', 'MEGR', 'LEPA',
+    'UMP', 'LUMP', 'LR', 'LLR', 'RPR', 'DVD', 'LDVD', 'DTE', 'SARK', 'CHIR',
+    'UDF', 'LUDF', 'UDFD', 'DL', 'UDI', 'LUDI', 'CEN', 'PRV', 'BAYR', 'LPC', 'LCP', 'LCMD',
+    'MPF', 'DLF', 'LDLF', 'DUPO', 'RPF', 'CPNT',
+    'REM', 'LREM', 'ENS', 'LENS', 'MDM', 'LMDM', 'MODM', 'MAJ', 'LMAJ', 'HOR', 'ALLI', 'LMC',
+    'REC', 'LREC',
+    'BC-FN', 'BC-RN', 'BC-DVD', 'BC-UMP', 'BC-LR', 'BC-UD',
+    'BC-UDI', 'BC-UC', 'BC-UCD', 'BC-REM', 'BC-MDM', 'BC-DLF',
+    'BC-EXD', 'BC-UXD', 'BC-DVC',
+    'DVC', 'LDVC', 'LDR', 'LDD', 'LUCD', 'FRN',
+    'DIV', 'LDIV', 'NC', 'LNC', 'NCE', 'M-NC', 'AUT', 'LAUT',
+    'REG', 'LREG', 'MNA', 'DSV', 'LDSV', 'BC-DSV', 'LDV', 'LUD', 'LCOP', 'PREP',
+    'VILL', 'NIHO', 'VOYN', 'BOUT', 'MADE', 'CHEV', 'SAIN', 'MAME',
 }
 
 
 def classify_camp(id_election, nom, nuance, libelle_liste):
-    """Classifie un candidat en Gauche ou Droite (présidentielles uniquement)."""
-    nom = (nom or "").strip().upper()
+    """Classifie une liste/candidat en Gauche ou Droite (par nuance puis mots-clés)."""
+    nuance = (nuance or "").strip().upper()
+    libelle = (libelle_liste or "").strip().lower()
 
-    # 1. Par nom de candidat (présidentielles)
-    if '_pres_' in id_election and nom:
-        for c in CANDIDATS_GAUCHE_ALL:
-            if c in nom or nom in c:
+    # 1. Par code de nuance
+    if nuance in GAUCHE_NUANCES:
+        return "Gauche"
+    if nuance in DROITE_NUANCES:
+        return "Droite"
+
+    # 2. Par mots-clés dans le libellé de liste
+    if libelle:
+        for kw in ['socialiste', 'communiste', 'gauche', 'écologi', 'vert',
+                    'insoumis', 'ouvrier', 'citoyen', 'solidaire']:
+            if kw in libelle:
                 return "Gauche"
-        for c in CANDIDATS_DROITE:
-            if c in nom or nom in c:
+        for kw in ['national', 'républicain', 'droite', 'marche', 'renaissance',
+                    'ensemble', 'majorité', 'libéral', 'conservat']:
+            if kw in libelle:
                 return "Droite"
 
-    # 2. Défaut pour les présidentielles non matchées
     return "Droite"
 
 
@@ -266,7 +287,7 @@ def etl_communes(conn):
 
 def etl_elections(conn):
     """Table elections : fichier 2.3 GB, lecture ligne par ligne."""
-    print_section("2/12 — elections (présidentielles, dept 34)")
+    print_section("2/12 — elections (municipales, dept 34)")
 
     if not os.path.exists(ELECTIONS_FILE):
         print(f"  ⚠ Fichier manquant : {ELECTIONS_FILE}")
@@ -298,8 +319,8 @@ def etl_elections(conn):
 
             id_election = get_val('id_election')
 
-            # Filtrer : présidentielles uniquement
-            if '_pres_' not in id_election:
+            # Filtrer : municipales uniquement
+            if '_muni_' not in id_election:
                 continue
 
             # Filtrer : département 34
@@ -342,7 +363,7 @@ def etl_elections(conn):
             total_kept += 1
 
     print(f"  Lignes lues : {total_read:,}")
-    print(f"  Lignes conservées (pres + dept 34) : {total_kept:,}")
+    print(f"  Lignes conservées (muni + dept 34) : {total_kept:,}")
 
     if rows:
         conn.executemany(

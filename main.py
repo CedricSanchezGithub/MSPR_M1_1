@@ -12,6 +12,7 @@ Commandes disponibles:
     visualize   - Générer tous les graphiques
     etl         - Pipeline ETL : filtrer Hérault (34), charger SQLite
     analyse     - Analyse exploratoire Phase 3 (10 graphiques depuis SQLite)
+    predict     - Modèle prédictif Phase 4 (2 modèles, 7 graphiques, prédiction municipales 2026)
     all         - Exécuter toutes les étapes
 """
 
@@ -30,6 +31,7 @@ SCRIPTS = {
     "viz_comparatifs": os.path.join(SCRIPTS_DIR, "visualisation", "visualize_revenus_vs_votes.py"),
     "etl": os.path.join(SCRIPTS_DIR, "etl", "etl_pipeline.py"),
     "analyse": os.path.join(SCRIPTS_DIR, "analyse", "analyse_exploratoire.py"),
+    "predict": os.path.join(SCRIPTS_DIR, "prediction", "modele_predictif.py"),
 }
 
 
@@ -50,13 +52,15 @@ Structure du projet:
 ├── graphiques/
 │   ├── presidentielles/    # Graphiques des présidentielles
 │   ├── comparatifs/        # Graphiques revenus vs votes
-│   └── phase3/             # Analyse exploratoire Hérault (10 graphiques)
+│   ├── phase3/             # Analyse exploratoire Hérault (10 graphiques)
+│   └── phase4/             # Modèle prédictif (8 graphiques)
 ├── scripts/
 │   ├── exploration/        # Scripts d'exploration des données
 │   ├── classification/     # Classification Gauche/Droite
 │   ├── visualisation/      # Graphiques nationaux
 │   ├── etl/                # Pipeline ETL → SQLite
-│   └── analyse/            # Analyse exploratoire Phase 3
+│   ├── analyse/            # Analyse exploratoire Phase 3
+│   └── prediction/         # Modèle prédictif Phase 4
 ├── main.py                 # Ce fichier
 └── requirements.txt
 """)
@@ -109,6 +113,12 @@ def cmd_analyse():
     run_script(SCRIPTS["analyse"], "Analyse exploratoire : 10 visualisations depuis SQLite")
 
 
+def cmd_predict():
+    """Lancer le modèle prédictif (Phase 4)"""
+    print("\n🤖 MODÈLE PRÉDICTIF — HÉRAULT (34)")
+    run_script(SCRIPTS["predict"], "Modèle prédictif : 2 modèles, 7 graphiques, prédiction municipales 2026")
+
+
 def cmd_all():
     """Exécuter toutes les étapes"""
     cmd_explore()
@@ -141,6 +151,7 @@ def main():
         "viz": cmd_visualize,
         "etl": cmd_etl,
         "analyse": cmd_analyse,
+        "predict": cmd_predict,
         "all": cmd_all,
         "help": cmd_help,
         "-h": cmd_help,

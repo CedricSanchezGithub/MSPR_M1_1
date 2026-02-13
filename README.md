@@ -1,41 +1,106 @@
-## Points forts de l'approche
+# Electio-Analytics — Analyse et Prédiction Électorale
 
-**Une masse de données suffisante malgré le faible nombre d'élections**
+Projet MSPR Big Data : prédiction des résultats des élections municipales 2026 dans le département de l'Hérault (34) à partir de 12 datasets socio-économiques publics.
 
-Le choix de travailler à l'échelle communale change complètement la donne. Au lieu de 5 observations (une par élection), on obtient environ 175 000 observations en croisant les 35 000 communes françaises avec les 5 scrutins de 2002 à 2022. C'est suffisant pour entraîner un modèle capable de détecter des relations significatives.
+## Installation
 
-**Une diversité territoriale qui enrichit l'apprentissage**
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+pip install matplotlib seaborn scikit-learn geopandas openpyxl ipykernel
+```
 
-Les communes françaises présentent des profils très variés : métropoles, zones périurbaines, territoires ruraux, bassins industriels en reconversion... Cette hétérogénéité offre au modèle un large éventail de situations contrastées pour apprendre les liens entre caractéristiques socio-économiques et comportement électoral.
+## Utilisation
 
-**Des données open data bien documentées**
+```bash
+# Pipeline complet (dans l'ordre)
+python main.py etl          # ETL : 12 datasets → SQLite (Hérault 34)
+python main.py analyse      # Analyse exploratoire (10 graphiques)
+python main.py predict      # Modèle prédictif (7 graphiques, prédiction 2026)
 
-Sur la période 2002-2022, les sources comme l'INSEE, data.gouv.fr ou le Ministère de l'Intérieur proposent des jeux de données cohérents et faciles à croiser. Cela limite les problèmes de comparabilité et simplifie le travail de préparation.
+# Exploration interactive
+jupyter notebook notebooks/exploration_donnees.ipynb
 
-**Une validation temporelle possible**
+# Étapes optionnelles (données nationales)
+python main.py explore      # Exploration des fichiers bruts
+python main.py classify     # Classification Gauche/Droite (fichier 2.3 GB)
+python main.py visualize    # Graphiques présidentielles nationales
+```
 
-On peut entraîner le modèle sur quatre élections et le tester sur la cinquième. Ce protocole permet de vérifier concrètement si les relations identifiées tiennent dans le temps.
+## Structure du projet
 
----
+```
+MSPR_1/
+├── main.py                              # Orchestrateur CLI
+├── requirements.txt
+├── scripts/
+│   ├── etl/etl_pipeline.py              # Pipeline ETL → SQLite (12 tables)
+│   ├── analyse/analyse_exploratoire.py  # 10 visualisations Hérault
+│   ├── prediction/modele_predictif.py   # Modèle Random Forest + prédiction 2026
+│   ├── exploration/                     # Scripts d'exploration des données brutes
+│   ├── classification/                  # Classification candidats Gauche/Droite
+│   └── visualisation/                   # Graphiques nationaux (présidentielles)
+├── notebooks/
+│   └── exploration_donnees.ipynb        # Exploration interactive de la base SQLite
+├── data/
+│   ├── input/                           # Données brutes (non versionnées, ~3.5 GB)
+│   │   ├── elections/                   # Résultats électoraux
+│   │   ├── economie/                    # Revenus, CSP, comptes communes
+│   │   ├── education/                   # Diplômes
+│   │   ├── demographie/                 # Population, naissances, décès
+│   │   └── environnement/              # CatNat, risques GASPAR
+│   └── output/
+│       └── electio_herault.db           # Base SQLite (12 tables, 341 communes)
+├── graphiques/
+│   ├── phase3/                          # 10 graphiques d'analyse exploratoire
+│   └── phase4/                          # 7 graphiques du modèle prédictif
+├── SOURCES_DONNEES.md                   # Liens de téléchargement des 12 datasets
+└── EXPLICATION_MODELE.md                # Explication vulgarisée du modèle ML
+```
 
-## Limites et précautions
+## Données
 
-**Une hypothèse de stabilité qui peut être mise en défaut**
+12 datasets publics (INSEE, data.gouv.fr, DGFiP) couvrant 6 thématiques :
 
-Le modèle suppose que les mécanismes liant variables socio-économiques et vote restent globalement stables sur vingt ans. Or, des bouleversements comme l'émergence de La République En Marche en 2017 ont profondément recomposé le paysage politique. Le modèle pourrait peiner à capter ces ruptures.
+| Thématique | Datasets | Années |
+|------------|----------|--------|
+| Élections | Résultats municipales par commune (2.3 GB) | 1999–2024 |
+| Économie | Revenus, CSP, comptes communes | 2000–2022 |
+| Éducation | Diplômes, CSP×diplôme | 1968–2022 |
+| Démographie | Population, naissances, décès | 1876–2024 |
+| Environnement | CatNat, risques GASPAR | 1985–2022 |
 
-**Des observations qui ne sont pas indépendantes**
+Liens de téléchargement détaillés : [`SOURCES_DONNEES.md`](SOURCES_DONNEES.md).
 
-Deux types de corrélation peuvent biaiser l'analyse :
-- *Corrélation temporelle* : une commune qui vote à droite en 2002 tend à rester à droite en 2022
-- *Corrélation spatiale* : les communes voisines ont souvent des comportements similaires
+## Périmètre : Hérault (34)
 
-Ces dépendances risquent de faire surestimer la robustesse du modèle si on n'y prête pas attention.
+**341 communes**, choisies pour :
+- Mix urbain/rural (Montpellier, Béziers, Sète + arrière-pays)
+- Diversité politique (gauche à Montpellier, RN à Béziers, zones rurales variées)
+- Données environnementales pertinentes (inondations, sécheresse méditerranéenne)
+- Taille exploitable pour un POC, généralisable ensuite
 
-**Des facteurs locaux impossibles à capter**
+## Modèle prédictif
 
-Un maire populaire, une fermeture d'usine juste avant le scrutin, un scandale local... Ces éléments peuvent faire basculer le vote d'une commune sans que les variables socio-économiques ne l'expliquent.
+- **13 features** : population, CSP (cadres, ouvriers, employés, prof. intermédiaires), revenu médian, diplômes (supérieur, sans diplôme), dette/habitant, investissement/habitant, natalité, CatNat
+- **Algorithme** : Random Forest (classification Gauche/Droite + régression % Gauche)
+- **Split temporel** : entraînement 2008–2014, test 2020
+- **Résultats** : Accuracy 89.6%, F1-score 0.906
+- **Prédiction** : municipales 2026
 
-**Des complications liées aux fusions de communes**
+Voir [`EXPLICATION_MODELE.md`](EXPLICATION_MODELE.md) pour une explication vulgarisée.
 
-Les codes INSEE évoluent, les périmètres changent. Il faut harmoniser soigneusement les données pour éviter les erreurs de jointure entre les différentes années.
+## Points forts
+
+- **Masse de données suffisante** : ~690 observations (341 communes × 3 élections municipales) malgré le faible nombre de scrutins
+- **Diversité territoriale** : métropoles, zones périurbaines, rural — profils socio-économiques très variés
+- **Validation temporelle** : entraînement sur le passé (2008–2014), test sur le présent (2020) — pas de fuite de données
+- **Données open data** : INSEE, data.gouv.fr, DGFiP — entièrement reproductible
+
+## Limites
+
+- **Hypothèse de stabilité** : le modèle suppose que les liens socio-économiques → vote restent stables sur 12 ans
+- **Facteurs locaux non captés** : maire populaire, scandale, fermeture d'usine — le modèle ne voit que les chiffres
+- **Extrapolation naïve** : pour 2026, la population est extrapolée linéairement, les autres indicateurs sont maintenus à leur valeur 2020
+- **Classification binaire** : Gauche/Droite simplifie la réalité politique (LREM classé Droite, pas de catégorie Centre)
