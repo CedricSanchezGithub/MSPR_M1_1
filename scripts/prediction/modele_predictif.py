@@ -14,8 +14,10 @@ Prédiction future : 2026.
 Usage :
     python scripts/prediction/modele_predictif.py
     python main.py predict
+    python main.py predict --annee 2032   # année cible personnalisée
 """
 
+import argparse
 import os
 import sqlite3
 import ssl
@@ -60,7 +62,15 @@ COMMUNES_REMARQUABLES = {
 ANNEES_ELECTIONS = [2008, 2014, 2020]
 ANNEES_TRAIN = [2008, 2014]
 ANNEE_TEST = 2020
-ANNEE_FUTURE = 2026
+
+# Année cible de prédiction — surchargée via --annee si besoin (défaut 2026).
+# Les noms de tables SQL (`predictions_2026`, `comparaison_2020_2026`) restent inchangés
+# pour ne pas casser les dashboards Metabase ; seuls titres et filenames sont dynamiques.
+_parser = argparse.ArgumentParser(add_help=False)
+_parser.add_argument("--annee", type=int, default=2026,
+                     help="Année cible de prédiction (défaut: 2026)")
+_args, _ = _parser.parse_known_args()
+ANNEE_FUTURE = _args.annee
 
 # Mapping année élection → année recensement CSP/diplômes
 MAPPING_CSP = {2008: 2006, 2014: 2011, 2020: 2022}
@@ -642,7 +652,7 @@ def plot_02_matrice_confusion(resultats):
 
 
 def plot_03_predictions_temporelles(conn, df_futures):
-    """Line chart : % Gauche département (réel + prédit 2026)."""
+    """Line chart : % Gauche département (réel + prédit ANNEE_FUTURE)."""
     print("\n[VIZ 3/7] Prédictions temporelles...")
 
     query = """
@@ -697,8 +707,8 @@ def plot_03_predictions_temporelles(conn, df_futures):
 
 
 def plot_04_carte_predictions(df_futures):
-    """Carte choroplèthe : % Gauche prédit 2026."""
-    print("\n[VIZ 4/7] Carte des prédictions 2026...")
+    """Carte choroplèthe : % Gauche prédit pour ANNEE_FUTURE."""
+    print(f"\n[VIZ 4/7] Carte des prédictions {ANNEE_FUTURE}...")
 
     pred = df_futures[['codgeo', 'pred_pct_gauche']]
     if pred.empty:
@@ -735,11 +745,11 @@ def plot_04_carte_predictions(df_futures):
                  fontsize=14, fontweight='bold')
 
     plt.tight_layout()
-    sauvegarder(fig, "04_carte_predictions_2026.png")
+    sauvegarder(fig, f"04_carte_predictions_{ANNEE_FUTURE}.png")
 
 
 def plot_05_distribution_probabilites(df_futures):
-    """Histogramme : distribution du % Gauche prédit 2026."""
+    """Histogramme : distribution du % Gauche prédit pour ANNEE_FUTURE."""
     print("\n[VIZ 5/7] Distribution des probabilités...")
 
     fig, ax = plt.subplots(figsize=(12, 7))
@@ -835,7 +845,7 @@ def plot_07_communes_remarquables(conn, df_futures):
 
     ax.axhline(y=50, color='gray', linestyle=':', alpha=0.5)
 
-    ax.axvspan(2020.5, 2026.5, alpha=0.08, color=COULEUR_PREDIT)
+    ax.axvspan(2020.5, ANNEE_FUTURE + 0.5, alpha=0.08, color=COULEUR_PREDIT)
     ax.text(ANNEE_FUTURE, ax.get_ylim()[1] - 2, 'Prédictions', ha='center',
             fontsize=10, color=COULEUR_PREDIT, fontstyle='italic')
 
@@ -897,6 +907,89 @@ def afficher_questions_analyse(resultats):
 
 
 # ============================================================================
+# 6. SAUVEGARDE EN BASE SQLITE
+# ============================================================================
+
+def sauvegarder_en_base(conn, resultats, df_futures):
+    """
+    Écrit les résultats du modèle dans 4 tables SQLite :
+      - metriques_modele        : accuracy, F1, R², MAE
+      - predictions_test_2020   : prédictions sur le jeu de test (2020)
+      - predictions_2026        : prédictions futures (2026)
+      - comparaison_2020_2026   : bascules entre 2020 et 2026
+    """
+    print("\n[BASE] Sauvegarde des résultats en base SQLite…")
+
+    # ── 0. feature_importances ───────────────────────────────────────────────
+    importances = pd.DataFrame({
+        "feature": resultats["features"],
+        "label":   [LABELS_FR.get(f, f) for f in resultats["features"]],
+        "importance": resultats["clf"].feature_importances_,
+    }).sort_values("importance", ascending=False).reset_index(drop=True)
+    importances.to_sql("feature_importances", conn, if_exists="replace", index=False)
+    print(f"  ✔ feature_importances ({len(importances)} features)")
+
+    # ── 1. metriques_modele ──────────────────────────────────────────────────
+    metriques = pd.DataFrame([
+        {"id": 1, "metrique": "Accuracy",
+         "valeur": f"{resultats['accuracy']*100:.1f}%",
+         "description": "Communes correctement classées (test 2020)"},
+        {"id": 2, "metrique": "F1-score pondéré",
+         "valeur": f"{resultats['f1']:.3f}",
+         "description": "F1 pondéré par camp (test 2020)"},
+        {"id": 3, "metrique": "R² régression",
+         "valeur": f"{resultats['r2']:.3f}",
+         "description": "Coefficient de détermination sur % Gauche continu"},
+        {"id": 4, "metrique": "MAE régression",
+         "valeur": f"{resultats['mae']:.1f} pts",
+         "description": "Erreur absolue moyenne en points de pourcentage"},
+    ])
+    metriques.to_sql("metriques_modele", conn, if_exists="replace", index=False)
+    print("  ✔ metriques_modele (4 lignes)")
+
+    # ── 2. predictions_test_2020 ─────────────────────────────────────────────
+    test_df = resultats['test'].copy()
+    communes = pd.read_sql_query("SELECT codgeo, nom FROM communes", conn)
+
+    pred_test = pd.DataFrame({
+        "codgeo":           resultats['test_codgeo'],
+        "camp_reel":        ["Gauche" if c == 1 else "Droite" for c in resultats['y_test_cls']],
+        "camp_predit":      ["Gauche" if c == 1 else "Droite" for c in resultats['y_pred_cls']],
+        "pct_gauche_reel":  resultats['y_test_reg'],
+        "pct_gauche_predit": resultats['y_pred_reg'].clip(0, 100),
+    })
+    pred_test["ecart_abs"] = (pred_test["pct_gauche_reel"] - pred_test["pct_gauche_predit"]).abs()
+    pred_test["correct"]   = (pred_test["camp_reel"] == pred_test["camp_predit"]).astype(int)
+    pred_test = pred_test.merge(communes, on="codgeo", how="left").rename(columns={"nom": "nom_commune"})
+    cols_test = ["codgeo", "nom_commune", "camp_reel", "camp_predit",
+                 "pct_gauche_reel", "pct_gauche_predit", "ecart_abs", "correct"]
+    pred_test[cols_test].to_sql("predictions_test_2020", conn, if_exists="replace", index=False)
+    print(f"  ✔ predictions_test_2020 ({len(pred_test)} lignes)")
+
+    # ── 3. predictions_2026 ──────────────────────────────────────────────────
+    pred_2026 = df_futures[["codgeo", "pred_camp", "pred_pct_gauche"]].copy()
+    pred_2026["camp_predit"] = pred_2026["pred_camp"].apply(
+        lambda x: "Gauche" if x == 1 else "Droite"
+    )
+    pred_2026 = pred_2026.merge(communes, on="codgeo", how="left").rename(columns={"nom": "nom_commune"})
+    cols_2026 = ["codgeo", "nom_commune", "camp_predit", "pred_pct_gauche"]
+    pred_2026[cols_2026].to_sql("predictions_2026", conn, if_exists="replace", index=False)
+    print(f"  ✔ predictions_2026 ({len(pred_2026)} lignes)")
+
+    # ── 4. comparaison_2020_2026 ─────────────────────────────────────────────
+    comp = pred_test[["codgeo", "nom_commune", "camp_reel", "pct_gauche_reel"]].rename(
+        columns={"camp_reel": "camp_2020", "pct_gauche_reel": "pct_gauche_2020"}
+    ).merge(
+        pred_2026[["codgeo", "camp_predit", "pred_pct_gauche"]],
+        on="codgeo", how="inner"
+    )
+    comp["bascule"] = (comp["camp_2020"] != comp["camp_predit"]).astype(int)
+    comp.to_sql("comparaison_2020_2026", conn, if_exists="replace", index=False)
+    print(f"  ✔ comparaison_2020_2026 ({len(comp)} lignes, "
+          f"{comp['bascule'].sum()} bascules)")
+
+
+# ============================================================================
 # MAIN
 # ============================================================================
 
@@ -929,7 +1022,10 @@ def main():
     df_futures = extrapoler_features(conn, panel)
     df_futures = predire_futur(resultats, df_futures)
 
-    # 4. Visualisations
+    # 4. Sauvegarde en base
+    sauvegarder_en_base(conn, resultats, df_futures)
+
+    # 5. Visualisations
     print("\n" + "=" * 70)
     print("  GÉNÉRATION DES VISUALISATIONS")
     print("=" * 70)
@@ -942,7 +1038,7 @@ def main():
     plot_06_reel_vs_predit(resultats)
     plot_07_communes_remarquables(conn, df_futures)
 
-    # 5. Questions d'analyse
+    # 6. Questions d'analyse
     afficher_questions_analyse(resultats)
 
     conn.close()

@@ -1,0 +1,102 @@
+{
+  "_comment": "Configuration Metabase — Electio-Analytics / Hérault 34",
+  "_usage": "public_uuid = UUID de la card depuis /public/question/{uuid}. card_id = ID numérique de la card.",
+
+  "metabase_url": "http://localhost:3000",
+
+  "credentials": {
+    "_comment": "Utilisé pour le mode authentifié (téléchargement via card_id). Laisser vide si liens publics suffisent.",
+    "username": "admin@electio.local",
+    "password": "VOTRE_MOT_DE_PASSE"
+  },
+
+  "export": {
+    "output_dir": "graphiques/metabase_export",
+    "reports_dir": "docs/rapports",
+    "keep_history": true,
+    "history_days": 30,
+    "image_width": 1200,
+    "image_height": 628
+  },
+
+  "dashboards": {
+    "predictions": {
+      "title": "Prédictions municipales 2026",
+      "dashboard_id": null
+    },
+    "validation": {
+      "title": "Validation du modèle Random Forest",
+      "dashboard_id": null
+    },
+    "profil": {
+      "title": "Profil socio-démographique — Hérault (34)",
+      "dashboard_id": null
+    }
+  },
+
+  "cards": [
+    {
+      "slug": "importance_features",
+      "title": "Importance des variables (Random Forest)",
+      "dashboard": "validation",
+      "public_uuid": "d1801dcb-8fa4-483c-adf8-cb453ecfb1ea",
+      "card_id": 43,
+      "local_fallback": "graphiques/phase4/01_importance_features.png",
+      "filename": "01_importance_features.png"
+    },
+    {
+      "slug": "matrice_confusion",
+      "title": "Matrice de confusion — Test 2020",
+      "dashboard": "validation",
+      "public_uuid": "c66a622b-de31-4c8c-89ec-d92fb8c65885",
+      "card_id": 44,
+      "local_fallback": "graphiques/phase4/02_matrice_confusion.png",
+      "filename": "02_matrice_confusion.png"
+    },
+    {
+      "slug": "predictions_temporelles",
+      "title": "Évolution temporelle des prédictions (2008–2026)",
+      "dashboard": "predictions",
+      "public_uuid": "7d04e31b-116b-4787-929d-0ca130914aa5",
+      "card_id": 45,
+      "local_fallback": "graphiques/phase4/03_predictions_temporelles.png",
+      "filename": "03_predictions_temporelles.png"
+    },
+    {
+      "slug": "carte_predictions_2026",
+      "title": "Carte des prédictions 2026 — Hérault",
+      "dashboard": "predictions",
+      "public_uuid": "7f8e03bc-6b5e-415f-9a96-7924017434e0",
+      "card_id": 46,
+      "local_fallback": "graphiques/phase4/04_carte_predictions_2026.png",
+      "filename": "04_carte_predictions_2026.png"
+    },
+    {
+      "slug": "distribution_probabilites",
+      "title": "Distribution des probabilités de vote Gauche",
+      "dashboard": "predictions",
+      "public_uuid": "d5cd1480-173b-49a7-940c-92b79f224bc9",
+      "card_id": 47,
+      "local_fallback": "graphiques/phase4/05_distribution_probabilites.png",
+      "filename": "05_distribution_probabilites.png"
+    },
+    {
+      "slug": "reel_vs_predit",
+      "title": "Résultat réel vs prédit — 2020",
+      "dashboard": "validation",
+      "public_uuid": "9495fa75-cd3d-4bc8-8486-af858b3eea10",
+      "card_id": 48,
+      "local_fallback": "graphiques/phase4/06_reel_vs_predit_2020.png",
+      "filename": "06_reel_vs_predit.png"
+    },
+    {
+      "slug": "communes_remarquables",
+      "title": "Évolution — Communes remarquables",
+      "dashboard": "profil",
+      "public_uuid": "22f6abb9-224a-4d3c-bcd3-e7bd1ada8dd5",
+      "card_id": 49,
+      "local_fallback": "graphiques/phase4/07_evolution_communes_remarquables.png",
+      "filename": "07_communes_remarquables.png"
+    }
+  ]
+}

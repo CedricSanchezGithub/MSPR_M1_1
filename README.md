@@ -71,7 +71,7 @@ MSPR_1/
 | Démographie | Population, naissances, décès | 1876–2024 |
 | Environnement | CatNat, risques GASPAR | 1985–2022 |
 
-Liens de téléchargement détaillés : [`SOURCES_DONNEES.md`](SOURCES_DONNEES.md).
+Liens de téléchargement détaillés : [`SOURCES_DONNEES.md`](data/input/SOURCES_DONNEES.md).
 
 ## Périmètre : Hérault (34)
 
@@ -83,13 +83,13 @@ Liens de téléchargement détaillés : [`SOURCES_DONNEES.md`](SOURCES_DONNEES.m
 
 ## Modèle prédictif
 
-- **13 features** : population, CSP (cadres, ouvriers, employés, prof. intermédiaires), revenu médian, diplômes (supérieur, sans diplôme), dette/habitant, investissement/habitant, natalité, CatNat
+- **12 features** : `population`, `pct_cadres`, `pct_ouvriers`, `pct_employes`, `pct_prof_intermediaires`, `revenu_median`, `pct_diplome_sup`, `pct_sans_diplome`, `dette_par_hab`, `invest_par_hab`, `taux_natalite`, `nb_catnat`
 - **Algorithme** : Random Forest (classification Gauche/Droite + régression % Gauche)
 - **Split temporel** : entraînement 2008–2014, test 2020
 - **Résultats** : Accuracy 89.6%, F1-score 0.906
 - **Prédiction** : municipales 2026
 
-Voir [`EXPLICATION_MODELE.md`](EXPLICATION_MODELE.md) pour une explication vulgarisée.
+Voir [`EXPLICATION_MODELE.md`](docs/EXPLICATION_MODELE.md) pour une explication vulgarisée.
 
 ## Points forts
 

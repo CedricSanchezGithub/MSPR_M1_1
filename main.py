@@ -13,6 +13,7 @@ Commandes disponibles:
     etl         - Pipeline ETL : filtrer Hérault (34), charger SQLite
     analyse     - Analyse exploratoire Phase 3 (10 graphiques depuis SQLite)
     predict     - Modèle prédictif Phase 4 (2 modèles, 7 graphiques, prédiction municipales 2026)
+    export      - Exporter les visualisations Metabase + générer rapports Markdown
     all         - Exécuter toutes les étapes
 """
 
@@ -32,6 +33,7 @@ SCRIPTS = {
     "etl": os.path.join(SCRIPTS_DIR, "etl", "etl_pipeline.py"),
     "analyse": os.path.join(SCRIPTS_DIR, "analyse", "analyse_exploratoire.py"),
     "predict": os.path.join(SCRIPTS_DIR, "prediction", "modele_predictif.py"),
+    "metabase_export": os.path.join(SCRIPTS_DIR, "visualisation", "metabase_export.py"),
 }
 
 
@@ -53,27 +55,33 @@ Structure du projet:
 │   ├── presidentielles/    # Graphiques des présidentielles
 │   ├── comparatifs/        # Graphiques revenus vs votes
 │   ├── phase3/             # Analyse exploratoire Hérault (10 graphiques)
-│   └── phase4/             # Modèle prédictif (8 graphiques)
+│   ├── phase4/             # Modèle prédictif (8 graphiques)
+│   └── metabase_export/    # PNGs téléchargés depuis Metabase (latest/ + YYYY-MM-DD/)
+├── docs/
+│   └── rapports/           # Rapports Markdown générés (synthese_latest.md + archives)
 ├── scripts/
 │   ├── exploration/        # Scripts d'exploration des données
 │   ├── classification/     # Classification Gauche/Droite
-│   ├── visualisation/      # Graphiques nationaux
+│   ├── visualisation/      # Graphiques + export Metabase
 │   ├── etl/                # Pipeline ETL → SQLite
 │   ├── analyse/            # Analyse exploratoire Phase 3
 │   └── prediction/         # Modèle prédictif Phase 4
+├── metabase_config.json    # Configuration Metabase (UUIDs, credentials)
 ├── main.py                 # Ce fichier
 └── requirements.txt
 """)
 
 
-def run_script(script_path, description):
-    """Exécute un script Python"""
+def run_script(script_path, description, extra_args=None):
+    """Exécute un script Python (avec args supplémentaires si fournis)"""
     print(f"\n{'─' * 50}")
     print(f"▶ {description}")
     print(f"{'─' * 50}")
 
-    result = subprocess.run([sys.executable, script_path],
-                          capture_output=False)
+    cmd = [sys.executable, script_path]
+    if extra_args:
+        cmd.extend(extra_args)
+    result = subprocess.run(cmd, capture_output=False)
 
     if result.returncode != 0:
         print(f"⚠ Erreur lors de l'exécution de {script_path}")
@@ -102,9 +110,25 @@ def cmd_visualize():
 
 
 def cmd_etl():
-    """Lancer le pipeline ETL (Phase 2)"""
+    """Lancer le pipeline ETL (Phase 2) puis exporter vers Metabase"""
     print("\n🔄 PIPELINE ETL — HÉRAULT (34)")
-    run_script(SCRIPTS["etl"], "Pipeline ETL : extraction, transformation, chargement SQLite")
+    etl_ok = run_script(SCRIPTS["etl"], "Pipeline ETL : extraction, transformation, chargement SQLite")
+
+    # ── Export Metabase automatique après chaque ETL ───────────────────
+    # Télécharge les PNGs Metabase et régénère les rapports Markdown.
+    # Passe silencieusement si metabase_config.json n'est pas configuré.
+    print("\n📊 EXPORT METABASE (post-ETL)")
+    export_script = SCRIPTS["metabase_export"]
+    if os.path.exists(export_script):
+        run_script(export_script, "Export Metabase : téléchargement PNGs + rapports Markdown")
+    else:
+        print("  ⚠ Script d'export introuvable — ignoré")
+
+
+def cmd_export():
+    """Exporter les visualisations Metabase et générer les rapports Markdown"""
+    print("\n📊 EXPORT METABASE")
+    run_script(SCRIPTS["metabase_export"], "Export Metabase : téléchargement PNGs + rapports Markdown")
 
 
 def cmd_analyse():
@@ -114,9 +138,17 @@ def cmd_analyse():
 
 
 def cmd_predict():
-    """Lancer le modèle prédictif (Phase 4)"""
+    """Lancer le modèle prédictif (Phase 4).
+
+    Arg optionnel : --annee YYYY pour changer l'année cible (défaut 2026).
+    Ex. : python main.py predict --annee 2032
+    """
     print("\n🤖 MODÈLE PRÉDICTIF — HÉRAULT (34)")
-    run_script(SCRIPTS["predict"], "Modèle prédictif : 2 modèles, 7 graphiques, prédiction municipales 2026")
+    # Tout ce qui suit "predict" est passé au script de prédiction (ex. --annee)
+    extra = sys.argv[2:]
+    run_script(SCRIPTS["predict"],
+               "Modèle prédictif : 2 modèles, 7 graphiques, prédiction municipales",
+               extra_args=extra)
 
 
 def cmd_all():
@@ -152,6 +184,7 @@ def main():
         "etl": cmd_etl,
         "analyse": cmd_analyse,
         "predict": cmd_predict,
+        "export": cmd_export,
         "all": cmd_all,
         "help": cmd_help,
         "-h": cmd_help,

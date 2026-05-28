@@ -1,0 +1,204 @@
+<mxfile host="app.diagrams.net" agent="Claude Code" version="22.0.0">
+  <diagram name="Pipeline ETL" id="pipeline-etl">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Pipeline complet — Electio-Analytics&#xa;Hérault (34) · Phase 2 ETL → Phase 3 Analyse → Phase 4 Modèle prédictif" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="1560" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bg-l1" value="Sources" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="270" height="920" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-etl" value="Phase 2 — ETL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="310" y="60" width="380" height="920" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-l2" value="Stockage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="710" y="60" width="220" height="920" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-p3" value="Phase 3 — Analyse exploratoire" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="950" y="60" width="280" height="920" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-p4" value="Phase 4 — Modèle prédictif" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=14;fontStyle=1;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="60" width="330" height="920" as="geometry" />
+        </mxCell>
+
+        <mxCell id="src-insee" value="&lt;b&gt;INSEE&lt;/b&gt;&#xa;• Population 1876–2023 (xlsx)&#xa;• Naissances · Décès (csv)&#xa;• CSP actifs 25-54 ans (xlsx)&#xa;• Secteurs activité (xlsx)&#xa;• Diplômes 2022 (csv)&#xa;• CSP × Diplôme (xlsx)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="230" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="src-datagouv" value="&lt;b&gt;data.gouv.fr&lt;/b&gt;&#xa;• Élections (txt 2.3 GB)&#xa;• Revenus médians communes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="src-dgfip" value="&lt;b&gt;DGFiP&lt;/b&gt;&#xa;• comptes_communes_*.csv&#xa;dette · DGF · CAF · invest." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="src-gaspar" value="&lt;b&gt;GASPAR&lt;/b&gt;&#xa;• catnat_gaspar.csv&#xa;• risq_gaspar.csv" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="src-geo" value="&lt;b&gt;france-geojson (GitHub)&lt;/b&gt;&#xa;Téléchargé via urllib&#xa;communes-34-herault.geojson" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="610" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="src-formats" value="Formats : CSV (sep ; ou ,) · XLSX · TXT&#xa;Encodages : utf-8 · latin-1 · cp1252" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6C8EBF;dashed=1;fontStyle=2;align=center;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="890" width="230" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="etl-extract" value="&lt;b&gt;EXTRACT&lt;/b&gt;&#xa;pandas.read_csv() / read_excel()&#xa;openpyxl (XLSX onglets COM_xxxx)&#xa;csv.reader streaming pour 2.3 GB&#xa;Détection auto encodage / séparateur" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="100" width="340" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="etl-transform" value="&lt;b&gt;TRANSFORM&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;strokeWidth=2;align=center;verticalAlign=top;spacingTop=6;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="240" width="340" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="etl-t1" value="1. Filtrage dept 34&#xa;codgeo.str.startswith('34')" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;align=left;spacingLeft=8;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="350" y="280" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="etl-t2" value="2. Normalisation codes INSEE&#xa;normalize_codgeo() → zfill(5)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;align=left;spacingLeft=8;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="350" y="340" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="etl-t3" value="3. Classification politique&#xa;classify_camp() · 140+ nuances + mots-clés" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;align=left;spacingLeft=8;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="350" y="400" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="etl-t4" value="4. Pivotement temporel&#xa;PMUNxxxx → lignes ; onglets COM_xxxx" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;align=left;spacingLeft=8;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="350" y="460" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="etl-t5" value="5. Conversion types et nettoyage&#xa;pd.to_numeric · virgule → point · drop meta" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;align=left;spacingLeft=8;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="350" y="520" width="300" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="etl-load" value="&lt;b&gt;LOAD&lt;/b&gt;&#xa;sqlite3.connect() · PRAGMA WAL&#xa;DDL : 12 CREATE IF NOT EXISTS + index&#xa;executemany() · df.to_sql()&#xa;Recréation dynamique tables flexibles" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="630" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="etl-validate" value="&lt;b&gt;VALIDATE&lt;/b&gt; — fonction validate()&#xa;Comptages tables · check FK communes ↔ elections" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#D79B00;dashed=1;align=center;fontStyle=2;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="770" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="etl-cmd" value="python main.py etl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#D79B00;fontFamily=Courier New;fontStyle=2;align=center;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="910" width="340" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db-header" value="&lt;b&gt;SQLite&lt;/b&gt;&#xa;electio_herault.db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=2;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="730" y="100" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="db-grp1" value="&lt;b&gt;Géographie / Démo&lt;/b&gt;&#xa;communes (PK codgeo)&#xa;population · naissances_deces" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="210" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="db-grp2" value="&lt;b&gt;Élections&lt;/b&gt;&#xa;elections (camp G/D)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="310" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="db-grp3" value="&lt;b&gt;Socio-éco&lt;/b&gt;&#xa;revenus · csp · diplomes&#xa;secteurs_activite · csp_diplome" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="390" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="db-grp4" value="&lt;b&gt;Finances&lt;/b&gt;&#xa;comptes_communes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="490" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="db-grp5" value="&lt;b&gt;Risques environnementaux&lt;/b&gt;&#xa;catnat · risques" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="560" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="db-index" value="&lt;b&gt;Index&lt;/b&gt;&#xa;CREATE INDEX sur codgeo&#xa;CREATE INDEX sur annee" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82B366;align=left;spacingLeft=8;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="720" y="640" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="db-stats" value="341 communes · 12 tables&#xa;3 scrutins (2008/14/20)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82B366;dashed=1;align=center;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="720" y="890" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p3-process" value="&lt;b&gt;analyse_exploratoire.py&lt;/b&gt;&#xa;Lecture SQLite via pd.read_sql_query&#xa;matplotlib · seaborn · numpy&#xa;geopandas + urllib (GeoJSON)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="970" y="100" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-graphs" value="&lt;b&gt;10 graphiques générés&lt;/b&gt;&#xa;01 — Évolution vote 2008-2020 (line)&#xa;02 — Carte choroplèthe 2020 (geo)&#xa;03 — Revenu vs vote (scatter + Pearson)&#xa;04 — Heatmap corrélations (9 variables)&#xa;05 — Boxplot revenus par camp&#xa;06 — CSP cadres/ouvriers (scatter)&#xa;07 — Évolution population (top 10)&#xa;08 — Dette vs vote (scatter)&#xa;09 — Diplômes vs vote (scatter)&#xa;10 — CatNat vs vote (bar h)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="970" y="220" width="240" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-output" value="&lt;b&gt;Sortie&lt;/b&gt;&#xa;graphiques/phase3/*.png" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9673A6;align=center;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="970" y="510" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-cmd" value="python main.py analyse" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#9673A6;fontFamily=Courier New;fontStyle=2;align=center;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="970" y="910" width="240" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p4-process" value="&lt;b&gt;modele_predictif.py&lt;/b&gt;&#xa;scikit-learn · pandas · numpy&#xa;matplotlib · seaborn · geopandas" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B85450;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="100" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-step1" value="&lt;b&gt;1. Feature engineering&lt;/b&gt; — construire_panel()&#xa;Panel temporel commune × année (2008/14/20)&#xa;12 features : population · 4 CSP · revenu_median&#xa;pct_diplome_sup · pct_sans_diplome · dette_par_hab&#xa;invest_par_hab · taux_natalite · nb_catnat" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="200" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-step2" value="&lt;b&gt;2. Préparation&lt;/b&gt;&#xa;StandardScaler.fit_transform(X_train)&#xa;Split temporel : train = 2008+2014 / test = 2020" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="320" width="290" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-step3" value="&lt;b&gt;3. Entraînement — 2 Random Forest (n=200, seed=42)&lt;/b&gt;&#xa;• Classifier (camp Gauche/Droite)&#xa;  → accuracy · F1 · matrice confusion&#xa;• Regressor (% Gauche continu)&#xa;  → R² · MAE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="410" width="290" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-step4" value="&lt;b&gt;4. Extrapolation 2026&lt;/b&gt; — extrapoler_features()&#xa;Population : tendance linéaire 2014→2020 prolongée&#xa;Autres variables : valeurs 2020 maintenues&#xa;CatNat : cumul historique inchangé" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="540" width="290" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-step5" value="&lt;b&gt;5. Prédictions 2026&lt;/b&gt; — predire_futur()&#xa;clf.predict() → pred_camp&#xa;reg.predict().clip(0,100) → pred_pct_gauche" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="650" width="290" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-graphs" value="&lt;b&gt;7 graphiques + console Q&amp;amp;R&lt;/b&gt;&#xa;01 importance features · 02 confusion · 03 temporel&#xa;04 carte 2026 · 05 distribution probabilités&#xa;06 réel vs prédit · 07 communes remarquables&#xa;Sortie : graphiques/phase4/*.png&#xa;Console : réponses Q1 / Q2 / Q3 (consignes)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B85450;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="740" width="290" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-cmd" value="python main.py predict" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#B85450;fontFamily=Courier New;fontStyle=2;align=center;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="910" width="290" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-insee" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.2;entryDx=0;entryDy=0;strokeColor=#6C8EBF;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" source="src-insee" target="etl-extract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-datagouv" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;strokeColor=#6C8EBF;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" source="src-datagouv" target="etl-extract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-dgfip" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.6;entryDx=0;entryDy=0;strokeColor=#6C8EBF;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" source="src-dgfip" target="etl-extract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-gaspar" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.8;entryDx=0;entryDy=0;strokeColor=#6C8EBF;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" source="src-gaspar" target="etl-extract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-geo" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#6C8EBF;strokeWidth=1;edgeStyle=orthogonalEdgeStyle;rounded=1;dashed=1;" edge="1" parent="1" source="src-geo" target="p3-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-e2t" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#D79B00;strokeWidth=3;" edge="1" parent="1" source="etl-extract" target="etl-transform">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-t2l" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#D79B00;strokeWidth=3;" edge="1" parent="1" source="etl-transform" target="etl-load">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-l2v" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#D79B00;strokeWidth=2;dashed=1;" edge="1" parent="1" source="etl-load" target="etl-validate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-l2db" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#82B366;strokeWidth=3;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" source="etl-load" target="db-header">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-db2p3" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#9673A6;strokeWidth=3;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" source="db-header" target="p3-process">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-p3" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673A6;strokeWidth=2;" edge="1" parent="1" source="p3-process" target="p3-graphs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-p3-out" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#9673A6;strokeWidth=2;dashed=1;" edge="1" parent="1" source="p3-graphs" target="p3-output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a-db2p4" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#B85450;strokeWidth=3;edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" parent="1" source="db-grp3" target="p4-step1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-p4-12" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B85450;strokeWidth=2;" edge="1" parent="1" source="p4-step1" target="p4-step2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-p4-23" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B85450;strokeWidth=2;" edge="1" parent="1" source="p4-step2" target="p4-step3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-p4-34" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B85450;strokeWidth=2;" edge="1" parent="1" source="p4-step3" target="p4-step4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-p4-45" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B85450;strokeWidth=2;" edge="1" parent="1" source="p4-step4" target="p4-step5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a-p4-out" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#B85450;strokeWidth=2;dashed=1;" edge="1" parent="1" source="p4-step5" target="p4-graphs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

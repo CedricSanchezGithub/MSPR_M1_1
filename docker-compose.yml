@@ -1,0 +1,60 @@
+# docker-compose.yml — Metabase + SQLite + serveur d'images pour Electio-Analytics
+# Lancement : docker compose up -d
+# Metabase  : http://localhost:3000
+# Images    : http://localhost:8080/phase4/04_carte_predictions_2026.png
+
+services:
+  metabase:
+    image: metabase/metabase:latest
+    container_name: electio_metabase
+    ports:
+      - "3000:3000"
+    volumes:
+      - metabase_data:/metabase-data
+      - ./data/output:/sqlite-data
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+      MB_SITE_LOCALE: fr
+      JAVA_TIMEZONE: Europe/Paris
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  images:
+    image: nginx:alpine
+    container_name: electio_images
+    ports:
+      - "8080:80"
+    volumes:
+      - ./graphiques:/usr/share/nginx/html:ro
+    restart: unless-stopped
+
+volumes:
+  metabase_data:
+    driver: local
+
+# -------------------------------------------------------------------
+# Connexion SQLite dans Metabase :
+#   Admin → Databases → Add a database → SQLite
+#   Filename : /sqlite-data/electio_herault.db
+#
+# Ajouter une image dans un dashboard Metabase :
+#   1. Éditer le dashboard → "+ Ajouter un bloc de texte"
+#   2. Coller : ![Carte 2026](http://localhost:8080/phase4/04_carte_predictions_2026.png)
+#
+# URLs des graphiques phase 4 :
+#   http://localhost:8080/phase4/01_importance_features.png
+#   http://localhost:8080/phase4/02_matrice_confusion.png
+#   http://localhost:8080/phase4/03_predictions_temporelles.png
+#   http://localhost:8080/phase4/04_carte_predictions_2026.png
+#   http://localhost:8080/phase4/05_distribution_probabilites.png
+#   http://localhost:8080/phase4/06_reel_vs_predit_2020.png
+#   http://localhost:8080/phase4/07_evolution_communes_remarquables.png
+#
+# Attention : relancer "docker compose restart metabase" après
+# chaque "python main.py etl" pour que Metabase relise le schéma.
+# -------------------------------------------------------------------

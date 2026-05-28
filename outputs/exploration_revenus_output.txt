@@ -514,7 +514,7 @@ ANALYSE EXPLORATOIRE - Revenus des Français par commune
 
 [8] RÉSUMÉ
 ================================================================================
-  Fichier: data_input/revenu-des-francais-a-la-commune-1765372688826.csv
+  Fichier: data/input/economie/revenu-des-francais-a-la-commune-1765372688826.csv
   Lignes: 34,926
   Colonnes: 57
   Colonnes numériques: 9
