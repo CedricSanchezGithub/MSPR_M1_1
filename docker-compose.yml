@@ -1,4 +1,4 @@
-# docker-compose.yml — Metabase + SQLite + serveur d'images pour Electio-Analytics
+# docker-compose.yml — Metabase + SQLite + serveur d'images
 # Lancement : docker compose up -d
 # Metabase  : http://localhost:3000
 # Images    : http://localhost:8080/phase4/04_carte_predictions_2026.png
@@ -46,7 +46,6 @@ volumes:
 #   1. Éditer le dashboard → "+ Ajouter un bloc de texte"
 #   2. Coller : ![Carte 2026](http://localhost:8080/phase4/04_carte_predictions_2026.png)
 #
-# URLs des graphiques phase 4 :
 #   http://localhost:8080/phase4/01_importance_features.png
 #   http://localhost:8080/phase4/02_matrice_confusion.png
 #   http://localhost:8080/phase4/03_predictions_temporelles.png
@@ -55,6 +54,5 @@ volumes:
 #   http://localhost:8080/phase4/06_reel_vs_predit_2020.png
 #   http://localhost:8080/phase4/07_evolution_communes_remarquables.png
 #
-# Attention : relancer "docker compose restart metabase" après
-# chaque "python main.py etl" pour que Metabase relise le schéma.
+# Attention : relancer docker compose restart metabase après chaque prédiction
 # -------------------------------------------------------------------
